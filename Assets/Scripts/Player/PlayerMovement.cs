@@ -4,8 +4,19 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed; // velocidade de movimento do personagem
+
+    public CharacterController controller;
+    public float moveSpeed; 
     public float rotation;
+    public float gravity = -10f;
+
+    Vector3 velocity;
+
+    public Transform groundCheck;
+    public float groundDistance;
+    public LayerMask groundMask;
+
+    bool isGrounded;
 
     private void Start()
     {
@@ -19,15 +30,24 @@ public class PlayerMovement : MonoBehaviour
 
     public void movement()
     {
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
+        if(isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f;
+        }
+
+        float moveX = Input.GetAxis("Horizontal");
+        float moveZ = Input.GetAxis("Vertical");
         float mouseX = Input.GetAxis("Mouse X");
 
-        Vector3 dir = new Vector3(x, 0, y) * moveSpeed;
+        Vector3 move = transform.right * moveX + transform.forward * moveZ;
 
-        transform.Translate(dir * Time.deltaTime);
+        controller.Move(move * moveSpeed * Time.deltaTime);
 
-        transform.Rotate(new Vector3(0, mouseX * rotation * Time.deltaTime, 0));
+        velocity.y += gravity * Time.deltaTime;
+
+        controller.Move(velocity * Time.deltaTime);
     }
 
 }
