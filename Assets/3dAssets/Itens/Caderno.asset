@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Caderno
   m_EditorClassIdentifier: 
   grabbable: 1
-  audioClip: {fileID: 0}
-  text: 
+  audioClip: {fileID: 8300000, guid: b2e9a446315d9cb41b67e80ed6d861f4, type: 3}
+  text: Estou sem tempo para ler

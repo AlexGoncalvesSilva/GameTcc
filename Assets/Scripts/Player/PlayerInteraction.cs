@@ -24,6 +24,12 @@ public class PlayerInteraction : MonoBehaviour
     private Vector3 originPosition;
     private Quaternion originRotation;
 
+    private SFXItens sfxItens;
+
+    private void Awake()
+    {
+        sfxItens= GetComponent<SFXItens>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -77,7 +83,7 @@ public class PlayerInteraction : MonoBehaviour
 
                     CameraController.instance.CantMoveCamera();
 
-                    Invoke("CanFinish", 1f);
+                    Interact(currentInteractable.item);
 
                     if (currentInteractable.item.grabbable)
                     {
@@ -99,9 +105,17 @@ public class PlayerInteraction : MonoBehaviour
         }
     }
 
+    void Interact(Item item)
+    {
+        sfxItens.PlayAudio(item.audioClip);
+        UiManager.Instance.SetCaptions(item.text);
+        Invoke("CanFinish" , item.audioClip.length + 0.7f);
+    }
+
     void CanFinish()
     {
         canFinish = true;
+        UiManager.Instance.SetCaptions("");
     }
 
     void FinishView()

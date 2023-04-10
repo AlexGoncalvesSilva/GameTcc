@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Caneca
   m_EditorClassIdentifier: 
   grabbable: 1
-  audioClip: {fileID: 0}
-  text: 
+  audioClip: {fileID: 8300000, guid: 3b6089fbe422d4146aed34df62ae65f7, type: 3}
+  text: "Estou sem caf\xE9"
