@@ -43,5 +43,4 @@ public class UiManager : MonoBehaviour
     {
         panelLevels.SetActive(false);
     }
-
 }

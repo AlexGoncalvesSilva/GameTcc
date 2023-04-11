@@ -113,6 +113,7 @@ public class PlayerInteraction : MonoBehaviour
         {
             UiManager.instance.showPanelLevels();
             Debug.Log("Clicou no quadro");
+            Cursor.lockState = CursorLockMode.None;
         }
         sfxItens.PlayAudio(item.audioClip);
         UiManager.instance.SetCaptions(item.text);
@@ -135,6 +136,7 @@ public class PlayerInteraction : MonoBehaviour
             StartCoroutine(MovingObject(currentInteractable, originPosition));
         }
         UiManager.instance.hidePanelLevels();
+        Cursor.lockState = CursorLockMode.Locked;
 
         OnFinishView.Invoke();
         CameraController.instance.CanMoveCamera();
