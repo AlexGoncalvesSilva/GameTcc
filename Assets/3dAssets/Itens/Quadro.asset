@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 975c40793ac3ca24ab61c46ab1bb0cc8, type: 3}
+  m_Name: Quadro
+  m_EditorClassIdentifier: 
+  grabbable: 0
+  audioClip: {fileID: 8300000, guid: 1be609ccdb844a34f9aae1b8ac44b12c, type: 3}
+  text: 
+  image: {fileID: 0}
+  panelInterection: {fileID: 753053135567153393, guid: f0b60d8b8ac1bb0449a1e50f443cb981, type: 3}

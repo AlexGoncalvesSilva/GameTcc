@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TreeEditor;
 using UnityEngine;
 using UnityEngine.Events;
+using static UnityEditor.Progress;
 
 public class PlayerInteraction : MonoBehaviour
 {
@@ -107,15 +109,20 @@ public class PlayerInteraction : MonoBehaviour
 
     void Interact(Item item)
     {
+        if (item.panelInterection != null)
+        {
+            UiManager.instance.showPanelLevels();
+            Debug.Log("Clicou no quadro");
+        }
         sfxItens.PlayAudio(item.audioClip);
-        UiManager.Instance.SetCaptions(item.text);
+        UiManager.instance.SetCaptions(item.text);
         Invoke("CanFinish" , item.audioClip.length + 0.7f);
     }
 
     void CanFinish()
     {
         canFinish = true;
-        UiManager.Instance.SetCaptions("");
+        UiManager.instance.SetCaptions("");
     }
 
     void FinishView()
@@ -127,6 +134,7 @@ public class PlayerInteraction : MonoBehaviour
             currentInteractable.transform.rotation = originRotation;
             StartCoroutine(MovingObject(currentInteractable, originPosition));
         }
+        UiManager.instance.hidePanelLevels();
 
         OnFinishView.Invoke();
         CameraController.instance.CanMoveCamera();

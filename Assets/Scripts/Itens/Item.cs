@@ -11,5 +11,7 @@ public class Item : ScriptableObject
 
     public AudioClip audioClip;
     public string text;
+    public Sprite image;
+    public GameObject panelInterection;
 
 }
