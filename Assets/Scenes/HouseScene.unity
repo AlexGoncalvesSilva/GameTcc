@@ -1193,6 +1193,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LaptopTela
       objectReference: {fileID: 0}
+    - target: {fileID: -2764512629625626004, guid: dc98d26fd08a56f49baf135146d7e903, type: 3}
+      propertyPath: m_TagString
+      value: Selectable
+      objectReference: {fileID: 0}
     - target: {fileID: -2654892437887966513, guid: dc98d26fd08a56f49baf135146d7e903, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1208,6 +1212,10 @@ PrefabInstance:
     - target: {fileID: -2040254050740271484, guid: dc98d26fd08a56f49baf135146d7e903, type: 3}
       propertyPath: m_Name
       value: LaptopTeclado
+      objectReference: {fileID: 0}
+    - target: {fileID: -2040254050740271484, guid: dc98d26fd08a56f49baf135146d7e903, type: 3}
+      propertyPath: m_TagString
+      value: Selectable
       objectReference: {fileID: 0}
     - target: {fileID: 65702495048144492, guid: dc98d26fd08a56f49baf135146d7e903, type: 3}
       propertyPath: m_IsActive
@@ -1244,6 +1252,10 @@ PrefabInstance:
     - target: {fileID: 4356877828898064976, guid: dc98d26fd08a56f49baf135146d7e903, type: 3}
       propertyPath: m_Name
       value: LixoQueVaiTerPista
+      objectReference: {fileID: 0}
+    - target: {fileID: 4356877828898064976, guid: dc98d26fd08a56f49baf135146d7e903, type: 3}
+      propertyPath: m_TagString
+      value: Selectable
       objectReference: {fileID: 0}
     - target: {fileID: 4750402418357727593, guid: dc98d26fd08a56f49baf135146d7e903, type: 3}
       propertyPath: m_LocalScale.x
@@ -1321,9 +1333,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Carta
       objectReference: {fileID: 0}
+    - target: {fileID: 8578709097331664583, guid: dc98d26fd08a56f49baf135146d7e903, type: 3}
+      propertyPath: m_TagString
+      value: Selectable
+      objectReference: {fileID: 0}
+    - target: {fileID: 9023564865144229383, guid: dc98d26fd08a56f49baf135146d7e903, type: 3}
+      propertyPath: m_TagString
+      value: Selectable
+      objectReference: {fileID: 0}
     - target: {fileID: 9141816029861474070, guid: dc98d26fd08a56f49baf135146d7e903, type: 3}
       propertyPath: m_Name
       value: PortaRetrato
+      objectReference: {fileID: 0}
+    - target: {fileID: 9141816029861474070, guid: dc98d26fd08a56f49baf135146d7e903, type: 3}
+      propertyPath: m_TagString
+      value: Selectable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc98d26fd08a56f49baf135146d7e903, type: 3}
@@ -1772,6 +1796,63 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3329902420748629119, guid: dc98d26fd08a56f49baf135146d7e903, type: 3}
+--- !u!1001 &951824404
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7085217889662533298, guid: 39a80cd8b56a062449677b1e71a2119f, type: 3}
+      propertyPath: m_Name
+      value: OutlineSelection
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085217889662533300, guid: 39a80cd8b56a062449677b1e71a2119f, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085217889662533300, guid: 39a80cd8b56a062449677b1e71a2119f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.4438908
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085217889662533300, guid: 39a80cd8b56a062449677b1e71a2119f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.122244954
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085217889662533300, guid: 39a80cd8b56a062449677b1e71a2119f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.0092587
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085217889662533300, guid: 39a80cd8b56a062449677b1e71a2119f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085217889662533300, guid: 39a80cd8b56a062449677b1e71a2119f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085217889662533300, guid: 39a80cd8b56a062449677b1e71a2119f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085217889662533300, guid: 39a80cd8b56a062449677b1e71a2119f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085217889662533300, guid: 39a80cd8b56a062449677b1e71a2119f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085217889662533300, guid: 39a80cd8b56a062449677b1e71a2119f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085217889662533300, guid: 39a80cd8b56a062449677b1e71a2119f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 39a80cd8b56a062449677b1e71a2119f, type: 3}
 --- !u!1 &967092416 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2275753527308173365, guid: dc98d26fd08a56f49baf135146d7e903, type: 3}
