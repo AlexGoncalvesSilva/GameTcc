@@ -2397,6 +2397,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panelLevels: {fileID: 1916758654}
   captionsText: {fileID: 1217631658}
+  levelCompleteText: {fileID: 0}
+--- !u!1 &1763054709 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2743824956484694717, guid: 8eedc2a067740bc43805a73287b1b4a4, type: 3}
+  m_PrefabInstance: {fileID: 1901633871}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1763054713
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763054709}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.008360001, y: 0.00034000078, z: 0.020099998}
+  m_Center: {x: 0.0041799997, y: 0.00016999822, z: -0.00041000018}
 --- !u!1 &1772305789 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2800250516343163423, guid: 8eedc2a067740bc43805a73287b1b4a4, type: 3}
