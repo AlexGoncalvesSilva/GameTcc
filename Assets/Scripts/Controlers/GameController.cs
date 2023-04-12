@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
 
 public class GameController : MonoBehaviour
 {
@@ -9,6 +11,9 @@ public class GameController : MonoBehaviour
     public bool canFinishLevel = false;
 
     public GameObject finishPanel;
+
+    public UnityEvent finishLevel;
+    public UnityEvent continueLevel;
 
     private void Awake()
     {
@@ -27,6 +32,7 @@ public class GameController : MonoBehaviour
             finishPanel.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             CameraController.instance.CantMoveCamera();
+            finishLevel.Invoke();
         }
     }
 
@@ -35,6 +41,7 @@ public class GameController : MonoBehaviour
         CameraController.instance.CanMoveCamera();
         finishPanel.SetActive(false); 
         Cursor.lockState = CursorLockMode.Locked;
+        continueLevel.Invoke();
     }
 
 }
