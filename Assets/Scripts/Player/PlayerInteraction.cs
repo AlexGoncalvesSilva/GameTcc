@@ -45,7 +45,7 @@ public class PlayerInteraction : MonoBehaviour
         CheckInteractables();
     }
 
-    void CheckInteractables()
+    public void CheckInteractables()
     {
         if (isViewing)
         {

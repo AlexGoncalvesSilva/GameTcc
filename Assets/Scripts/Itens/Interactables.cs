@@ -8,6 +8,8 @@ using UnityEngine.Events;
 
 public class Interactables : MonoBehaviour
 {
+    [SerializeField] private GameObject interactContainer;
+    [SerializeField] private PlayerInteraction playerInteraction;
     public Item item;
 
     public bool isClue;
@@ -19,4 +21,17 @@ public class Interactables : MonoBehaviour
     */
     [HideInInspector]
     public bool isMoving;
+
+    private void Update()
+    {
+       
+    }
+    private void Show()
+    {
+        interactContainer.SetActive(true);
+    }
+    private void Hide()
+    {
+        interactContainer.SetActive(false);
+    }
 }
