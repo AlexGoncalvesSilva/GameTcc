@@ -87,6 +87,14 @@ public class PlayerInteraction : MonoBehaviour
 
                     Interact(currentInteractable.item);
 
+                    if(interactable.isClue == true && interactable.alredyInteract == false)
+                    {
+                        Analyze.instance.PistaObjeto();
+                        interactable.alredyInteract= true;
+                    }
+
+
+
                     if (currentInteractable.item.grabbable)
                     {
                         originPosition = currentInteractable.transform.position;
@@ -123,13 +131,13 @@ public class PlayerInteraction : MonoBehaviour
     void CanFinish()
     {
         canFinish = true;
-        UiManager.instance.SetCaptions("");
     }
 
     void FinishView()
     {
         canFinish = false;
         isViewing = false;
+        UiManager.instance.SetCaptions("");
         if (currentInteractable.item.grabbable)
         {
             currentInteractable.transform.rotation = originRotation;

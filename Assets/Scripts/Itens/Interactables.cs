@@ -10,11 +10,13 @@ public class Interactables : MonoBehaviour
 {
     public Item item;
 
+    public bool isClue;
+
+    public bool alredyInteract;
     /*
         public UnityEvent OnInteract;
         public UnityEvent CollectItem;
     */
     [HideInInspector]
     public bool isMoving;
-
 }

@@ -12,21 +12,16 @@ public class UiManager : MonoBehaviour
 
     public Text captionsText; //textos de legendas dos itens
 
+    public Text levelCompleteText;
+
     private void Awake()
     {
         instance = this;
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void showLevelCompleteText(string text)
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        levelCompleteText.text = text;
     }
 
     public void SetCaptions(string text)

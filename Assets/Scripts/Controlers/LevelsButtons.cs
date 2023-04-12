@@ -9,6 +9,7 @@ public class LevelsButtons : MonoBehaviour
     {
         UiManager.instance.hidePanelLevels();
         Cursor.lockState = CursorLockMode.Locked;
+        CameraController.instance.CanMoveCamera();
         SceneManager.LoadScene(i);
     }
 }
