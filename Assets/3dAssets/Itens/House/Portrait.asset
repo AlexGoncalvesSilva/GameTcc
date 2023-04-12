@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabbable: 0
   audioClip: {fileID: 8300000, guid: ab8cc0a838f2f224a903d5a1a12169c5, type: 3}
-  text: 
-  image: {fileID: 21300000, guid: b033e4b6926e0af4bac5125eb5a06ceb, type: 3}
+  text: "A foto no porta retrato est\xE1 rasgada. Esse \xE9 Daniel, essa deve ser
+    sua m\xE3e com ele"
+  image: {fileID: 0}
   panelInterection: {fileID: 0}
