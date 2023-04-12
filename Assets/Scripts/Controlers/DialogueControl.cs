@@ -56,6 +56,8 @@ public class DialogueControl : MonoBehaviour
                 }
                 else //nao tem mais fala
                 {
+                    Analyze.instance.PistaDialogo();
+                    Debug.Log("Funcionou a primeira parte");
                     speechText.text = "";
                     index = 0;
                     StartCoroutine(isNotSpeaking());

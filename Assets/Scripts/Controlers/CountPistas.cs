@@ -32,7 +32,6 @@ public class CountPistas : MonoBehaviour
     {
         if (countEvidenciasAnalisadas >= MaxEvidenciasDaCena)
         {
-            UiManager.instance.showLevelCompleteText("Você encontrou todas as pistas da fase, clique 'F' para retornar");
             GameController.instance.canFinishLevel = true;
             GameController.instance.AskToFinish();
             Debug.Log("Todas as pistas foram analisadas!");

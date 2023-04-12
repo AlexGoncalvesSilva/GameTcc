@@ -1056,6 +1056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerClose: 0
   thisEvidenceWasAnalyzed: 0
+  alredyTalk: 0
 --- !u!1 &851753684 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -516098083770646512, guid: 9634d301a1db1544dbf1bf69e855ef0d, type: 3}
@@ -2142,6 +2143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerClose: 0
   thisEvidenceWasAnalyzed: 0
+  alredyTalk: 0
 --- !u!136 &1689780254
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2389,6 +2391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerClose: 0
   thisEvidenceWasAnalyzed: 0
+  alredyTalk: 0
 --- !u!1 &1887239269 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -208595431880416365, guid: 9634d301a1db1544dbf1bf69e855ef0d, type: 3}
@@ -2453,6 +2456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerClose: 0
   thisEvidenceWasAnalyzed: 0
+  alredyTalk: 0
 --- !u!1 &1977783052
 GameObject:
   m_ObjectHideFlags: 0
@@ -3364,6 +3368,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  timeToShowPanel: 1
 --- !u!114 &5941252972672248716
 MonoBehaviour:
   m_ObjectHideFlags: 0

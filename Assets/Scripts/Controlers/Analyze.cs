@@ -8,6 +8,8 @@ public class Analyze : MonoBehaviour
     public bool playerClose;
     public bool thisEvidenceWasAnalyzed;
 
+    public bool alredyTalk;
+
     public static Analyze instance;
 
     private void Awake()
@@ -22,23 +24,38 @@ public class Analyze : MonoBehaviour
 
     private void Update()
     {
-        PistaDialogo();
+       // PistaDialogo();
     }
 
     public void PistaDialogo()
     {
+        if (Input.GetKeyDown(KeyCode.X) && !alredyTalk)
+        {
+            CountPistas.instance.AddPista();
+            Debug.Log("Funcionou a segunda parte");
+            alredyTalk = true;
+        }
+        if (alredyTalk)
+        {
+            Debug.Log("Ja falou");
+        }
+
+        /*
+
         if (Input.GetKeyDown(KeyCode.X) && playerClose && !thisEvidenceWasAnalyzed)
         {
             thisEvidenceWasAnalyzed = true;
             if (thisEvidenceWasAnalyzed == true)
             {
                 CountPistas.instance.AddPista();
+                Debug.Log("Funcionou a segunda parte");
             }
         }
         if (Input.GetKeyDown(KeyCode.X) && playerClose && thisEvidenceWasAnalyzed)
         {
             thisEvidenceWasAnalyzed = true;
         }
+        */
     }
 
     public void PistaObjeto()
