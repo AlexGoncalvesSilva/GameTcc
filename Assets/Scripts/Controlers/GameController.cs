@@ -22,11 +22,11 @@ public class GameController : MonoBehaviour
 
     public void AskToFinish()
     {
-        CameraController.instance.CantMoveCamera();
         if (Input.GetKeyDown(KeyCode.F) && canFinishLevel)
         {
             finishPanel.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
+            CameraController.instance.CantMoveCamera();
         }
     }
 
