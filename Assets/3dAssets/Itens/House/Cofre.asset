@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 975c40793ac3ca24ab61c46ab1bb0cc8, type: 3}
-  m_Name: Lixeiro
+  m_Name: Cofre
   m_EditorClassIdentifier: 
   grabbable: 0
-  audioClip: {fileID: 8300000, guid: b0d145f1b1f52e441bf72c1ce21ed826, type: 3}
-  text: 
+  audioClip: {fileID: 8300000, guid: ab8cc0a838f2f224a903d5a1a12169c5, type: 3}
+  text: "Tem uns documentos aqui, mas foram mexidos. Algu\xE9m esteve aqui"
   image: {fileID: 0}
   panelInterection: {fileID: 0}

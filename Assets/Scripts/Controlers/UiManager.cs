@@ -14,6 +14,8 @@ public class UiManager : MonoBehaviour
 
     public Text levelCompleteText;
 
+    public Image interactionImage;
+
     private void Awake()
     {
         instance = this;
@@ -37,5 +39,19 @@ public class UiManager : MonoBehaviour
     public void hidePanelLevels()
     {
         panelLevels.SetActive(false);
+    }
+
+    public void SetBackImage(bool state)
+    {
+        if (!state)
+        {
+            interactionImage.enabled = false;
+        }
+    }
+
+    public void SetImage(Sprite sprite)
+    {
+        interactionImage.sprite = sprite;
+        interactionImage.enabled = true;
     }
 }

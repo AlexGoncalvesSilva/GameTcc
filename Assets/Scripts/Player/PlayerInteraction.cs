@@ -123,14 +123,19 @@ public class PlayerInteraction : MonoBehaviour
             Debug.Log("Clicou no quadro");
             Cursor.lockState = CursorLockMode.None;
         }
+        if (item.image != null)
+        {
+            UiManager.instance.SetImage(item.image);
+        }
         sfxItens.PlayAudio(item.audioClip);
         UiManager.instance.SetCaptions(item.text);
-        Invoke("CanFinish" , item.audioClip.length + 0.7f);
+        Invoke("CanFinish" , 1f);
     }
 
     void CanFinish()
     {
         canFinish = true;
+        UiManager.instance.SetBackImage(true);
     }
 
     void FinishView()
@@ -138,6 +143,7 @@ public class PlayerInteraction : MonoBehaviour
         canFinish = false;
         isViewing = false;
         UiManager.instance.SetCaptions("");
+        UiManager.instance.SetBackImage(false);
         if (currentInteractable.item.grabbable)
         {
             currentInteractable.transform.rotation = originRotation;
