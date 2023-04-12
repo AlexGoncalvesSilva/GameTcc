@@ -677,6 +677,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2874765826992384646, guid: dc98d26fd08a56f49baf135146d7e903, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -2654892437887966513, guid: dc98d26fd08a56f49baf135146d7e903, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -693,11 +697,19 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 645056540621773532, guid: dc98d26fd08a56f49baf135146d7e903, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.332
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dc98d26fd08a56f49baf135146d7e903, type: 3}
       propertyPath: m_Name
       value: CASA (com itens)
       objectReference: {fileID: 0}
     - target: {fileID: 1498538232883820446, guid: dc98d26fd08a56f49baf135146d7e903, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1835210009659533079, guid: dc98d26fd08a56f49baf135146d7e903, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -736,6 +748,10 @@ PrefabInstance:
     - target: {fileID: 8174907068477135312, guid: dc98d26fd08a56f49baf135146d7e903, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8578709097331664583, guid: dc98d26fd08a56f49baf135146d7e903, type: 3}
+      propertyPath: m_Name
+      value: Carta
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc98d26fd08a56f49baf135146d7e903, type: 3}
