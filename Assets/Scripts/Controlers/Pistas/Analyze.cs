@@ -29,7 +29,7 @@ public class Analyze : MonoBehaviour
 
     public void PistaDialogo()
     {
-        if (Input.GetKeyDown(KeyCode.X) && !alredyTalk)
+        if (!alredyTalk)
         {
             CountPistas.instance.AddPista();
             Debug.Log("Funcionou a segunda parte");

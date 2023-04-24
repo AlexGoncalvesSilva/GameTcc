@@ -123,86 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &3170799
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3170800}
-  - component: {fileID: 3170802}
-  - component: {fileID: 3170801}
-  m_Layer: 5
-  m_Name: Name
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &3170800
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3170799}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1082371247}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 119.66882, y: -39.51651}
-  m_SizeDelta: {x: 199.33759, y: 55.033005}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3170801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3170799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.053893737, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 46
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 46
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 
---- !u!222 &3170802
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3170799}
-  m_CullTransparentMesh: 1
 --- !u!1 &50421959 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 117214286460000749, guid: 9634d301a1db1544dbf1bf69e855ef0d, type: 3}
@@ -560,6 +480,54 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9634d301a1db1544dbf1bf69e855ef0d, type: 3}
+--- !u!1 &259167891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 259167893}
+  - component: {fileID: 259167892}
+  m_Layer: 0
+  m_Name: DialogoController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &259167892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259167891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f2aa89052a088a41acf3c5a15e6a58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  painelDiaologo: {fileID: 1082371246}
+  falaNPC: {fileID: 1635011894}
+  resposta: {fileID: 8037167084585561775, guid: 92a902676a191cf498a25fae3849029c, type: 3}
+  falaAtiva: 0
+--- !u!4 &259167893
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259167891}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.641848, y: 5.4002213, z: -0.401702}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &332311298 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6714375581466041388, guid: 9634d301a1db1544dbf1bf69e855ef0d, type: 3}
@@ -1450,6 +1418,7 @@ GameObject:
   - component: {fileID: 1082371247}
   - component: {fileID: 1082371249}
   - component: {fileID: 1082371248}
+  - component: {fileID: 1082371250}
   m_Layer: 5
   m_Name: PanelDialogue
   m_TagString: Untagged
@@ -1469,15 +1438,14 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3170800}
   - {fileID: 1635011893}
   m_Father: {fileID: 1977783053}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -307}
-  m_SizeDelta: {x: 1491.558, y: 222.6458}
+  m_AnchoredPosition: {x: 0, y: -337.92993}
+  m_SizeDelta: {x: 1491.558, y: 284.5056}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1082371248
 MonoBehaviour:
@@ -1517,6 +1485,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082371246}
   m_CullTransparentMesh: 1
+--- !u!114 &1082371250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082371246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 1
+  m_ChildScaleHeight: 1
+  m_ReverseArrangement: 0
 --- !u!1 &1116885463
 GameObject:
   m_ObjectHideFlags: 0
@@ -1917,7 +1911,7 @@ GameObject:
   - component: {fileID: 1635011895}
   - component: {fileID: 1635011894}
   m_Layer: 5
-  m_Name: Speech
+  m_Name: NPCText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1930,17 +1924,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1635011892}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1082371247}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 730.33, y: -134}
+  m_AnchoredPosition: {x: 710.35, y: -52.54955}
   m_SizeDelta: {x: 1420.7, y: 105.0991}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1635011894
@@ -2062,7 +2056,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -2124,6 +2118,7 @@ GameObject:
   - component: {fileID: 1689780258}
   - component: {fileID: 1689780253}
   - component: {fileID: 1689780259}
+  - component: {fileID: 1689780260}
   m_Layer: 0
   m_Name: Testemunha
   m_TagString: Untagged
@@ -2233,7 +2228,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1689780252}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2671678e328e4542b9cad4832ace0f5, type: 3}
   m_Name: 
@@ -2261,6 +2256,21 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.9
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1689780260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689780252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30116d62e172db64caa1b74d5da957bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  falas:
+  - {fileID: 11400000, guid: 6c7e1c50d66f0224c9cf24bab4c431d8, type: 2}
+  - {fileID: 11400000, guid: 68619fe5682c9074185975b79e1995af, type: 2}
 --- !u!1 &1732568809
 GameObject:
   m_ObjectHideFlags: 0
@@ -3477,7 +3487,7 @@ PrefabInstance:
     - target: {fileID: 942763436090214462, guid: 726c7b5df88dfc44283340f06c31d4cc, type: 3}
       propertyPath: actorNameText
       value: 
-      objectReference: {fileID: 3170801}
+      objectReference: {fileID: 0}
     - target: {fileID: 4300389582137209498, guid: 726c7b5df88dfc44283340f06c31d4cc, type: 3}
       propertyPath: m_Name
       value: DialogueControler
