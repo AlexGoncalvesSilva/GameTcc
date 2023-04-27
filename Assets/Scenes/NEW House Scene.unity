@@ -5033,7 +5033,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8036731163111746910}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.000000012340024, y: -0.000000008381903, z: 0.7029363, w: 0.7112529}
   m_LocalPosition: {x: -0.0041799927, y: -0.00022100031, z: 0.010499999}
   m_LocalScale: {x: 0.99999994, y: 1, z: 0.98439264}
   m_ConstrainProportionsScale: 0
@@ -5042,7 +5042,7 @@ Transform:
   - {fileID: 4231617005373987094}
   m_Father: {fileID: 5860956018127737872}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 89.326}
 --- !u!64 &1460739776655903709
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13562,13 +13562,32 @@ GameObject:
   - component: {fileID: 2210192938055999283}
   - component: {fileID: 1738776581803871358}
   - component: {fileID: 1609510649814699264}
+  - component: {fileID: 4356877828839972651}
   m_Layer: 0
-  m_Name: Cube.018
+  m_Name: Pista 4 - Lixero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4356877828839972651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4356877828839972650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea773fa4fbbadf240847682e892360a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactContainer: {fileID: 0}
+  playerInteraction: {fileID: 0}
+  item: {fileID: 11400000, guid: 19943a51cb412184a98cff73838d6d0d, type: 2}
+  isClue: 0
+  alredyInteract: 0
+  isMoving: 0
 --- !u!23 &4360767807371553570
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14009,7 +14028,7 @@ GameObject:
   - component: {fileID: 6275833175832711821}
   - component: {fileID: 4447794228421379316}
   m_Layer: 0
-  m_Name: Cube.020
+  m_Name: Lixeiro - Errado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16666,7 +16685,7 @@ GameObject:
   - component: {fileID: 5008022235980124067}
   - component: {fileID: 8518336744167867993}
   m_Layer: 0
-  m_Name: Cube.021
+  m_Name: Lixeiro - Errado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20630,7 +20649,7 @@ GameObject:
   - component: {fileID: 6764164715640707206}
   - component: {fileID: 6764164715640707207}
   m_Layer: 0
-  m_Name: Notbook
+  m_Name: Pista 2 - Notbook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23135,7 +23154,7 @@ GameObject:
   - component: {fileID: 8757869261080873701}
   - component: {fileID: 8757869261080873702}
   m_Layer: 0
-  m_Name: Notbook
+  m_Name: Pista 2 - Notbook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28742,13 +28761,32 @@ GameObject:
   - component: {fileID: 19156297059613000}
   - component: {fileID: 649251792520524241}
   - component: {fileID: 6863230891952873471}
+  - component: {fileID: 9141816029916953197}
   m_Layer: 0
-  m_Name: Cube.026
+  m_Name: Pista 3 - Porta Retrato
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9141816029916953197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9141816029916953196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea773fa4fbbadf240847682e892360a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactContainer: {fileID: 0}
+  playerInteraction: {fileID: 0}
+  item: {fileID: 11400000, guid: c86149cdc5a64a648a5decfa7190c80c, type: 2}
+  isClue: 0
+  alredyInteract: 0
+  isMoving: 0
 --- !u!33 &9155275840821121616
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -28865,7 +28903,7 @@ GameObject:
   - component: {fileID: 8361921253549077313}
   - component: {fileID: 9217234437748192023}
   m_Layer: 0
-  m_Name: Notbook
+  m_Name: Pista 2 - Notbook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
