@@ -4263,7 +4263,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3885114382414362609, guid: 60bea7539ee399e4abaafe51de40c2b2, type: 3}
+  - {fileID: 2100000, guid: 073b442c7e6fb1c4a80c7c34a72a9e90, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8263,14 +8263,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6042444411083759218}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.70311266, y: 0.0047330023, z: -0.004721697, w: 0.7110471}
   m_LocalPosition: {x: -9.911741, y: 3.9805117, z: 23.947008}
   m_LocalScale: {x: 1.5315123, y: 35.395153, z: 93.9799}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543450653491196561}
   m_RootOrder: 276
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89, y: 49.997, z: -49.996}
 --- !u!1 &2560353040701543057
 GameObject:
   m_ObjectHideFlags: 0
@@ -13323,7 +13323,8 @@ GameObject:
   - component: {fileID: 6772912780666195106}
   - component: {fileID: 1914653232077799031}
   - component: {fileID: 855623863650361491}
-  m_Layer: 0
+  - component: {fileID: 6772912780666195107}
+  m_Layer: 8
   m_Name: Cube.019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13482,7 +13483,7 @@ GameObject:
   - component: {fileID: 1738776581803871358}
   - component: {fileID: 1609510649814699264}
   - component: {fileID: 4356877828839972651}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pista 4 - Lixero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13864,7 +13865,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3885114382414362609, guid: 60bea7539ee399e4abaafe51de40c2b2, type: 3}
+  - {fileID: 2100000, guid: 073b442c7e6fb1c4a80c7c34a72a9e90, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13946,7 +13947,7 @@ GameObject:
   - component: {fileID: 8678946764938139629}
   - component: {fileID: 6275833175832711821}
   - component: {fileID: 4447794228421379316}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lixeiro - Errado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16402,7 +16403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0de2761f7d11cf44f98186989ed99d3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayDistance: 2
+  rayDistance: 3
   rotateSpeed: 20
   velocidadeDoObj: 5
   objectViwer: {fileID: 5351937138536196876}
@@ -17412,7 +17413,7 @@ GameObject:
   - component: {fileID: 2040280107538898609}
   - component: {fileID: 5008022235980124067}
   - component: {fileID: 8518336744167867993}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lixeiro - Errado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17620,7 +17621,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5832546561092237879, guid: 60bea7539ee399e4abaafe51de40c2b2, type: 3}
+  - {fileID: 2100000, guid: 073b442c7e6fb1c4a80c7c34a72a9e90, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21388,7 +21389,7 @@ GameObject:
   - component: {fileID: 466608246631966637}
   - component: {fileID: 6764164715640707206}
   - component: {fileID: 6764164715640707207}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pista 2 - Notbook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22410,6 +22411,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4316533146987321203}
   m_Mesh: {fileID: -3541629673168548286, guid: 60bea7539ee399e4abaafe51de40c2b2, type: 3}
+--- !u!114 &6772912780666195107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4316533146987321203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea773fa4fbbadf240847682e892360a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactContainer: {fileID: 0}
+  playerInteraction: {fileID: 0}
+  item: {fileID: 11400000, guid: 19943a51cb412184a98cff73838d6d0d, type: 2}
+  isClue: 0
+  alredyInteract: 0
+  isMoving: 0
 --- !u!33 &6776786642124146155
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -23332,7 +23351,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5832546561092237879, guid: 60bea7539ee399e4abaafe51de40c2b2, type: 3}
+  - {fileID: 2100000, guid: 073b442c7e6fb1c4a80c7c34a72a9e90, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23896,7 +23915,7 @@ GameObject:
   - component: {fileID: 8628502785526068193}
   - component: {fileID: 8757869261080873701}
   - component: {fileID: 8757869261080873702}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pista 2 - Notbook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28045,7 +28064,7 @@ GameObject:
   - component: {fileID: 7621133392037008202}
   - component: {fileID: 4986139806342781056}
   - component: {fileID: 8578709097252860862}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pista - Carta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29527,7 +29546,7 @@ GameObject:
   - component: {fileID: 649251792520524241}
   - component: {fileID: 6863230891952873471}
   - component: {fileID: 9141816029916953197}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pista 3 - Porta Retrato
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29710,7 +29729,7 @@ GameObject:
   - component: {fileID: 2380718651150591914}
   - component: {fileID: 8361921253549077313}
   - component: {fileID: 9217234437748192023}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pista 2 - Notbook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
