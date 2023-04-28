@@ -1107,7 +1107,7 @@ MeshCollider:
   m_GameObject: {fileID: 3432731147948680056}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -6765,7 +6765,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1968994109728037013
 GameObject:
   m_ObjectHideFlags: 0
@@ -7446,7 +7446,7 @@ GameObject:
   - component: {fileID: 5758924345416674563}
   - component: {fileID: 5758924345416674564}
   - component: {fileID: 5758924345416674565}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "Port\xE3o da casa - Vitima - Interativo"
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -7589,7 +7589,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &2242043007511164734
 GameObject:
   m_ObjectHideFlags: 0
@@ -9892,7 +9892,7 @@ GameObject:
   - component: {fileID: 8032313466877510804}
   - component: {fileID: 6049520048152896429}
   - component: {fileID: 3408501318953351356}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Handle_Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10927,9 +10927,11 @@ GameObject:
   - component: {fileID: 885967027720606526}
   - component: {fileID: 3746929184001310010}
   - component: {fileID: 271910876867135315}
-  m_Layer: 0
+  - component: {fileID: 5434637210608491009}
+  - component: {fileID: 5434637210608491008}
+  m_Layer: 8
   m_Name: Door
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16655,7 +16657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerCamera: {fileID: 5351937138777235763}
-  MaxDistance: 5
+  MaxDistance: 3
 --- !u!4 &5351937138536196876
 Transform:
   m_ObjectHideFlags: 0
@@ -17337,6 +17339,40 @@ Transform:
   m_Father: {fileID: 5069891235753762464}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &5434637210608491008
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3432731147948680056}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dabfdd2489deeda47b74c1b080b7cfb7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &5434637210608491009
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3432731147948680056}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.008360001, y: 0.0009, z: 0.020099994}
+  m_Center: {x: 0.0041800025, y: 0.00016999998, z: -0.0004100021}
 --- !u!33 &5436215443474086547
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20284,7 +20320,7 @@ RectTransform:
   m_GameObject: {fileID: 6324692785454730125}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.221, y: 1.221, z: 1.221}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6324692785565417428}
@@ -21593,7 +21629,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6574542429802502325
 Transform:
   m_ObjectHideFlags: 0
@@ -26924,7 +26960,7 @@ GameObject:
   - component: {fileID: 5108145706042856440}
   - component: {fileID: 6032493702019945759}
   - component: {fileID: 3147338764462003052}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Handle_Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -16,11 +16,11 @@ public class DoorsInteractions : MonoBehaviour
     void Update()
     {
         //This will tell if the player press F on the Keyboard. P.S. You can change the key if you want.
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             Pressed();
             //Delete if you dont want Text in the Console saying that You Press F.
-            Debug.Log("You Press F");
+            Debug.Log("You Press E");
         }
     }
 
@@ -43,7 +43,7 @@ public class DoorsInteractions : MonoBehaviour
                 opened = !opened;
 
                 //This line will set the bool true so it will play the animation.
-                anim.SetBool("Opened", !opened);
+                anim.SetBool("Opened", opened);
             }
         }
     }
