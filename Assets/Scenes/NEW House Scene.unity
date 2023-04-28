@@ -4948,7 +4948,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8036731163111746910}
-  m_LocalRotation: {x: 0.000000012340024, y: -0.000000008381903, z: 0.7029363, w: 0.7112529}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.0041799927, y: -0.00022100031, z: 0.010499999}
   m_LocalScale: {x: 0.99999994, y: 1, z: 0.98439264}
   m_ConstrainProportionsScale: 0
@@ -4957,7 +4957,7 @@ Transform:
   - {fileID: 4231617005373987094}
   m_Father: {fileID: 5860956018127737872}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 89.326}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1460739776655903709
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -15889,7 +15889,7 @@ GameObject:
   - component: {fileID: 366003268384760050}
   - component: {fileID: 9004676384385940071}
   - component: {fileID: 2187436572368531247}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Handle_Front.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16845,7 +16845,7 @@ Camera:
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
+  m_FocalLength: 32.96973
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -17393,7 +17393,7 @@ GameObject:
   - component: {fileID: 7677799538714476835}
   - component: {fileID: 6127969609890435201}
   - component: {fileID: 2307887737198844353}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Handle_Back.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26294,13 +26294,35 @@ GameObject:
   - component: {fileID: 3783196780380184120}
   - component: {fileID: 1563192590128734888}
   - component: {fileID: 394979514272109613}
-  m_Layer: 0
+  - component: {fileID: 8036731163111746911}
+  m_Layer: 8
   m_Name: Door.001
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &8036731163111746911
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8036731163111746910}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d49e1668d1ae4e245b521ebd0002d6ee, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!64 &8054525419943155235
 MeshCollider:
   m_ObjectHideFlags: 0
