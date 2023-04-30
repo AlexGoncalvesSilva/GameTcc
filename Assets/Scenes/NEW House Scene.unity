@@ -13290,6 +13290,7 @@ GameObject:
   - component: {fileID: 5663835665809642521}
   - component: {fileID: 5800821163212405237}
   - component: {fileID: 5704969509297379481}
+  - component: {fileID: 5800821163212405238}
   m_Layer: 0
   m_Name: mesinha
   m_TagString: Untagged
@@ -13947,6 +13948,7 @@ GameObject:
   - component: {fileID: 8678946764938139629}
   - component: {fileID: 6275833175832711821}
   - component: {fileID: 4447794228421379316}
+  - component: {fileID: 8906773799185585582}
   m_Layer: 8
   m_Name: Lixeiro - Errado
   m_TagString: Untagged
@@ -16290,8 +16292,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5351937137628486502}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.719, z: 0}
+  m_LocalScale: {x: 1, y: 1.85, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5351937138181611005}
@@ -16599,9 +16601,9 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
+  m_Height: 2.31
   m_Radius: 0.5
-  m_SlopeLimit: 45
+  m_SlopeLimit: 10
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
@@ -16747,7 +16749,7 @@ MonoBehaviour:
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 10
-    NearClipPlane: 0.1
+    NearClipPlane: 0.05
     FarClipPlane: 5000
     Dutch: 0
     ModeOverride: 0
@@ -16800,7 +16802,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5351937138777235764}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.13608892, y: 1.2703577, z: 0.5843716}
+  m_LocalPosition: {x: 0.091999955, y: 2.0700002, z: 0.738}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16853,7 +16855,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
+  near clip plane: 0.05
   far clip plane: 5000
   field of view: 40
   orthographic: 0
@@ -17413,6 +17415,7 @@ GameObject:
   - component: {fileID: 2040280107538898609}
   - component: {fileID: 5008022235980124067}
   - component: {fileID: 8518336744167867993}
+  - component: {fileID: 8518336744167867994}
   m_Layer: 8
   m_Name: Lixeiro - Errado
   m_TagString: Untagged
@@ -18312,6 +18315,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5800821163212405238
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4307332663294140502}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020564927, y: 0.020168612, z: 0.03332007}
+  m_Center: {x: -0.00019824579, y: 0.00000016098416, z: -0.0064656246}
 --- !u!4 &5801172155592327148
 Transform:
   m_ObjectHideFlags: 0
@@ -24182,6 +24198,7 @@ GameObject:
   - component: {fileID: 1604286220850786013}
   - component: {fileID: 1843850722879998791}
   - component: {fileID: 6795246487268239987}
+  - component: {fileID: 8884441067367070807}
   m_Layer: 0
   m_Name: raque
   m_TagString: Untagged
@@ -27746,6 +27763,24 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2746142260806068395, guid: 60bea7539ee399e4abaafe51de40c2b2, type: 3}
+--- !u!114 &8518336744167867994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5444727772502365966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea773fa4fbbadf240847682e892360a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactContainer: {fileID: 0}
+  playerInteraction: {fileID: 0}
+  item: {fileID: 11400000, guid: db9c56004503d02478a1e8170b8c3baa, type: 2}
+  isClue: 0
+  alredyInteract: 0
+  isMoving: 0
 --- !u!23 &8518953415417378039
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29083,6 +29118,19 @@ Transform:
   m_Father: {fileID: 543450653491196561}
   m_RootOrder: 231
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8884441067367070807
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7314846183622381227}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.023, z: 0.022616081}
+  m_Center: {x: 2.8601613e-12, y: -0.0001620115, z: -0.0003559864}
 --- !u!33 &8894691112807508600
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -29144,6 +29192,24 @@ Transform:
   m_Father: {fileID: 543450653491196561}
   m_RootOrder: 69
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8906773799185585582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4504409719248561829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea773fa4fbbadf240847682e892360a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactContainer: {fileID: 0}
+  playerInteraction: {fileID: 0}
+  item: {fileID: 11400000, guid: db9c56004503d02478a1e8170b8c3baa, type: 2}
+  isClue: 0
+  alredyInteract: 0
+  isMoving: 0
 --- !u!64 &8934324729602332756
 MeshCollider:
   m_ObjectHideFlags: 0

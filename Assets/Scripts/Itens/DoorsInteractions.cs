@@ -40,10 +40,10 @@ public class DoorsInteractions : MonoBehaviour
                 anim = doorhit.transform.GetComponentInParent<Animator>();
 
                 //This will set the bool the opposite of what it is.
-                opened = !opened;
+                //opened = !opened;
 
                 //This line will set the bool true so it will play the animation.
-                anim.SetBool("Opened", opened);
+                anim.SetTrigger("OpenToClose");
             }
         }
     }
