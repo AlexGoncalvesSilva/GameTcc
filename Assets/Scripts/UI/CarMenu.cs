@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CarMenu : MonoBehaviour
 {
@@ -33,11 +34,14 @@ public class CarMenu : MonoBehaviour
                     {
                         openedPanel = true;
                         Panel.SetActive(true);
+                        Cursor.visible = true;
+                        Cursor.lockState = CursorLockMode.Confined;
                     }
                     else
                     {
                         openedPanel = false;
                         Panel.SetActive(false);
+                        
                     }
                 }
             }
@@ -45,8 +49,14 @@ public class CarMenu : MonoBehaviour
             {
                 openedPanel = false;
                 Panel.SetActive(false);
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
             }
         }
 
     }
+    public void LoadOfficeScene()
+    {
+        SceneManager.LoadScene("OfficeScene");
     }
+}
