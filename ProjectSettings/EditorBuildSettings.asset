@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NEW House Scene.unity
     guid: 2584ef64312559540805348025988e09
+  - enabled: 1
+    path: Assets/Scenes/ONG.unity
+    guid: 3b4c3d362c107a641adf41a002420e04
   m_configObjects: {}

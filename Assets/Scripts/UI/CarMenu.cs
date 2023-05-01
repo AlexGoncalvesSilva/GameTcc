@@ -59,4 +59,8 @@ public class CarMenu : MonoBehaviour
     {
         SceneManager.LoadScene("OfficeScene");
     }
+    public void LoadOngScene()
+    {
+        SceneManager.LoadScene("ONG");
+    }
 }
