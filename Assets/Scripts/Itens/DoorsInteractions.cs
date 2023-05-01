@@ -22,6 +22,7 @@ public class DoorsInteractions : MonoBehaviour
             //Delete if you dont want Text in the Console saying that You Press F.
             Debug.Log("You Press E");
         }
+            
     }
 
     void Pressed()
@@ -47,4 +48,6 @@ public class DoorsInteractions : MonoBehaviour
             }
         }
     }
+
+
 }
