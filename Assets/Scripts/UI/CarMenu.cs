@@ -41,7 +41,8 @@ public class CarMenu : MonoBehaviour
                     {
                         openedPanel = false;
                         Panel.SetActive(false);
-                        
+                        Cursor.visible = false;
+
                     }
                 }
             }
