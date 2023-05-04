@@ -8,6 +8,8 @@ public class UiManager : MonoBehaviour
 {
     public static UiManager instance;
 
+    public GameObject backImage;
+
     public GameObject panelLevels;
 
     public Text captionsText; //textos de legendas dos itens
@@ -43,6 +45,7 @@ public class UiManager : MonoBehaviour
 
     public void SetBackImage(bool state)
     {
+        backImage.SetActive(state);
         if (!state)
         {
             interactionImage.enabled = false;

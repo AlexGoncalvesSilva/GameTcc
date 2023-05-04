@@ -82,6 +82,8 @@ public class PlayerInteraction : MonoBehaviour
 
                     isViewing = true;
 
+                    Invoke("CanFinish", 1f);
+
                     CameraController.instance.CantMoveCamera();
 
                     Interact(currentInteractable.item);
