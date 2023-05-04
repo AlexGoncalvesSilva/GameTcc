@@ -27,16 +27,18 @@ public class Dialogo : MonoBehaviour
         {
 
             //Para de andar
-    
+            CameraController.instance.CantMoveCamera();
+
             if (!dialogoConcluido)
             {
                 Cursor.lockState = CursorLockMode.Confined;
-                DialogoController.instance.ProximaFala(falas[0]);
+                DialogoController.instance.ProximaFala(falas[0]);   
                 Analyze.instance.PistaDialogo();
             }
             else
             {
                 DialogoController.instance.ProximaFala(falas[1]);
+                CameraController.instance.CanMoveCamera();
             }
 
             dialogoConcluido = true;

@@ -52,7 +52,7 @@ public class PlayerInteraction : MonoBehaviour
             {
                 RotateObject();
             }
-            if(canFinish && Input.GetMouseButtonDown(1))
+            if(canFinish && Input.GetKeyDown(KeyCode.E))
             {
                 FinishView();
             }
@@ -68,7 +68,7 @@ public class PlayerInteraction : MonoBehaviour
             Interactables interactable = hit.collider.GetComponent<Interactables>();
             if (interactable != null)//aq ele ta colidindo com um objeto que interage
             {
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetKeyDown(KeyCode.E))
                 {
                     if (interactable.isMoving)
                     {

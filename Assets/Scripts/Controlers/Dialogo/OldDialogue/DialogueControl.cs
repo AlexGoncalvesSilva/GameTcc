@@ -43,7 +43,7 @@ public class DialogueControl : MonoBehaviour
     public void NextSentence()
     {
         DialogueNPC.instance.isSpeaking = true;
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             if (speechText.text == sentences[index])
             {
@@ -62,6 +62,7 @@ public class DialogueControl : MonoBehaviour
                     index = 0;
                     StartCoroutine(isNotSpeaking());
                     dialogueObj.SetActive(false);
+                    CameraController.instance.CanMoveCamera();
                 }
             }
         }

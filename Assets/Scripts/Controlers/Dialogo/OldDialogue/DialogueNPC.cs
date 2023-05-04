@@ -29,7 +29,7 @@ public class DialogueNPC : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X) && playerClose && !isSpeaking)
+        if (Input.GetKeyDown(KeyCode.E) && playerClose && !isSpeaking)
         {
             isSpeaking = true;
             dc.Speech(speechTxt, actorName);

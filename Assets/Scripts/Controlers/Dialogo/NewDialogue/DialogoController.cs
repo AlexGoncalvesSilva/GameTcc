@@ -33,7 +33,7 @@ public class DialogoController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && falaAtiva)
+        if (Input.GetKeyDown(KeyCode.E) && falaAtiva)
         {
             if (falas.respostas.Length > 0) 
             {
@@ -46,6 +46,7 @@ public class DialogoController : MonoBehaviour
                 painelDiaologo.SetActive(false);
                 falaNPC.gameObject.SetActive(false);
                 Cursor.lockState = CursorLockMode.Locked;
+                CameraController.instance.CanMoveCamera();
                 //voltar a andar
             }
         }
