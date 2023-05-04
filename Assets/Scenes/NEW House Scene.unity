@@ -12086,6 +12086,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7305061096792474304, guid: 1911f74de3bbe8242bf389d62c176be3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.7378121
+      objectReference: {fileID: 0}
     - target: {fileID: 7305061098059202035, guid: 1911f74de3bbe8242bf389d62c176be3, type: 3}
       propertyPath: pickUpUI
       value: 
@@ -12100,7 +12104,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7305061098059202062, guid: 1911f74de3bbe8242bf389d62c176be3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.480017
+      value: 40.44
       objectReference: {fileID: 0}
     - target: {fileID: 7305061098059202062, guid: 1911f74de3bbe8242bf389d62c176be3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12108,7 +12112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7305061098059202062, guid: 1911f74de3bbe8242bf389d62c176be3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.3884058
+      value: -0.13
       objectReference: {fileID: 0}
     - target: {fileID: 7305061098059202062, guid: 1911f74de3bbe8242bf389d62c176be3, type: 3}
       propertyPath: m_LocalRotation.w
