@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Dialogo : MonoBehaviour
 {
     public FalaNPC[] falas = new FalaNPC[2];
 
     private bool dialogoConcluido = false;
+
+    public UnityEvent IsTalking;
+    public UnityEvent OnFinishTalking;
+
 
 
     // Start is called before the first frame update
@@ -26,7 +31,7 @@ public class Dialogo : MonoBehaviour
         if (other.CompareTag("Player"))
         {
 
-            //Para de andar
+            IsTalking.Invoke();
             CameraController.instance.CantMoveCamera();
 
             if (!dialogoConcluido)

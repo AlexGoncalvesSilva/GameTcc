@@ -32,10 +32,7 @@ public class CountPistas : MonoBehaviour
     {
         if (countEvidenciasAnalisadas >= MaxEvidenciasDaCena)
         {
-            GameController.instance.canFinishLevel = true;
-            GameController.instance.AskToFinish();
             Debug.Log("Todas as pistas foram analisadas!");
-
         }
     }
 

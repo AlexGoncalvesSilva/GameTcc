@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b91b47a63b64349a357d6f1bed7fc8, type: 3}
+  m_Name: FalaNPC1
+  m_EditorClassIdentifier: 
+  fala: "Voc\xEA \xE9 a Carol? Os outros j\xE1 est\xE3o cientes sobre voc\xEA, pode
+    falar com quem quiser e para entrar na sala dele."
+  respostas:
+  - resposta: Onde posso encontrar a sala dele?
+    proximaFala: {fileID: 11400000, guid: 1a30e81f5d3888e479fcbd471d43786f, type: 2}
+  - resposta: "Voc\xEA era alguma coisa dele?"
+    proximaFala: {fileID: 11400000, guid: d67e8ac443d249d4e90e7dea45ccae36, type: 2}

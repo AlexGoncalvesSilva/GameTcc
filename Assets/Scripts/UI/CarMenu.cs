@@ -62,6 +62,6 @@ public class CarMenu : MonoBehaviour
     }
     public void LoadOngScene()
     {
-        SceneManager.LoadScene("ONG");
+        SceneManager.LoadScene("ONGScene");
     }
 }

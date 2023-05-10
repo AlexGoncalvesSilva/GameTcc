@@ -15,6 +15,7 @@ public class DialogueNPC : MonoBehaviour
     public bool playerClose;
     public bool isSpeaking;
 
+
     public static DialogueNPC instance;
 
     private void Awake()

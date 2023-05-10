@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class DialogoController : MonoBehaviour
@@ -12,6 +13,9 @@ public class DialogoController : MonoBehaviour
     public Text falaNPC;
 
     public GameObject resposta;
+
+    public UnityEvent IsTalking;
+    public UnityEvent OnFinishTalking;
 
     public bool falaAtiva = false;
 
@@ -47,7 +51,7 @@ public class DialogoController : MonoBehaviour
                 falaNPC.gameObject.SetActive(false);
                 Cursor.lockState = CursorLockMode.Locked;
                 CameraController.instance.CanMoveCamera();
-                //voltar a andar
+                OnFinishTalking.Invoke();
             }
         }
     }

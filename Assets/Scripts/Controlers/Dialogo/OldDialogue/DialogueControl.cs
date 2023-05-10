@@ -8,7 +8,7 @@ public class DialogueControl : MonoBehaviour
     [Header("Components")]
     public GameObject dialogueObj;
     public Text speechText;
-    public Text actorNameText;
+    //public Text actorNameText;
 
 
     [Header("Settings")]
@@ -27,7 +27,7 @@ public class DialogueControl : MonoBehaviour
     {
         dialogueObj.SetActive(true);
         sentences = txt;
-        actorNameText.text = actorName;
+        //actorNameText.text = actorName;
         StartCoroutine(TypeSentence());
     }
 
