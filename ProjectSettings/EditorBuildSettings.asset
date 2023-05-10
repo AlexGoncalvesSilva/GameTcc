@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ONGScene.unity
     guid: 3b4c3d362c107a641adf41a002420e04
+  - enabled: 1
+    path: Assets/Scenes/LabScene.unity
+    guid: a9303855f5792834c87efab19c84f023
   m_configObjects: {}

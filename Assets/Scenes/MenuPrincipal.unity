@@ -1061,7 +1061,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CLIQUE "X" PARA FALAR COM OS NPCs
+  m_text: CLIQUE "E" PARA INTERAGIR COM OBJETOS E PARA FALAR COM AS PESSOAS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1196,7 +1196,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b033e4b6926e0af4bac5125eb5a06ceb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f2f021c4725fa7d408915f2cadf4f803, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
