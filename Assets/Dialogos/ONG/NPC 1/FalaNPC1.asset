@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FalaNPC1
   m_EditorClassIdentifier: 
   fala: "Voc\xEA \xE9 a Carol? Os outros j\xE1 est\xE3o cientes sobre voc\xEA, pode
-    falar com quem quiser e para entrar na sala dele."
+    falar com quem quiser e para entrar na sala dele pegue a chave com a Ana."
   respostas:
   - resposta: Onde posso encontrar a sala dele?
     proximaFala: {fileID: 11400000, guid: 1a30e81f5d3888e479fcbd471d43786f, type: 2}

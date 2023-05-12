@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b91b47a63b64349a357d6f1bed7fc8, type: 3}
+  m_Name: Op1
+  m_EditorClassIdentifier: 
+  fala: "Sou sim, eu sou veterin\xE1ria aqui. "
+  respostas:
+  - resposta: "Quando foi a \xFAltima vez que voc\xEA falou com ele?"
+    proximaFala: {fileID: 11400000, guid: f357bb3603141d64d9f62a739e4b0917, type: 2}
+  - resposta: "Voc\xEA sabe se ele pode ter ido para algum lugar sem avisar? Uma
+      viagem ou algo do tipo? "
+    proximaFala: {fileID: 11400000, guid: 67ad1341296c4d34db8f249551d848d0, type: 2}
