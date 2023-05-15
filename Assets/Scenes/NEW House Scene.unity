@@ -12087,8 +12087,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7305061096792474304, guid: 1911f74de3bbe8242bf389d62c176be3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.4799999
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305061096792474304, guid: 1911f74de3bbe8242bf389d62c176be3, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.7378121
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305061097538582672, guid: 1911f74de3bbe8242bf389d62c176be3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305061097538582678, guid: 1911f74de3bbe8242bf389d62c176be3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305061097538582678, guid: 1911f74de3bbe8242bf389d62c176be3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.381
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305061097538582679, guid: 1911f74de3bbe8242bf389d62c176be3, type: 3}
+      propertyPath: m_Height
+      value: 1.65
       objectReference: {fileID: 0}
     - target: {fileID: 7305061098059202035, guid: 1911f74de3bbe8242bf389d62c176be3, type: 3}
       propertyPath: pickUpUI
