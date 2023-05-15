@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fala: "Sou sim, eu sou veterin\xE1ria aqui. "
   respostas:
-  - resposta: "Quando foi a \xFAltima vez que voc\xEA falou com ele?"
+  - resposta: "Quando foi a \xFAltima vez que voc\xEA falou com Daniel?"
     proximaFala: {fileID: 11400000, guid: f357bb3603141d64d9f62a739e4b0917, type: 2}
   - resposta: "Voc\xEA sabe se ele pode ter ido para algum lugar sem avisar? Uma
       viagem ou algo do tipo? "
