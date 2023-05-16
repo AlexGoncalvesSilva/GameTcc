@@ -8,8 +8,16 @@ public class CellphoneMenuController : MonoBehaviour
     private bool menuOpened = false;
     public GameObject cellphoneObj;
     public GameObject menuCellphone;
+    private PlayerMovement playerMovement;
+    private CameraController cameraController;
     private CursorLockMode previousCursorLockMode;
     private bool previousCursorVisible;
+
+    private void Start()
+    {
+        playerMovement = FindObjectOfType<PlayerMovement>();
+        cameraController = FindObjectOfType<CameraController>();
+    }
 
     void Update()
     {
@@ -17,18 +25,18 @@ public class CellphoneMenuController : MonoBehaviour
         {
             if (activatedCellphone)
             {
-                // Se o celular estiver ativado e o menu estiver aberto, desativa o menu
                 if (menuOpened && menuCellphone)
                 {
                     menuCellphone.SetActive(false);
                     menuOpened = false;
 
-                    // Restaura o estado anterior do mouse
                     Cursor.lockState = previousCursorLockMode;
                     Cursor.visible = previousCursorVisible;
+
+                    playerMovement.SetCanMove(true);
+                    cameraController.CanMoveCamera();
                 }
 
-                // Desativa o celular
                 if (cellphoneObj)
                 {
                     cellphoneObj.SetActive(false);
@@ -38,7 +46,6 @@ public class CellphoneMenuController : MonoBehaviour
             }
             else
             {
-                // Ativa o celular
                 if (cellphoneObj)
                 {
                     cellphoneObj.SetActive(true);
@@ -59,22 +66,25 @@ public class CellphoneMenuController : MonoBehaviour
                         menuCellphone.SetActive(false);
                         menuOpened = false;
 
-                        // Restaura o estado anterior do mouse
                         Cursor.lockState = previousCursorLockMode;
                         Cursor.visible = previousCursorVisible;
+
+                        playerMovement.SetCanMove(true);
+                        cameraController.CanMoveCamera();
                     }
                     else
                     {
                         menuCellphone.SetActive(true);
                         menuOpened = true;
 
-                        // Salva o estado atual do mouse
                         previousCursorLockMode = Cursor.lockState;
                         previousCursorVisible = Cursor.visible;
 
-                        // Libera o mouse e o torna visível
                         Cursor.lockState = CursorLockMode.None;
                         Cursor.visible = true;
+
+                        playerMovement.SetCanMove(false);
+                        cameraController.CantMoveCamera();
                     }
                 }
             }

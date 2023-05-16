@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
     public CharacterController controller;
-    public float moveSpeed; 
+    public float moveSpeed;
     public float rotation;
     public float gravity = -10f;
 
@@ -17,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask;
 
     bool isGrounded;
+    bool canMove = true; // Variável para controlar a movimentação do personagem
 
     private void Start()
     {
@@ -25,14 +25,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        movement();
+        if (canMove) // Verifica se a movimentação está habilitada
+        {
+            movement();
+        }
     }
 
     public void movement()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        if(isGrounded && velocity.y < 0)
+        if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
@@ -50,4 +53,9 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
     }
 
+    // Método para habilitar/desabilitar a movimentação do personagem
+    public void SetCanMove(bool move)
+    {
+        canMove = move;
+    }
 }

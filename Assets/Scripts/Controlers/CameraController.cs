@@ -3,18 +3,14 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public float mouseSensitivity;
-
     public Transform playerBody;
-
-    float xRotation = 0f;
-
+    private float xRotation = 0f;
     public bool isViewingAnObject;
-
     public static CameraController instance;
 
     private void Awake()
     {
-        instance= this;
+        instance = this;
     }
 
     void Start()
@@ -24,10 +20,10 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        if (isViewingAnObject == false)
+        if (!isViewingAnObject)
         {
-            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.fixedDeltaTime;
+            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.fixedDeltaTime;
 
             xRotation -= mouseY;
             xRotation = Mathf.Clamp(xRotation, -90f, 90f);
@@ -39,11 +35,13 @@ public class CameraController : MonoBehaviour
 
     public void CanMoveCamera()
     {
-        isViewingAnObject= false;
+        isViewingAnObject = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void CantMoveCamera()
     {
-        isViewingAnObject= true;
+        isViewingAnObject = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 }
