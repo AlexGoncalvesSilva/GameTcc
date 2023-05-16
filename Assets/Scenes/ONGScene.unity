@@ -693,10 +693,22 @@ PrefabInstance:
       propertyPath: m_TagString
       value: DoorMenu
       objectReference: {fileID: 0}
+    - target: {fileID: -7515429101286732190, guid: 21467886a70a7ba449913778bbff0e1b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6093592463355912122, guid: 21467886a70a7ba449913778bbff0e1b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 11b528fa82d32884fa155fcf8e51b35f, type: 2}
     - target: {fileID: -2762262359140785493, guid: 21467886a70a7ba449913778bbff0e1b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.25
       objectReference: {fileID: 0}
+    - target: {fileID: -804731622281664130, guid: 21467886a70a7ba449913778bbff0e1b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 11b528fa82d32884fa155fcf8e51b35f, type: 2}
     - target: {fileID: -466329591000292508, guid: 21467886a70a7ba449913778bbff0e1b, type: 3}
       propertyPath: m_IsActive
       value: 0
