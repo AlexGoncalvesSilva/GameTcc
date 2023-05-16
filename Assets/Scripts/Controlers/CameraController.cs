@@ -1,12 +1,15 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CameraController : MonoBehaviour
 {
-    public float mouseSensitivity;
     public Transform playerBody;
     private float xRotation = 0f;
     public bool isViewingAnObject;
     public static CameraController instance;
+
+    public Slider sensitivitySlider; // Referência ao slider de sensibilidade
+    private float mouseSensitivity = 100f; // Sensibilidade inicial do mouse
 
     private void Awake()
     {
@@ -16,6 +19,9 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+
+        // Configurar o valor inicial do slider para a sensibilidade atual
+        sensitivitySlider.value = mouseSensitivity;
     }
 
     void Update()
@@ -43,5 +49,10 @@ public class CameraController : MonoBehaviour
     {
         isViewingAnObject = true;
         Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void ChangeMouseSensitivity(float newSensitivity)
+    {
+        mouseSensitivity = newSensitivity;
     }
 }
