@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b91b47a63b64349a357d6f1bed7fc8, type: 3}
+  m_Name: 1.1m
+  m_EditorClassIdentifier: 
+  fala: "Ele costumava comprar comida por aqui, algumas frutas e ra\xE7\xE3o para
+    o seu cachorro."
+  respostas: []

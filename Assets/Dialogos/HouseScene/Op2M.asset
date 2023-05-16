@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b91b47a63b64349a357d6f1bed7fc8, type: 3}
+  m_Name: Op2M
+  m_EditorClassIdentifier: 
+  fala: "N\xE3o, por aqui esses dias foi tudo normal. "
+  respostas:
+  - resposta: "Voc\xEA soube o que aconteceu com Daniel?"
+    proximaFala: {fileID: 11400000, guid: ff676244abfa44f4494480ce7f1717f7, type: 2}
+  - resposta: "Quando foi a \xFAltima vez que voc\xEA viu Daniel? "
+    proximaFala: {fileID: 11400000, guid: 3376607333ee1fd4b8c87ee80cd46d65, type: 2}
