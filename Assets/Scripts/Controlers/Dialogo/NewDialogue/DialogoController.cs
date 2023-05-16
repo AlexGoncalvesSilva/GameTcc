@@ -76,7 +76,7 @@ public class DialogoController : MonoBehaviour
         LimparRespostas();
 
         falaAtiva = true;
-        painelDiaologo.SetActive(true);
+        painelDiaologo.SetActive(true); 
         falaNPC.gameObject.SetActive(true);
 
         falaNPC.text = falas.fala;
