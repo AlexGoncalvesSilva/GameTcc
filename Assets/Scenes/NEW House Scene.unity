@@ -6183,6 +6183,86 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 165326199}
   m_Mesh: {fileID: -5746147162638082140, guid: bdaf295aa0caf80408f4847820385ffc, type: 3}
+--- !u!1 &168254755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 168254756}
+  - component: {fileID: 168254759}
+  - component: {fileID: 168254758}
+  - component: {fileID: 168254757}
+  m_Layer: 8
+  m_Name: GameObject
+  m_TagString: HouseNotebook
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &168254756
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168254755}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6461109677631322065}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &168254757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168254755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4072d4c0367da842bd1f7fcfc9a1d5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerClose: 0
+  thisEvidenceWasAnalyzed: 0
+  alredyTalk: 0
+--- !u!114 &168254758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168254755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea773fa4fbbadf240847682e892360a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactContainer: {fileID: 0}
+  playerInteraction: {fileID: 0}
+  item: {fileID: 11400000, guid: 8a16307439f376e419fd99424ca40f53, type: 2}
+  isClue: 0
+  alredyInteract: 0
+  isMoving: 0
+--- !u!65 &168254759
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168254755}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.024118524, y: 0.023582568, z: 0.6757804}
+  m_Center: {x: -0.007059198, y: -0.0046193805, z: -0.14788535}
 --- !u!1 &168265482
 GameObject:
   m_ObjectHideFlags: 0
@@ -74028,6 +74108,7 @@ GameObject:
   - component: {fileID: 1979259410}
   - component: {fileID: 1979259412}
   - component: {fileID: 1979259411}
+  - component: {fileID: 1979259413}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -74081,6 +74162,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.02408179, y: 0.026836634, z: 0.024932172}
   m_Center: {x: -0.00074380264, y: 0.0011869408, z: -0.0021811698}
+--- !u!114 &1979259413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979259409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4072d4c0367da842bd1f7fcfc9a1d5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerClose: 0
+  thisEvidenceWasAnalyzed: 0
+  alredyTalk: 0
 --- !u!1 &1979780312
 GameObject:
   m_ObjectHideFlags: 0
@@ -92774,6 +92870,7 @@ GameObject:
   - component: {fileID: 1738776581803871358}
   - component: {fileID: 4356877828839972651}
   - component: {fileID: 4356877828839972652}
+  - component: {fileID: 4356877828839972653}
   m_Layer: 8
   m_Name: Pista 4 - Lixero
   m_TagString: Untagged
@@ -92812,6 +92909,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.029783694, y: 0.019999996, z: 0.023328496}
   m_Center: {x: -0.0048918477, y: -5.6528696e-18, z: 0.0016491954}
+--- !u!114 &4356877828839972653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4356877828839972650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4072d4c0367da842bd1f7fcfc9a1d5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerClose: 0
+  thisEvidenceWasAnalyzed: 0
+  alredyTalk: 0
 --- !u!23 &4360767807371553570
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -96354,6 +96466,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 64
+  canMove: 1
 --- !u!114 &5351937138181611008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96527,7 +96640,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5351937138777235764}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.16845955, y: 1.5880002, z: 0.14599991}
+  m_LocalPosition: {x: -0.16850396, y: 1.5880002, z: 0.14599991}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -100530,6 +100643,7 @@ GameObject:
   - component: {fileID: 466608246631966637}
   - component: {fileID: 6764164715640707206}
   - component: {fileID: 6764164715640707207}
+  - component: {fileID: 6764164715640707208}
   m_Layer: 8
   m_Name: Pista 2 - Notbook
   m_TagString: HouseNotebook
@@ -100548,7 +100662,8 @@ Transform:
   m_LocalPosition: {x: -5.5864525, y: 2.6544497, z: 37.32341}
   m_LocalScale: {x: 26.184208, y: 39.51071, z: 1.0075096}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 168254756}
   m_Father: {fileID: 543450653491196561}
   m_RootOrder: 71
   m_LocalEulerAnglesHint: {x: 0.455, y: 73.921, z: -90.09}
@@ -101547,7 +101662,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6458859407041361686}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea773fa4fbbadf240847682e892360a0, type: 3}
   m_Name: 
@@ -101555,9 +101670,24 @@ MonoBehaviour:
   interactContainer: {fileID: 0}
   playerInteraction: {fileID: 0}
   item: {fileID: 11400000, guid: 8a16307439f376e419fd99424ca40f53, type: 2}
-  isClue: 0
+  isClue: 1
   alredyInteract: 0
   isMoving: 0
+--- !u!114 &6764164715640707208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6458859407041361686}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4072d4c0367da842bd1f7fcfc9a1d5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerClose: 0
+  thisEvidenceWasAnalyzed: 0
+  alredyTalk: 0
 --- !u!33 &6768739086113413028
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -103194,6 +103324,7 @@ GameObject:
   - component: {fileID: 8628502785526068193}
   - component: {fileID: 8757869261080873701}
   - component: {fileID: 8757869261080873702}
+  - component: {fileID: 8757869261080873703}
   m_Layer: 8
   m_Name: Pista 2 - Notbook
   m_TagString: HouseNotebook
@@ -107417,6 +107548,7 @@ GameObject:
   - component: {fileID: 7621133392037008202}
   - component: {fileID: 4986139806342781056}
   - component: {fileID: 8578709097252860862}
+  - component: {fileID: 8578709097252860863}
   m_Layer: 8
   m_Name: Pista - Carta
   m_TagString: Untagged
@@ -107442,6 +107574,21 @@ MonoBehaviour:
   isClue: 1
   alredyInteract: 0
   isMoving: 0
+--- !u!114 &8578709097252860863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8578709097252860861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4072d4c0367da842bd1f7fcfc9a1d5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerClose: 0
+  thisEvidenceWasAnalyzed: 0
+  alredyTalk: 0
 --- !u!33 &8581843263231144819
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -107983,7 +108130,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7183117986195411966}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea773fa4fbbadf240847682e892360a0, type: 3}
   m_Name: 
@@ -107991,9 +108138,24 @@ MonoBehaviour:
   interactContainer: {fileID: 0}
   playerInteraction: {fileID: 0}
   item: {fileID: 11400000, guid: 8a16307439f376e419fd99424ca40f53, type: 2}
-  isClue: 0
+  isClue: 1
   alredyInteract: 0
   isMoving: 0
+--- !u!114 &8757869261080873703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7183117986195411966}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4072d4c0367da842bd1f7fcfc9a1d5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerClose: 0
+  thisEvidenceWasAnalyzed: 0
+  alredyTalk: 0
 --- !u!23 &8772098149799757946
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -108943,6 +109105,7 @@ GameObject:
   - component: {fileID: 649251792520524241}
   - component: {fileID: 6863230891952873471}
   - component: {fileID: 9141816029916953197}
+  - component: {fileID: 9141816029916953198}
   m_Layer: 8
   m_Name: Pista 3 - Porta Retrato
   m_TagString: Untagged
@@ -108968,6 +109131,21 @@ MonoBehaviour:
   isClue: 1
   alredyInteract: 0
   isMoving: 0
+--- !u!114 &9141816029916953198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9141816029916953196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4072d4c0367da842bd1f7fcfc9a1d5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerClose: 0
+  thisEvidenceWasAnalyzed: 0
+  alredyTalk: 0
 --- !u!33 &9155275840821121616
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -109126,6 +109304,7 @@ GameObject:
   - component: {fileID: 2380718651150591914}
   - component: {fileID: 8361921253549077313}
   - component: {fileID: 9217234437748192023}
+  - component: {fileID: 9217234437748192024}
   m_Layer: 8
   m_Name: Pista 2 - Notbook
   m_TagString: HouseNotebook
@@ -109140,7 +109319,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9217234437748192022}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea773fa4fbbadf240847682e892360a0, type: 3}
   m_Name: 
@@ -109148,9 +109327,24 @@ MonoBehaviour:
   interactContainer: {fileID: 0}
   playerInteraction: {fileID: 0}
   item: {fileID: 11400000, guid: 8a16307439f376e419fd99424ca40f53, type: 2}
-  isClue: 0
+  isClue: 1
   alredyInteract: 0
   isMoving: 0
+--- !u!114 &9217234437748192024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9217234437748192022}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4072d4c0367da842bd1f7fcfc9a1d5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerClose: 0
+  thisEvidenceWasAnalyzed: 0
+  alredyTalk: 0
 --- !u!64 &9223264520461634049
 MeshCollider:
   m_ObjectHideFlags: 0
