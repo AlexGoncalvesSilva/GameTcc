@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b91b47a63b64349a357d6f1bed7fc8, type: 3}
   m_Name: Rp1
   m_EditorClassIdentifier: 
-  fala: "A sala dele \xE9 essa da esquerda na nossa frente. Para entrar nela pegue
-    a chave com Ana"
+  fala: "A sala dele \xE9 essa da esquerda na nossa frente."
   respostas: []
