@@ -16,7 +16,14 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask;
 
     bool isGrounded;
-    bool canMove = true; // Variável para controlar a movimentação do personagem
+    public  bool canMove = true; // Variável para controlar a movimentação do personagem
+
+    public static PlayerMovement instance;
+
+    private void Awake()
+    {
+        instance= this;
+    }
 
     private void Start()
     {
