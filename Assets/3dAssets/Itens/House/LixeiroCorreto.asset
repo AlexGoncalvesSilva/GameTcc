@@ -15,5 +15,5 @@ MonoBehaviour:
   grabbable: 0
   audioClip: {fileID: 8300000, guid: b0d145f1b1f52e441bf72c1ce21ed826, type: 3}
   text: "Aqui est\xE1 a outra parte da foto, esse deve ser o padrastro dele."
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 6831aeb6f3ba3524296d41bc4f9f3afb, type: 3}
   panelInterection: {fileID: 0}

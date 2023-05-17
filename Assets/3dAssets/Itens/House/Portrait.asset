@@ -16,5 +16,5 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: ab8cc0a838f2f224a903d5a1a12169c5, type: 3}
   text: "A foto no porta retrato est\xE1 rasgada. Esse \xE9 Daniel, essa deve ser
     sua m\xE3e com ele"
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 87ac5b98df22e8747b1ceec06a335f7e, type: 3}
   panelInterection: {fileID: 0}
