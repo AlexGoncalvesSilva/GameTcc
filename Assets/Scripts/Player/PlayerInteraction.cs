@@ -21,6 +21,7 @@ public class PlayerInteraction : MonoBehaviour
     private bool isViewing;
     private bool canFinish;
     public bool notebook;
+    public bool notebookLab;
 
     private Interactables currentInteractable;
     private Vector3 originPosition;
@@ -28,9 +29,11 @@ public class PlayerInteraction : MonoBehaviour
 
     private SFXItens sfxItens;
 
+    public static PlayerInteraction instance;
     private void Awake()
     {
         sfxItens= GetComponent<SFXItens>();
+        instance = this;
     }
 
     // Start is called before the first frame update
@@ -98,6 +101,14 @@ public class PlayerInteraction : MonoBehaviour
 
                     }else { Interact(currentInteractable.item); }
 
+                    if(hit.transform.tag == "LabNotebook")
+                    {
+                        Interact(currentInteractable.item);
+                        StartCoroutine("rotinaText");
+                        LabNot.instance.OpenPanelLab();
+                        notebookLab = true;
+                    }
+
                     if(interactable.isClue == true && interactable.alredyInteract == false)
                     {
                         Analyze.instance.PistaObjeto();
@@ -122,6 +133,12 @@ public class PlayerInteraction : MonoBehaviour
         {
             //n se colidiu com nd
         }
+    }
+
+    IEnumerator rotinaText()
+    {
+        yield return new WaitForSeconds(2f);
+        UiManager.instance.SetCaptions("");
     }
 
     void Interact(Item item)
@@ -162,6 +179,7 @@ public class PlayerInteraction : MonoBehaviour
         {
             LiberarNot.instance.ClosePanel();
         }
+        if (notebookLab == true) { LabNot.instance.ClosePanelLab(); }
         UiManager.instance.hidePanelLevels();
         Cursor.lockState = CursorLockMode.Locked;
         OnFinishView.Invoke();

@@ -2,21 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LiberarNot : MonoBehaviour
+public class LabNot : MonoBehaviour
 {
-    public GameObject PanelNotebook; 
+
+    public GameObject PanelNotebook;
     [Header("MaxDistance")]
     public float MaxDistance = 2;
 
     private bool openedPanel = false;
 
-    public bool playerHasThePassword;
-
-    public static LiberarNot instance;
+    public static LabNot instance;
 
     private void Awake()
     {
-        instance = this;    
+        instance = this;
     }
 
     // Start is called before the first frame update
@@ -62,22 +61,10 @@ public class LiberarNot : MonoBehaviour
         }
         */
 
-        CheckIfHavePassword();
-
     }
 
-    void CheckIfHavePassword()
-    {
-        if(CheckPassword.instance.playerGetThePassword == true)
-        {
-            playerHasThePassword = true;
-        }else if (CheckPassword.instance.playerGetThePassword == false)
-        {
-            playerHasThePassword = false;
-        }
-    }
 
-    public void OpenPanel()
+    public void OpenPanelLab()
     {
         openedPanel = true;
         PanelNotebook.SetActive(true);
@@ -86,11 +73,12 @@ public class LiberarNot : MonoBehaviour
 
     }
 
-    public void ClosePanel()
+    public void ClosePanelLab()
     {
         openedPanel = false;
         PanelNotebook.SetActive(false);
-        ButtonNot.instance.blocoDeNotas.SetActive(false);
+        ButtonsNotLab.instance.player.SetActive(false);
         Cursor.visible = false;
+        PlayerInteraction.instance.notebook = false;
     }
 }
