@@ -26,7 +26,7 @@ public class GetNotCode : MonoBehaviour
             {
                 if (hit.transform.tag == "BobTheDog")
                 {
-                    LiberarNot.instance.playerHasThePassword = true;
+                    CheckPassword.instance.playerGetThePassword = true; 
                     Debug.Log("Pegou a senha");
                 }
             }

@@ -16,15 +16,7 @@ public class LiberarNot : MonoBehaviour
 
     private void Awake()
     {
-        if (instance != null)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
+        instance = this;    
     }
 
     // Start is called before the first frame update
@@ -70,6 +62,19 @@ public class LiberarNot : MonoBehaviour
         }
         */
 
+        CheckIfHavePassword();
+
+    }
+
+    void CheckIfHavePassword()
+    {
+        if(CheckPassword.instance.playerGetThePassword == true)
+        {
+            playerHasThePassword = true;
+        }else if (CheckPassword.instance.playerGetThePassword == false)
+        {
+            playerHasThePassword = false;
+        }
     }
 
     public void OpenPanel()
