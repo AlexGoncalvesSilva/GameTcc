@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabbable: 0
   audioClip: {fileID: 8300000, guid: ab8cc0a838f2f224a903d5a1a12169c5, type: 3}
-  text: "Tem uns documentos aqui, mas foram mexidos. Algu\xE9m esteve aqui"
+  text: "Aparentemente o cofre foi arrombado. Algu\xE9m esteva aqui e pegou o que
+    havia dentro. Um caso isolado ou ser\xE1 que tem haver com o desaparecimento
+    de Daniel?"
   image: {fileID: 0}
   panelInterection: {fileID: 0}
