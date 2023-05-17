@@ -4122,6 +4122,7 @@ GameObject:
   - component: {fileID: 588726040}
   - component: {fileID: 588726044}
   - component: {fileID: 588726043}
+  - component: {fileID: 588726045}
   m_Layer: 0
   m_Name: Cube.054 (1)
   m_TagString: Untagged
@@ -4227,6 +4228,21 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1997392669490731943, guid: 60fba8e57ca04104fa800d83f3a24e75, type: 3}
+--- !u!114 &588726045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588726039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4072d4c0367da842bd1f7fcfc9a1d5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerClose: 0
+  thisEvidenceWasAnalyzed: 0
+  alredyTalk: 0
 --- !u!64 &589588049
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9022,6 +9038,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.057849843, y: 0.18566652, z: 0.2522693}
   m_Center: {x: 0.0014433126, y: 0.091383554, z: 0.03334187}
+--- !u!114 &1737782692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720243137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4072d4c0367da842bd1f7fcfc9a1d5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerClose: 0
+  thisEvidenceWasAnalyzed: 0
+  alredyTalk: 0
 --- !u!1 &1769557294
 GameObject:
   m_ObjectHideFlags: 0
@@ -10862,6 +10893,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 64
+  canMove: 1
 --- !u!143 &7305061097456774449
 CharacterController:
   m_ObjectHideFlags: 0
@@ -11079,6 +11111,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   notebook: 0
+  notebookLab: 0
 --- !u!114 &7305061097456774862
 MonoBehaviour:
   m_ObjectHideFlags: 0
