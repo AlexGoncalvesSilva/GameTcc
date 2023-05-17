@@ -8,6 +8,8 @@ TagManager:
   - Door
   - Car
   - DoorMenu
+  - HouseNotebook
+  - BobTheDog
   layers:
   - Default
   - TransparentFX

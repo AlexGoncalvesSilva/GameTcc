@@ -20,6 +20,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private bool isViewing;
     private bool canFinish;
+    public bool notebook;
 
     private Interactables currentInteractable;
     private Vector3 originPosition;
@@ -86,15 +87,22 @@ public class PlayerInteraction : MonoBehaviour
 
                     CameraController.instance.CantMoveCamera();
 
-                    Interact(currentInteractable.item);
+                    if (hit.transform.tag == "HouseNotebook")
+                    {
+                        if (LiberarNot.instance.playerHasThePassword == true)
+                        {
+                            LiberarNot.instance.OpenPanel();
+                            notebook = true;
+                        } else
+                        { Interact(currentInteractable.item); }
+
+                    }else { Interact(currentInteractable.item); }
 
                     if(interactable.isClue == true && interactable.alredyInteract == false)
                     {
                         Analyze.instance.PistaObjeto();
                         interactable.alredyInteract= true;
                     }
-
-
 
                     if (currentInteractable.item.grabbable)
                     {
@@ -150,9 +158,12 @@ public class PlayerInteraction : MonoBehaviour
             currentInteractable.transform.rotation = originRotation;
             StartCoroutine(MovingObject(currentInteractable, originPosition));
         }
+        if(notebook == true)
+        {
+            LiberarNot.instance.ClosePanel();
+        }
         UiManager.instance.hidePanelLevels();
         Cursor.lockState = CursorLockMode.Locked;
-
         OnFinishView.Invoke();
         CameraController.instance.CanMoveCamera();
     }
