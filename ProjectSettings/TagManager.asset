@@ -10,6 +10,7 @@ TagManager:
   - DoorMenu
   - HouseNotebook
   - BobTheDog
+  - Cellphone
   layers:
   - Default
   - TransparentFX
