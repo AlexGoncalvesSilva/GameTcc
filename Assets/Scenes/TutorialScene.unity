@@ -1354,6 +1354,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cebd2fd8a5045c745add0f95d71f1914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 1849671502}
+  i: 0
 --- !u!4 &440843418
 Transform:
   m_ObjectHideFlags: 0
@@ -3888,7 +3890,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: CLIQUE "E" PARA INTERAGIR COM OBJETOS E NPCs
 --- !u!222 &1849671503
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4602,6 +4604,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 64
+  canMove: 1
 --- !u!143 &5351937138656766341
 CharacterController:
   m_ObjectHideFlags: 0
