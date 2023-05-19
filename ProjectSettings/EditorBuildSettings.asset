@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuPrincipal.unity
     guid: 497fd2b3df14d9d45b78297fd6b8e13e
   - enabled: 1
-    path: Assets/Scenes/OfficeScene.unity
-    guid: 24a00e851bc1206419723b7d4f37257d
-  - enabled: 1
     path: Assets/Scenes/TutorialScene.unity
     guid: 6609d5beecf27d340b40dd828a255427
+  - enabled: 1
+    path: Assets/Scenes/OfficeScene.unity
+    guid: 24a00e851bc1206419723b7d4f37257d
   - enabled: 1
     path: Assets/Scenes/NEW House Scene.unity
     guid: 2584ef64312559540805348025988e09

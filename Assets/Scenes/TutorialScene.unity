@@ -529,7 +529,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BACK TO OFFICCE
+  m_text: "VOLTAR AO ESCRIT\xD3RIO"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -934,9 +934,17 @@ PrefabInstance:
       propertyPath: m_TagString
       value: DoorMenu
       objectReference: {fileID: 0}
+    - target: {fileID: -586406174181898900, guid: 9634d301a1db1544dbf1bf69e855ef0d, type: 3}
+      propertyPath: m_TagString
+      value: Selectable
+      objectReference: {fileID: 0}
     - target: {fileID: 65702495048144492, guid: 9634d301a1db1544dbf1bf69e855ef0d, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 281855664364225751, guid: 9634d301a1db1544dbf1bf69e855ef0d, type: 3}
+      propertyPath: m_TagString
+      value: Selectable
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9634d301a1db1544dbf1bf69e855ef0d, type: 3}
       propertyPath: m_Name
@@ -953,6 +961,10 @@ PrefabInstance:
     - target: {fileID: 8416272007918961125, guid: 9634d301a1db1544dbf1bf69e855ef0d, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8416272007918961125, guid: 9634d301a1db1544dbf1bf69e855ef0d, type: 3}
+      propertyPath: m_TagString
+      value: Selectable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9634d301a1db1544dbf1bf69e855ef0d, type: 3}
@@ -1355,6 +1367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1849671502}
+  textFinal: {fileID: 1718187829}
   i: 0
 --- !u!4 &440843418
 Transform:
@@ -2409,6 +2422,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CellphoneHolder
       objectReference: {fileID: 0}
+    - target: {fileID: 6189591092584537930, guid: 85c69c6d63ee10946be017fc0fb3f94d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6189591092584537931, guid: 85c69c6d63ee10946be017fc0fb3f94d, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -2745,7 +2762,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1434472160}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 24.465494, y: 24.465496, z: 24.465494}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2754,8 +2771,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: 244}
-  m_SizeDelta: {x: 55.1, y: 10}
+  m_AnchoredPosition: {x: 4, y: 244}
+  m_SizeDelta: {x: 81.7, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1434472162
 MonoBehaviour:
@@ -2777,9 +2794,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level Selection
-
-'
+  m_text: "SELE\xC7\xC3O DE CENA"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2813,7 +2828,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -3172,8 +3187,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -102}
-  m_SizeDelta: {x: 279.44, y: 30}
+  m_AnchoredPosition: {x: 0, y: -162}
+  m_SizeDelta: {x: 279.4, y: 58.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!65 &1603553720
 BoxCollider:
@@ -3239,7 +3254,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3464,6 +3479,7 @@ RectTransform:
   - {fileID: 399957448}
   - {fileID: 50713655}
   - {fileID: 1849671500}
+  - {fileID: 1718187833}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3670,6 +3686,104 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6189591092584537931, guid: 85c69c6d63ee10946be017fc0fb3f94d, type: 3}
   m_PrefabInstance: {fileID: 1145719440}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1718187829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1718187833}
+  - component: {fileID: 1718187832}
+  - component: {fileID: 1718187830}
+  - component: {fileID: 1718187831}
+  m_Layer: 5
+  m_Name: TutText (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1718187830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718187829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.81940556, b: 0.28773582, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 36
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 50
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "ENCAMINHAREI ISSO TUDO PARA A DELEGACIA, ELES V\xC3O CONSEGUIR IDENTIFICAR
+    O SUSPEITO. HORA DE VOLTAR AO ESCRIT\xD3RIO. \nPARA VOLTAR AO ESCRIT\xD3RIO,
+    CLIQUE 'E' NA PORTA DE SA\xCDDA"
+--- !u!114 &1718187831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718187829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
+--- !u!222 &1718187832
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718187829}
+  m_CullTransparentMesh: 1
+--- !u!224 &1718187833
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718187829}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1644882901}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 57, y: 144}
+  m_SizeDelta: {x: 1573.9011, y: 171.9528}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1732568809
 GameObject:
   m_ObjectHideFlags: 0
@@ -3890,7 +4004,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: CLIQUE "E" PARA INTERAGIR COM OBJETOS E NPCs
+  m_Text: CLIQUE "E" PARA PROSSEGUIR
 --- !u!222 &1849671503
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4279,7 +4393,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5351937138312861007}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2732392, y: 3.13, z: 0.14599988}
+  m_LocalPosition: {x: -0.27353376, y: 3.13, z: 0.14599988}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
