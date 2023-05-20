@@ -7,6 +7,7 @@ public class CarMenu : MonoBehaviour
 {
     public GameObject Panel;
     public Transform PlayerCamera;
+    public Interactions interactionsScript; // Referência ao script "Interactions"
     [Header("MaxDistance")]
     public float MaxDistance = 5;
     public float CloseDistance = 10; // Distância para fechar o menu
@@ -15,7 +16,8 @@ public class CarMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        // Obtém a referência ao script "Interactions"
+        interactionsScript = FindObjectOfType<Interactions>();
     }
 
     // Update is called once per frame
@@ -34,12 +36,18 @@ public class CarMenu : MonoBehaviour
                         Panel.SetActive(true);
                         Cursor.visible = true;
                         Cursor.lockState = CursorLockMode.Confined;
+
+                        // Define que o personagem está interagindo
+                        interactionsScript.SetInteracting(true);
                     }
                     else
                     {
                         openedPanel = false;
                         Panel.SetActive(false);
                         Cursor.visible = false;
+
+                        // Define que o personagem não está mais interagindo
+                        interactionsScript.SetInteracting(false);
                     }
                 }
             }
@@ -49,6 +57,9 @@ public class CarMenu : MonoBehaviour
                 Panel.SetActive(false);
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
+
+                // Define que o personagem não está mais interagindo
+                interactionsScript.SetInteracting(false);
             }
         }
 
@@ -58,6 +69,9 @@ public class CarMenu : MonoBehaviour
             openedPanel = false;
             Panel.SetActive(false);
             Cursor.visible = false;
+
+            // Define que o personagem não está mais interagindo
+            interactionsScript.SetInteracting(false);
         }
     }
 

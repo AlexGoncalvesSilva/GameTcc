@@ -11,7 +11,7 @@ public class Interactions : MonoBehaviour
     private Transform playerCameraTransform;
 
     [SerializeField]
-    private GameObject pickUpUI;
+    public GameObject pickUpUI;
 
     [SerializeField]
     [Min(1)]
@@ -19,30 +19,34 @@ public class Interactions : MonoBehaviour
 
     private RaycastHit hit;
 
-  
-
-    private void Start()
-    {
-        
-    }
-
-
+    private bool isInteracting = false; // Variável para controlar se o personagem está interagindo
 
     private void Update()
     {
+        Debug.DrawRay(playerCameraTransform.position, playerCameraTransform.forward * hitRange, Color.red);
 
-        Debug.DrawRay(playerCameraTransform.position, playerCameraTransform.forward *hitRange, Color.red);
-        if(hit.collider != null)
+        // Verifica se o personagem está interagindo com algum objeto ou algum menu está aberto
+        if (isInteracting)
         {
-            hit.collider.GetComponent<Highlight>()?.ToggleHighlight(false);
             pickUpUI.SetActive(false);
+            return; // Sai do método para evitar a execução das próximas condições
         }
-        if(Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out hit, hitRange, interactLayermask))
+
+        if (Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out hit, hitRange, interactLayermask))
         {
             hit.collider.GetComponent<Highlight>()?.ToggleHighlight(true);
             pickUpUI.SetActive(true);
-            
-            
+        }
+        else
+        {
+            pickUpUI.SetActive(false);
         }
     }
+
+    // Método para definir se o personagem está interagindo ou não
+    public void SetInteracting(bool interacting)
+    {
+        isInteracting = interacting;
+    }
 }
+
