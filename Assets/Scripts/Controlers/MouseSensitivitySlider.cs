@@ -9,6 +9,11 @@ public class MouseSensitivitySlider : MonoBehaviour
     void Start()
     {
         // Adicionar um listener para chamar o método ChangeMouseSensitivity quando o valor do slider for alterado
-        sensitivitySlider.onValueChanged.AddListener(cameraController.ChangeMouseSensitivity);
+        sensitivitySlider.onValueChanged.AddListener(OnSensitivityChanged);
+    }
+
+    private void OnSensitivityChanged(float newSensitivity)
+    {
+        cameraController.ChangeMouseSensitivity(newSensitivity);
     }
 }

@@ -9,7 +9,6 @@ public class CameraController : MonoBehaviour
     public static CameraController instance;
 
     public Slider sensitivitySlider; // Referência ao slider de sensibilidade
-    private float mouseSensitivity = 100f; // Sensibilidade inicial do mouse
 
     private void Awake()
     {
@@ -20,16 +19,20 @@ public class CameraController : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
 
-        // Configurar o valor inicial do slider para a sensibilidade atual
-        sensitivitySlider.value = mouseSensitivity;
+        // Carregar o valor salvo da sensibilidade do mouse
+        float savedSensitivity = PlayerPrefs.GetFloat("MouseSensitivity", 100f);
+        sensitivitySlider.value = savedSensitivity; // Configurar o valor inicial do slider
+
+        // Definir a sensibilidade do mouse com base no valor salvo
+        ChangeMouseSensitivity(savedSensitivity);
     }
 
     void Update()
     {
         if (!isViewingAnObject)
         {
-            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.fixedDeltaTime;
-            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.fixedDeltaTime;
+            float mouseX = Input.GetAxis("Mouse X") * sensitivitySlider.value * Time.fixedDeltaTime;
+            float mouseY = Input.GetAxis("Mouse Y") * sensitivitySlider.value * Time.fixedDeltaTime;
 
             xRotation -= mouseY;
             xRotation = Mathf.Clamp(xRotation, -90f, 90f);
@@ -53,6 +56,6 @@ public class CameraController : MonoBehaviour
 
     public void ChangeMouseSensitivity(float newSensitivity)
     {
-        mouseSensitivity = newSensitivity;
+        PlayerPrefs.SetFloat("MouseSensitivity", newSensitivity); // Salvar o novo valor da sensibilidade do mouse
     }
 }
