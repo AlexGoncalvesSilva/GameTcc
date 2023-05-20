@@ -13,6 +13,7 @@ TagManager:
   - Cellphone
   - LabNotebook
   - PostLights
+  - Switcher
   layers:
   - Default
   - TransparentFX
