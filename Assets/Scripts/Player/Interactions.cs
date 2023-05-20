@@ -49,4 +49,3 @@ public class Interactions : MonoBehaviour
         isInteracting = interacting;
     }
 }
-
