@@ -22,18 +22,19 @@ public class CountPistas : MonoBehaviour
 
     void Start()
     {
+        LoadPistas();
         UpdatePistaText();
-        UpdatePistaExtra();
+        //UpdatePistaExtra();
+        checkIfWin(); // Verifica se já coletou as 4 pistas
     }
+
     public void AddPista()
     {
         countEvidenciasAnalisadas++;
         UpdatePistaText();
         checkIfWin();
-        //UpdatePistaExtra();
-        
+        SavePistas();
     }
-
 
     void checkIfWin()
     {
@@ -57,5 +58,19 @@ public class CountPistas : MonoBehaviour
     private void EnableOutroMenuButton()
     {
         outroMenuButton.interactable = true;
+    }
+
+    private void SavePistas()
+    {
+        PlayerPrefs.SetInt("PistasColetadas", countEvidenciasAnalisadas);
+        PlayerPrefs.Save();
+    }
+
+    private void LoadPistas()
+    {
+        if (PlayerPrefs.HasKey("PistasColetadas"))
+        {
+            countEvidenciasAnalisadas = PlayerPrefs.GetInt("PistasColetadas");
+        }
     }
 }
