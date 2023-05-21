@@ -8,6 +8,7 @@ public class CountPistas : MonoBehaviour
     public int countEvidenciasAnalisadas;
     public int MaxEvidenciasDaCena;
     public Text pistaText;
+    public Button outroMenuButton;
 
     public static CountPistas instance;
 
@@ -25,7 +26,7 @@ public class CountPistas : MonoBehaviour
     {
         countEvidenciasAnalisadas++;
         UpdatePistaText();
-        checkIfWin();   
+        checkIfWin();
     }
 
     void checkIfWin()
@@ -33,6 +34,7 @@ public class CountPistas : MonoBehaviour
         if (countEvidenciasAnalisadas >= MaxEvidenciasDaCena)
         {
             Debug.Log("Todas as pistas foram analisadas!");
+            EnableOutroMenuButton();
         }
     }
 
@@ -41,4 +43,8 @@ public class CountPistas : MonoBehaviour
         pistaText.text = string.Format("{0}/{1} Pistas Analisadas", countEvidenciasAnalisadas, MaxEvidenciasDaCena);
     }
 
+    private void EnableOutroMenuButton()
+    {
+        outroMenuButton.interactable = true;
+    }
 }
