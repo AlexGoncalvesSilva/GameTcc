@@ -8,6 +8,7 @@ public class OutlineSelection : MonoBehaviour
     private Transform highlight;
     private Transform selection;
     private RaycastHit raycastHit;
+    public float maxDistance = 3f; // Define a distância máxima para enxergar o outline
 
     void Update()
     {
@@ -18,7 +19,7 @@ public class OutlineSelection : MonoBehaviour
             highlight = null;
         }
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (!EventSystem.current.IsPointerOverGameObject() && Physics.Raycast(ray, out raycastHit)) //Make sure you have EventSystem in the hierarchy before using EventSystem
+        if (!EventSystem.current.IsPointerOverGameObject() && Physics.Raycast(ray, out raycastHit, maxDistance)) // Use maxDistance no raycast para limitar a distância
         {
             highlight = raycastHit.transform;
             if (highlight.CompareTag("Selectable") && highlight != selection)
@@ -40,7 +41,8 @@ public class OutlineSelection : MonoBehaviour
                 highlight = null;
             }
         }
-
+    
+       /*
         // Selection
         if (Input.GetMouseButtonDown(0))
         {
@@ -58,11 +60,16 @@ public class OutlineSelection : MonoBehaviour
             {
                 if (selection)
                 {
-                    selection.gameObject.GetComponent<Outline>().enabled = false;
-                    selection = null;
+                    // Comentando a linha abaixo para remover a desativação do outline quando você interage com o objeto clicando
+                    // selection.gameObject.GetComponent<Outline>().enabled = false;
+                    //selection = null;
                 }
             }
+    
         }
-    }
-
+    
+        */
+        }
+    
 }
+        
