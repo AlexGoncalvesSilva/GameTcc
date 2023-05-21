@@ -9,10 +9,12 @@ using UnityEngine.Events;
 public class Interactables : MonoBehaviour
 {
     [SerializeField] private GameObject interactContainer;
-    [SerializeField] private PlayerInteraction playerInteraction;
+    [SerializeField] public PlayerInteraction playerInteraction;
     public Item item;
 
     public bool isClue;
+    
+
 
     public bool alredyInteract;
     /*

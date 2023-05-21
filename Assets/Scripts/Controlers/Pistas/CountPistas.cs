@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
 public class CountPistas : MonoBehaviour
 {
     public int countEvidenciasAnalisadas;
     public int MaxEvidenciasDaCena;
-    public Text pistaText;
+    public TextMeshProUGUI pistaText;
+    public TextMeshProUGUI pistaExtra;
     public Button outroMenuButton;
+    private Interactables interactables;
 
     public static CountPistas instance;
 
@@ -20,14 +23,17 @@ public class CountPistas : MonoBehaviour
     void Start()
     {
         UpdatePistaText();
+        UpdatePistaExtra();
     }
-
     public void AddPista()
     {
         countEvidenciasAnalisadas++;
         UpdatePistaText();
         checkIfWin();
+        //UpdatePistaExtra();
+        
     }
+
 
     void checkIfWin()
     {
@@ -41,6 +47,11 @@ public class CountPistas : MonoBehaviour
     private void UpdatePistaText()
     {
         pistaText.text = string.Format("{0}/{1} Pistas Analisadas", countEvidenciasAnalisadas, MaxEvidenciasDaCena);
+    }
+
+    private void UpdatePistaExtra()
+    {
+        pistaExtra.text = string.Format("{0} Pistas Extras", countEvidenciasAnalisadas);
     }
 
     private void EnableOutroMenuButton()
