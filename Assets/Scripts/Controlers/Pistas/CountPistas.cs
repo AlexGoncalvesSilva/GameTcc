@@ -13,6 +13,8 @@ public class CountPistas : MonoBehaviour
     public Button outroMenuButton;
     private Interactables interactables;
 
+    public string cenaKey; // Chave única para cada cena
+
     public static CountPistas instance;
 
     private void Awake()
@@ -24,8 +26,8 @@ public class CountPistas : MonoBehaviour
     {
         LoadPistas();
         UpdatePistaText();
-        //UpdatePistaExtra();
-        checkIfWin(); // Verifica se já coletou as 4 pistas
+       // UpdatePistaExtra();
+        checkIfWin(); // Verifica se já coletou as pistas suficientes
     }
 
     public void AddPista()
@@ -62,15 +64,15 @@ public class CountPistas : MonoBehaviour
 
     private void SavePistas()
     {
-        PlayerPrefs.SetInt("PistasColetadas", countEvidenciasAnalisadas);
+        PlayerPrefs.SetInt(cenaKey + "PistasColetadas", countEvidenciasAnalisadas);
         PlayerPrefs.Save();
     }
 
     private void LoadPistas()
     {
-        if (PlayerPrefs.HasKey("PistasColetadas"))
+        if (PlayerPrefs.HasKey(cenaKey + "PistasColetadas"))
         {
-            countEvidenciasAnalisadas = PlayerPrefs.GetInt("PistasColetadas");
+            countEvidenciasAnalisadas = PlayerPrefs.GetInt(cenaKey + "PistasColetadas");
         }
     }
 }
