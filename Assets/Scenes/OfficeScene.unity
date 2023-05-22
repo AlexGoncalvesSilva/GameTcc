@@ -1181,7 +1181,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 950721250}
   m_OnClick:
     m_PersistentCalls:
@@ -1764,6 +1764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dde800420c09e3f4f93c01b6ead50f06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelUnlockedButton: {fileID: 950721249}
 --- !u!4 &1205508603
 Transform:
   m_ObjectHideFlags: 0
@@ -2535,7 +2536,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 2082457323}
   m_OnClick:
     m_PersistentCalls:
@@ -3628,6 +3629,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2975506154480044914, guid: eba1be2dccc8e75449862a6b660150f2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -337
+      objectReference: {fileID: 0}
+    - target: {fileID: 2975506154480044914, guid: eba1be2dccc8e75449862a6b660150f2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 56
+      objectReference: {fileID: 0}
     - target: {fileID: 4187501812595188067, guid: eba1be2dccc8e75449862a6b660150f2, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3647,6 +3656,10 @@ PrefabInstance:
     - target: {fileID: 6001642501721993468, guid: eba1be2dccc8e75449862a6b660150f2, type: 3}
       propertyPath: m_Color.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516730128665061544, guid: eba1be2dccc8e75449862a6b660150f2, type: 3}
+      propertyPath: m_Name
+      value: Quadro
       objectReference: {fileID: 0}
     - target: {fileID: 8516730128665061544, guid: eba1be2dccc8e75449862a6b660150f2, type: 3}
       propertyPath: m_IsActive

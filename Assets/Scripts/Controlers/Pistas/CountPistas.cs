@@ -14,6 +14,7 @@ public class CountPistas : MonoBehaviour
     private Interactables interactables;
 
     public string cenaKey; // Chave única para cada cena
+    public static bool allCollectedClues = false;
 
     public static CountPistas instance;
 
@@ -47,6 +48,7 @@ public class CountPistas : MonoBehaviour
         if (countEvidenciasAnalisadas >= MaxEvidenciasDaCena)
         {
             Debug.Log("Todas as pistas foram analisadas!");
+            allCollectedClues = true;
             EnableOutroMenuButton();
         }
     }
