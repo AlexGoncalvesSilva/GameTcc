@@ -26,17 +26,21 @@ public class CountPistas : MonoBehaviour
     {
         LoadPistas();
         UpdatePistaText();
-       // UpdatePistaExtra();
+        // UpdatePistaExtra();
         checkIfWin(); // Verifica se já coletou as pistas suficientes
     }
 
     public void AddPista()
     {
-        countEvidenciasAnalisadas++;
-        UpdatePistaText();
-        checkIfWin();
-        SavePistas();
+        if (countEvidenciasAnalisadas < MaxEvidenciasDaCena)
+        {
+            countEvidenciasAnalisadas++;
+            UpdatePistaText();
+            checkIfWin();
+            SavePistas();
+        }
     }
+
 
     void checkIfWin()
     {
@@ -73,6 +77,9 @@ public class CountPistas : MonoBehaviour
         if (PlayerPrefs.HasKey(cenaKey + "PistasColetadas"))
         {
             countEvidenciasAnalisadas = PlayerPrefs.GetInt(cenaKey + "PistasColetadas");
+            UpdatePistaText(); // Atualiza o texto da interface com o valor carregado
+            checkIfWin(); // Verifica se já coletou as pistas suficientes
         }
     }
+
 }
