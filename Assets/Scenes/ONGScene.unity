@@ -1823,6 +1823,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7146521406498821007, guid: 21467886a70a7ba449913778bbff0e1b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -7146521406498821007, guid: 21467886a70a7ba449913778bbff0e1b, type: 3}
       propertyPath: m_TagString
       value: Door
       objectReference: {fileID: 0}
