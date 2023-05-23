@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabbable: 0
   audioClip: {fileID: 8300000, guid: 07668cff04507004ea66ca95032e7219, type: 3}
-  text: "Enviei para o departamento o que consegui na joalheria. Agora t\xE1 na hora
-    de focar no outro caso."
+  text: 
   image: {fileID: 0}
   panelInterection: {fileID: 0}

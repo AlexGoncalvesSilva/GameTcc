@@ -15,6 +15,7 @@ TagManager:
   - PostLights
   - Switcher
   - OfficeNotebook
+  - NPC
   layers:
   - Default
   - TransparentFX

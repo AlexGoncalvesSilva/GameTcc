@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8b91b47a63b64349a357d6f1bed7fc8, type: 3}
-  m_Name: 2.2
+  m_Name: 1.2Ana
   m_EditorClassIdentifier: 
-  fala: "Infelizmente n\xE3o, ele trouxe o seu cachorro para c\xE1 um pouco antes
-    de fecharmos e disse que tinha que fazer algo e que a gente cuidasse dele por
-    enquanto."
+  fala: "N\xE3o, ele avisaria se fosse demorar tanto, temos muitas obriga\xE7\xF5es
+    por aqui e ele \xE9 bem respons\xE1vel  "
   respostas: []

@@ -52,6 +52,7 @@ public class DialogoController : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Locked;
                 CameraController.instance.CanMoveCamera();
                 OnFinishTalking.Invoke();
+                Dialogo.instance.playerIntetact = false;
             }
         }
     }

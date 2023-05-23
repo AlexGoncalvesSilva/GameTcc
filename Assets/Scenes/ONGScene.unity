@@ -5276,7 +5276,7 @@ GameObject:
   - component: {fileID: 882098535}
   m_Layer: 0
   m_Name: AnaNPC2
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5326,6 +5326,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  playerIntetact: 0
+  PlayerCamera: {fileID: 7305061097398014460}
+  MaxDistance: 5
 --- !u!135 &882098536
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6190,7 +6193,7 @@ GameObject:
   - component: {fileID: 1002337441}
   m_Layer: 0
   m_Name: TestemunhaNPC1
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6240,6 +6243,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  playerIntetact: 0
+  PlayerCamera: {fileID: 7305061097398014460}
+  MaxDistance: 5
 --- !u!135 &1002337442
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8534,6 +8540,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  playerIntetact: 0
+  PlayerCamera: {fileID: 0}
+  MaxDistance: 5
 --- !u!135 &1445673999
 SphereCollider:
   m_ObjectHideFlags: 0

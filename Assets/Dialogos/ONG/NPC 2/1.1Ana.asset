@@ -10,8 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8b91b47a63b64349a357d6f1bed7fc8, type: 3}
-  m_Name: 2.1
+  m_Name: 1.1Ana
   m_EditorClassIdentifier: 
-  fala: "Somente com o padrasto dele, n\xE3o consegui falar com sua m\xE3e pois ela
-    est\xE1 viajando, mas ele me disse que falaria com ela."
+  fala: "Foi h\xE1 dois dias atr\xE1s, quando ele veio aqui trazer Bob, seu cachorro. "
   respostas: []
