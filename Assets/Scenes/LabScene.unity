@@ -7126,9 +7126,13 @@ PrefabInstance:
       value: GameController
       objectReference: {fileID: 0}
     - target: {fileID: 6105290871003036012, guid: 8de5876090446dd4e8ce44097ec67fb4, type: 3}
+      propertyPath: cenaKey
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6105290871003036012, guid: 8de5876090446dd4e8ce44097ec67fb4, type: 3}
       propertyPath: pistaText
       value: 
-      objectReference: {fileID: 524266296}
+      objectReference: {fileID: 0}
     - target: {fileID: 6105290871003036012, guid: 8de5876090446dd4e8ce44097ec67fb4, type: 3}
       propertyPath: MaxEvidenciasDaCena
       value: 4

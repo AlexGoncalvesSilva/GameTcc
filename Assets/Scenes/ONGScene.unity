@@ -1574,6 +1574,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6001642501721993466, guid: eba1be2dccc8e75449862a6b660150f2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8953966655118455945, guid: eba1be2dccc8e75449862a6b660150f2, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3640,15 +3644,43 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2894509977200834346}
     - target: {fileID: 6105290871003036012, guid: 8de5876090446dd4e8ce44097ec67fb4, type: 3}
+      propertyPath: sceneType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6105290871003036012, guid: 8de5876090446dd4e8ce44097ec67fb4, type: 3}
       propertyPath: pistaExtra
       value: 
       objectReference: {fileID: 2894509977875942229}
+    - target: {fileID: 6105290871003036012, guid: 8de5876090446dd4e8ce44097ec67fb4, type: 3}
+      propertyPath: pistaTextOng
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6105290871003036012, guid: 8de5876090446dd4e8ce44097ec67fb4, type: 3}
       propertyPath: outroMenuButton
       value: 
       objectReference: {fileID: 120529897}
     - target: {fileID: 6105290871003036012, guid: 8de5876090446dd4e8ce44097ec67fb4, type: 3}
+      propertyPath: maxEvidenciasOng
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6105290871003036012, guid: 8de5876090446dd4e8ce44097ec67fb4, type: 3}
       propertyPath: MaxEvidenciasDaCena
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6105290871003036012, guid: 8de5876090446dd4e8ce44097ec67fb4, type: 3}
+      propertyPath: pistaTextLaboratorio
+      value: 
+      objectReference: {fileID: 2894509977200834346}
+    - target: {fileID: 6105290871003036012, guid: 8de5876090446dd4e8ce44097ec67fb4, type: 3}
+      propertyPath: maxEvidenciasLaboratorio
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6105290871003036012, guid: 8de5876090446dd4e8ce44097ec67fb4, type: 3}
+      propertyPath: countEvidenciasAnalisadasOng
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6105290871003036012, guid: 8de5876090446dd4e8ce44097ec67fb4, type: 3}
+      propertyPath: countEvidenciasAnalisadasLaboratorio
       value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3665,11 +3697,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 520554892}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dde800420c09e3f4f93c01b6ead50f06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ongLevelButton: {fileID: 0}
+  laboratorioLevelButton: {fileID: 0}
 --- !u!114 &520554894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4767,7 +4801,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

@@ -13,7 +13,7 @@ public class TutorialController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -60,21 +60,21 @@ public class TutorialController : MonoBehaviour
 
         }
     }
-    
+
     void finishedTutorial()
     {
-        if (CountPistas.instance.countEvidenciasAnalisadas >= CountPistas.instance.MaxEvidenciasDaCena)
+        if (CountPistas.instance.countEvidenciasAnalisadasOng >= CountPistas.instance.maxEvidenciasOng)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                StartCoroutine("rotinaFInal");
+                StartCoroutine("rotinaFinal");
             }
         }
     }
-    
-    IEnumerator rotinaFInal()
+
+    IEnumerator rotinaFinal()
     {
-        yield return new WaitForSeconds(3f);
-        textFinal.SetActive(true);
+        // Lógica para o término do tutorial
+        yield return null;
     }
 }
