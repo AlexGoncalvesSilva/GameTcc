@@ -1736,6 +1736,7 @@ MonoBehaviour:
   i: 0
   PlayerCamera: {fileID: 150073711}
   playerInteractWithNotebook: 0
+  alredyInteract: 0
   MaxDistance: 5
 --- !u!114 &1213813632
 MonoBehaviour:
@@ -2189,8 +2190,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "ENVIEI TUDO PARA A POL\xCDCIA, AGORA EST\xC1 NA HORA DE FOCAR NESSE NOVO
-    CASO QUE ME PASSARAM"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
