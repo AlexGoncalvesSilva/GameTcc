@@ -1696,7 +1696,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1213813630}
   - component: {fileID: 1213813631}
-  - component: {fileID: 1213813632}
   m_Layer: 0
   m_Name: OfficeTexts
   m_TagString: Untagged
@@ -1737,19 +1736,8 @@ MonoBehaviour:
   PlayerCamera: {fileID: 150073711}
   playerInteractWithNotebook: 0
   alredyInteract: 0
+  showText: 0
   MaxDistance: 5
---- !u!114 &1213813632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1213813629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02456087b3814404a81414cd21023302, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1315384736
 GameObject:
   m_ObjectHideFlags: 0
