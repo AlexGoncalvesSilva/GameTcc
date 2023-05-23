@@ -5273,7 +5273,7 @@ GameObject:
   - component: {fileID: 882098538}
   - component: {fileID: 882098537}
   - component: {fileID: 882098536}
-  - component: {fileID: 882098535}
+  - component: {fileID: 882098542}
   m_Layer: 0
   m_Name: AnaNPC2
   m_TagString: NPC
@@ -5281,54 +5281,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &882098535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 882098534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30116d62e172db64caa1b74d5da957bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  falas:
-  - {fileID: 11400000, guid: 04b512e38b2055942860e57703fdd8b6, type: 2}
-  - {fileID: 11400000, guid: d10688d8d2ee8dc45bd93c5e836af733, type: 2}
-  IsTalking:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7305061097456774448}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnFinishTalking:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7305061097456774448}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  playerIntetact: 0
-  PlayerCamera: {fileID: 7305061097398014460}
-  MaxDistance: 5
 --- !u!135 &882098536
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5438,6 +5390,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &882098542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882098534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79d010c8c020aa44eb2f124da93b11f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  falas:
+  - {fileID: 11400000, guid: 04b512e38b2055942860e57703fdd8b6, type: 2}
+  - {fileID: 11400000, guid: d10688d8d2ee8dc45bd93c5e836af733, type: 2}
+  IsTalking:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7305061097456774448}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnFinishTalking:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7305061097456774448}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  playerIntetact: 0
+  PlayerCamera: {fileID: 7305061097398014460}
+  MaxDistance: 5
 --- !u!64 &887901046
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6190,7 +6190,7 @@ GameObject:
   - component: {fileID: 1002337444}
   - component: {fileID: 1002337443}
   - component: {fileID: 1002337442}
-  - component: {fileID: 1002337441}
+  - component: {fileID: 1002337448}
   m_Layer: 0
   m_Name: TestemunhaNPC1
   m_TagString: NPC
@@ -6198,54 +6198,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1002337441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1002337440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30116d62e172db64caa1b74d5da957bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  falas:
-  - {fileID: 11400000, guid: 56fcdc120ac3d5b438250d77bb12feb1, type: 2}
-  - {fileID: 11400000, guid: 59078b78a11c31242866bf3788ac683b, type: 2}
-  IsTalking:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7305061097456774448}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnFinishTalking:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7305061097456774448}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  playerIntetact: 0
-  PlayerCamera: {fileID: 7305061097398014460}
-  MaxDistance: 5
 --- !u!135 &1002337442
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6355,6 +6307,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1002337448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002337440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ca138308911b974089eff4692796b01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  falas:
+  - {fileID: 11400000, guid: 56fcdc120ac3d5b438250d77bb12feb1, type: 2}
+  - {fileID: 11400000, guid: 59078b78a11c31242866bf3788ac683b, type: 2}
+  IsTalking:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7305061097456774448}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnFinishTalking:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7305061097456774448}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  playerIntetact: 0
+  PlayerCamera: {fileID: 7305061097398014460}
+  MaxDistance: 5
 --- !u!1 &1010352932
 GameObject:
   m_ObjectHideFlags: 0
