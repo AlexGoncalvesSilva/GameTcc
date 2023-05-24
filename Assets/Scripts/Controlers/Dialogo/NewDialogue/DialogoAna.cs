@@ -69,12 +69,12 @@ public class DialogoAna : MonoBehaviour
             {
                 Cursor.lockState = CursorLockMode.Confined;
                 Cursor.visible = true;
-                DialogoController.instance.ProximaFala(falas[0]);
+                DialogoControllerAna.instance.ProximaFala(falas[0]);
                 Analyze.instance.PistaDialogo();
             }
             else
             {
-                DialogoController.instance.ProximaFala(falas[1]);
+                DialogoControllerAna.instance.ProximaFala(falas[1]);
                 CameraController.instance.CanMoveCamera();
             }
 

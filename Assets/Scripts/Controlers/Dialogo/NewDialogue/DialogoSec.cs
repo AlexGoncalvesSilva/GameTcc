@@ -43,7 +43,7 @@ public class DialogoSec : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(PlayerCamera.transform.position, PlayerCamera.transform.forward, out hit, MaxDistance))
             {
-                if (hit.transform.tag == "NPC")
+                if (hit.transform.tag == "NPCSec")
                 {
                     playerIntetact = true;
                     playerDioalogo();
