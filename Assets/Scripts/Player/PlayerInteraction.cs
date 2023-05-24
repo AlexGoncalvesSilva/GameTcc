@@ -6,12 +6,13 @@ using UnityEngine.Events;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    public float rayDistance = 2f;
+    public float rayDistance = 2f;  
     public float rotateSpeed = 200f;
 
     public float velocidadeDoObj = 5f;
 
     public Transform objectViwer;
+    public GameObject outroObjeto;
 
     public UnityEvent OnView;
     public UnityEvent OnFinishView;
@@ -172,6 +173,16 @@ public class PlayerInteraction : MonoBehaviour
         UiManager.instance.SetBackImage(false);
         if (currentInteractable.item.grabbable)
         {
+            // Verifica se o objeto é o "Celular"
+            if (currentInteractable.gameObject.name == "Celular")
+            {
+                // Desativa o objeto atual
+                currentInteractable.gameObject.SetActive(false);
+
+                // Ativa o outro objeto que você tem em mãos
+                // Substitua "outroObjeto" pelo nome do seu objeto
+                outroObjeto.SetActive(true);
+            }
             currentInteractable.transform.rotation = originRotation;
             StartCoroutine(MovingObject(currentInteractable, originPosition));
         }
