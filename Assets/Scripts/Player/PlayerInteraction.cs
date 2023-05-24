@@ -19,7 +19,7 @@ public class PlayerInteraction : MonoBehaviour
     private Camera myCam;
 
     private bool isViewing;
-    private bool canFinish;
+    public bool canFinish;
     public bool notebook;
     public bool notebookLab;
 
