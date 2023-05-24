@@ -13037,6 +13037,7 @@ MonoBehaviour:
   rotateSpeed: 20
   velocidadeDoObj: 5
   objectViwer: {fileID: 5351937138536196876}
+  outroObjeto: {fileID: 0}
   OnView:
     m_PersistentCalls:
       m_Calls:
