@@ -16,5 +16,3 @@ MonoBehaviour:
   respostas:
   - resposta: 'O que ele costumava comprar por aqui? '
     proximaFala: {fileID: 11400000, guid: 3f7dd7413a29e424a97e7b5c159ea78c, type: 2}
-  - resposta: 'Daniel vivia sozinho? '
-    proximaFala: {fileID: 11400000, guid: bebc790c21ffaab4b9c84d993018dcdf, type: 2}

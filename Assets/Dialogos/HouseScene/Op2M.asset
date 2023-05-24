@@ -14,7 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fala: "N\xE3o, por aqui esses dias foi tudo normal. "
   respostas:
-  - resposta: "Voc\xEA soube o que aconteceu com Daniel?"
+  - resposta: "Voc\xEA soube o que aconteceu com ele?"
     proximaFala: {fileID: 11400000, guid: ff676244abfa44f4494480ce7f1717f7, type: 2}
-  - resposta: "Quando foi a \xFAltima vez que voc\xEA viu Daniel? "
-    proximaFala: {fileID: 11400000, guid: 3376607333ee1fd4b8c87ee80cd46d65, type: 2}

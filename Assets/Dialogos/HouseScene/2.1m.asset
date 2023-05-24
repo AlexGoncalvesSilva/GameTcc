@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fala: " A amiga dele teve por aqui ontem e perguntou por ele, ele n\xE3o d\xE1
     not\xEDcias h\xE1 alguns dias n\xE9. Espero que n\xE3o seja nada s\xE9rio."
-  respostas: []
+  respostas:
+  - resposta: "Quando foi a \xFAltima vez que voc\xEA viu ele? "
+    proximaFala: {fileID: 11400000, guid: 3376607333ee1fd4b8c87ee80cd46d65, type: 2}

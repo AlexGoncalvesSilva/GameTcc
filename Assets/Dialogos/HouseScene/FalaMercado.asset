@@ -17,5 +17,3 @@ MonoBehaviour:
   - resposta: "Bom dia. Voc\xEA poderia me responder algumas perguntas? Voc\xEA conhecia
       Daniel? "
     proximaFala: {fileID: 11400000, guid: 2e2a094eed5d8c541bb1bb193e6d750e, type: 2}
-  - resposta: "Bom dia. Voc\xEA viu alguma movimenta\xE7\xE3o estranha por aqui recentemente? "
-    proximaFala: {fileID: 11400000, guid: 5f154c3d6084e424890fb734a26d3e1a, type: 2}

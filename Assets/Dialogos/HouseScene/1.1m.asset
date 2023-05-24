@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fala: "Ele costumava comprar comida por aqui, algumas frutas e ra\xE7\xE3o para
     o seu cachorro."
-  respostas: []
+  respostas:
+  - resposta: 'Daniel vivia sozinho? '
+    proximaFala: {fileID: 11400000, guid: bebc790c21ffaab4b9c84d993018dcdf, type: 2}

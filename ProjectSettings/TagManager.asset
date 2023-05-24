@@ -18,6 +18,7 @@ TagManager:
   - NPC
   - NPCSec
   - NPCMerc
+  - NPCJoal
   layers:
   - Default
   - TransparentFX
