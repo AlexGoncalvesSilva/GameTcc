@@ -82,6 +82,17 @@ public class DialogoAna : MonoBehaviour
         }
     }
 
+    public void finished()
+    {
+        StartCoroutine("RotinaInteract");
+    }
+
+    IEnumerator RotinaInteract()
+    {
+        yield return new WaitForSeconds(3f);
+        playerIntetact = false;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))

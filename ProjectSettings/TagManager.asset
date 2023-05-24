@@ -16,6 +16,7 @@ TagManager:
   - Switcher
   - OfficeNotebook
   - NPC
+  - NPCSec
   layers:
   - Default
   - TransparentFX

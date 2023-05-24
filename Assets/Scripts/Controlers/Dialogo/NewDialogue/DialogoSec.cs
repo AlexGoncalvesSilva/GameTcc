@@ -67,6 +67,7 @@ public class DialogoSec : MonoBehaviour
 
             if (!dialogoConcluido)
             {
+                Debug.Log("Dialogando agoraaa"); 
                 Cursor.lockState = CursorLockMode.Confined;
                 Cursor.visible = true;
                 DialogoController.instance.ProximaFala(falas[0]);
@@ -74,12 +75,24 @@ public class DialogoSec : MonoBehaviour
             }
             else
             {
+                Debug.Log("Dialogou ja sdasas");
                 DialogoController.instance.ProximaFala(falas[1]);
                 CameraController.instance.CanMoveCamera();
             }
 
             dialogoConcluido = true;
         }
+    }
+
+    public void finished()
+    {
+        StartCoroutine("RotinaInteract");
+    }
+
+    IEnumerator RotinaInteract()
+    {
+        yield return new WaitForSeconds(3f);
+        playerIntetact = false;
     }
 
     private void OnTriggerEnter(Collider other)

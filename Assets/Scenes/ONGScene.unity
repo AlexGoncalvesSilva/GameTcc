@@ -3731,6 +3731,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1287114739}
     - target: {fileID: 3211961975066556054, guid: 9fb40075f0861264998a7f3a62f3c088, type: 3}
+      propertyPath: OnFinishTalking.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3211961975066556054, guid: 9fb40075f0861264998a7f3a62f3c088, type: 3}
       propertyPath: IsTalking.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7305061097456774448}
@@ -3739,12 +3743,40 @@ PrefabInstance:
       value: set_enabled
       objectReference: {fileID: 0}
     - target: {fileID: 3211961975066556054, guid: 9fb40075f0861264998a7f3a62f3c088, type: 3}
+      propertyPath: OnFinishTalking.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3211961975066556054, guid: 9fb40075f0861264998a7f3a62f3c088, type: 3}
       propertyPath: OnFinishTalking.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7305061097456774448}
     - target: {fileID: 3211961975066556054, guid: 9fb40075f0861264998a7f3a62f3c088, type: 3}
+      propertyPath: OnFinishTalking.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1002337448}
+    - target: {fileID: 3211961975066556054, guid: 9fb40075f0861264998a7f3a62f3c088, type: 3}
+      propertyPath: OnFinishTalking.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3211961975066556054, guid: 9fb40075f0861264998a7f3a62f3c088, type: 3}
       propertyPath: OnFinishTalking.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: set_enabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 3211961975066556054, guid: 9fb40075f0861264998a7f3a62f3c088, type: 3}
+      propertyPath: OnFinishTalking.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: finished
+      objectReference: {fileID: 0}
+    - target: {fileID: 3211961975066556054, guid: 9fb40075f0861264998a7f3a62f3c088, type: 3}
+      propertyPath: OnFinishTalking.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DialogoSec, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3211961975066556054, guid: 9fb40075f0861264998a7f3a62f3c088, type: 3}
+      propertyPath: OnFinishTalking.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3211961975066556054, guid: 9fb40075f0861264998a7f3a62f3c088, type: 3}
+      propertyPath: OnFinishTalking.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3211961975066556055, guid: 9fb40075f0861264998a7f3a62f3c088, type: 3}
       propertyPath: m_RootOrder
@@ -5697,7 +5729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   falas:
-  - {fileID: 11400000, guid: 04b512e38b2055942860e57703fdd8b6, type: 2}
+  - {fileID: 11400000, guid: fe5fbbb5ea6be154b8e5095f53ff2333, type: 2}
   - {fileID: 11400000, guid: d10688d8d2ee8dc45bd93c5e836af733, type: 2}
   IsTalking:
     m_PersistentCalls:
@@ -6489,7 +6521,7 @@ GameObject:
   - component: {fileID: 1002337448}
   m_Layer: 0
   m_Name: TestemunhaNPC1
-  m_TagString: NPC
+  m_TagString: NPCSec
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11876,6 +11908,69 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.07789517, y: 0.18566652, z: 0.2522693}
   m_Center: {x: 0.0046735522, y: 0.091383554, z: 0.03334187}
+--- !u!1 &2102169848 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3211961975066556049, guid: 9fb40075f0861264998a7f3a62f3c088, type: 3}
+  m_PrefabInstance: {fileID: 499128913}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2102169849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102169848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f323a95496d530843b58ab0c02a8e695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  painelDiaologo: {fileID: 1287114739}
+  falaNPC: {fileID: 1988531399}
+  resposta: {fileID: 8037167084585561775, guid: b7394bd13b1493141a6c3b9a255d06d6, type: 3}
+  IsTalking:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7305061097456774448}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnFinishTalking:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7305061097456774448}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 882098542}
+        m_TargetAssemblyTypeName: DialogoAna, Assembly-CSharp
+        m_MethodName: finished
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  falaAtiva: 0
 --- !u!1 &297026648638842695
 GameObject:
   m_ObjectHideFlags: 0
