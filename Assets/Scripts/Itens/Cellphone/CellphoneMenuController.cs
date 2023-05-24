@@ -8,6 +8,7 @@ public class CellphoneMenuController : MonoBehaviour
     private bool menuOpened = false;
     public GameObject cellphoneObj;
     public GameObject menuCellphone;
+    public GameObject cellphoneLightObject; // Referência para o objeto da luz do celular
     private PlayerMovement playerMovement;
     private CameraController cameraController;
     private CursorLockMode previousCursorLockMode;
@@ -21,9 +22,21 @@ public class CellphoneMenuController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            if (activatedCellphone)
+            if (!activatedCellphone)
+            {
+                if (cellphoneObj)
+                {
+                    cellphoneObj.SetActive(true);
+                    activatedCellphone = true;
+                }
+                if (cellphoneLightObject)
+                {
+                    cellphoneLightObject.SetActive(true); // Ativa o objeto da luz do celular
+                }
+            }
+            else
             {
                 if (menuOpened && menuCellphone)
                 {
@@ -32,6 +45,7 @@ public class CellphoneMenuController : MonoBehaviour
 
                     Cursor.lockState = previousCursorLockMode;
                     Cursor.visible = previousCursorVisible;
+                    previousCursorVisible = true; // Garante que o cursor fique visível ao fechar o canvas
 
                     playerMovement.SetCanMove(true);
                     cameraController.CanMoveCamera();
@@ -40,60 +54,45 @@ public class CellphoneMenuController : MonoBehaviour
                 if (cellphoneObj)
                 {
                     cellphoneObj.SetActive(false);
+                    activatedCellphone = false;
                 }
-
-                activatedCellphone = false;
-            }
-            else
-            {
-                if (cellphoneObj)
+                if (cellphoneLightObject)
                 {
-                    cellphoneObj.SetActive(true);
+                    cellphoneLightObject.SetActive(false); // Desativa o objeto da luz do celular
                 }
-
-                activatedCellphone = true;
             }
         }
 
-        if (activatedCellphone && Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isCellphoneInHand())
+            if (menuCellphone)
             {
-                if (menuCellphone)
+                if (menuOpened)
                 {
-                    if (menuOpened)
-                    {
-                        menuCellphone.SetActive(false);
-                        menuOpened = false;
+                    menuCellphone.SetActive(false);
+                    menuOpened = false;
 
-                        Cursor.lockState = previousCursorLockMode;
-                        Cursor.visible = previousCursorVisible;
+                    Cursor.lockState = previousCursorLockMode;
+                    Cursor.visible = previousCursorVisible;
+                    previousCursorVisible = true; // Garante que o cursor fique visível ao fechar o canvas
 
-                        playerMovement.SetCanMove(true);
-                        cameraController.CanMoveCamera();
-                    }
-                    else
-                    {
-                        menuCellphone.SetActive(true);
-                        menuOpened = true;
+                    playerMovement.SetCanMove(true);
+                    cameraController.CanMoveCamera();
+                }
+                else
+                {
+                    menuCellphone.SetActive(true);
+                    menuOpened = true;
 
-                        previousCursorLockMode = Cursor.lockState;
-                        previousCursorVisible = Cursor.visible;
+                    previousCursorLockMode = Cursor.lockState;
+                    previousCursorVisible = Cursor.visible;
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
 
-                        Cursor.lockState = CursorLockMode.None;
-                        Cursor.visible = true;
-
-                        playerMovement.SetCanMove(false);
-                        cameraController.CantMoveCamera();
-                    }
+                    playerMovement.SetCanMove(false);
+                    cameraController.CantMoveCamera();
                 }
             }
         }
-    }
-
-    bool isCellphoneInHand()
-    {
-        // Adicione aqui a lógica para verificar se o celular está na mão do personagem
-        return true;
     }
 }

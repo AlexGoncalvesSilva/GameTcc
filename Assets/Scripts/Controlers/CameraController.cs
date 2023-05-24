@@ -31,7 +31,7 @@ public class CameraController : MonoBehaviour
     {
         if (!isViewingAnObject)
         {
-            float mouseX = Input.GetAxis("Mouse X") * sensitivitySlider.value * Time.fixedDeltaTime;
+            float mouseX = Input.GetAxis("Mouse X") * sensitivitySlider.value * Time.fixedDeltaTime;    
             float mouseY = Input.GetAxis("Mouse Y") * sensitivitySlider.value * Time.fixedDeltaTime;
 
             xRotation -= mouseY;
