@@ -9,6 +9,7 @@ public class CellphoneMenuController : MonoBehaviour
     public GameObject cellphoneObj;
     public GameObject menuCellphone;
     public GameObject cellphoneLightObject; // Referência para o objeto da luz do celular
+    public GameObject cellphoneOnTable; // Referência para o celular na mesa
     private PlayerMovement playerMovement;
     private CameraController cameraController;
     private CursorLockMode previousCursorLockMode;
@@ -24,19 +25,7 @@ public class CellphoneMenuController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            if (!activatedCellphone)
-            {
-                if (cellphoneObj)
-                {
-                    cellphoneObj.SetActive(true);
-                    activatedCellphone = true;
-                }
-                if (cellphoneLightObject)
-                {
-                    cellphoneLightObject.SetActive(true); // Ativa o objeto da luz do celular
-                }
-            }
-            else
+            if (activatedCellphone)
             {
                 if (menuOpened && menuCellphone)
                 {
@@ -60,6 +49,10 @@ public class CellphoneMenuController : MonoBehaviour
                 {
                     cellphoneLightObject.SetActive(false); // Desativa o objeto da luz do celular
                 }
+            }
+            else if (!activatedCellphone && !cellphoneOnTable.activeSelf)
+            {
+                PullCellphone();
             }
         }
 
@@ -93,6 +86,23 @@ public class CellphoneMenuController : MonoBehaviour
                     cameraController.CantMoveCamera();
                 }
             }
+        }
+    }
+
+    private void PullCellphone()
+    {
+        if (cellphoneObj)
+        {
+            cellphoneObj.SetActive(true);
+            activatedCellphone = true;
+        }
+        if (cellphoneLightObject)
+        {
+            cellphoneLightObject.SetActive(true); // Ativa o objeto da luz do celular
+        }
+        if (cellphoneOnTable)
+        {
+            cellphoneOnTable.SetActive(false); // Remove o telefone da mesa
         }
     }
 }

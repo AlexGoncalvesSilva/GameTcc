@@ -8,8 +8,6 @@ using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.Rendering;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
-using static UnityEditor.PlayerSettings;
-using static UnityEngine.Rendering.DebugUI;
 
 public class OfficeFeedback : MonoBehaviour
 {
@@ -23,7 +21,6 @@ public class OfficeFeedback : MonoBehaviour
     public bool alredyInteract;
     public bool showText;
     public float MaxDistance = 5;
-
 
     // Start is called before the first frame update
     void Start()
@@ -56,7 +53,6 @@ public class OfficeFeedback : MonoBehaviour
                 Cursor.visible = false;
             }
         }
-
     }
 
     void textFeedback()
@@ -66,7 +62,7 @@ public class OfficeFeedback : MonoBehaviour
             PlayerMovement.instance.canMove = false;
         }
         else { PlayerMovement.instance.canMove = true; }
-      
+
         if (Input.GetKeyDown(KeyCode.E) && playerInteractWithNotebook == true && alredyInteract == false)
         {
             StartCoroutine("rotinaText");
@@ -77,7 +73,7 @@ public class OfficeFeedback : MonoBehaviour
                 {
                     text.text = "ENVIEI PARA O DEPARTAMENTO O QUE CONSEGUI NA JOALHERIA. AGORA TÁ NA HORA DE FOCAR NO OUTRO CASO";
                 }
-                else if(i == 2)
+                else if (i == 2)
                 {
                     text.text = "VAMOS VER... É O CASO DE DANIEL, ELE DESAPARECEU HÁ DOIS DIAS SEM DEIXAR NENHUM RASTRO";
                 }
@@ -100,7 +96,7 @@ public class OfficeFeedback : MonoBehaviour
                     alredyInteract = true;
                 }
             }
-            
+
         }
     }
 
@@ -109,5 +105,4 @@ public class OfficeFeedback : MonoBehaviour
         yield return new WaitForSeconds(1f);
         showText = true;
     }
-
 }
