@@ -17,6 +17,7 @@ TagManager:
   - OfficeNotebook
   - NPC
   - NPCSec
+  - NPCMerc
   layers:
   - Default
   - TransparentFX

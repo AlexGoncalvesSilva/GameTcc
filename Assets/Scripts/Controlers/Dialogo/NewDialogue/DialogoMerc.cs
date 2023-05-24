@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class DialogoAna : MonoBehaviour
+public class DialogoMerc : MonoBehaviour
 {
     public FalaNPC[] falas = new FalaNPC[2];
 
@@ -17,7 +17,7 @@ public class DialogoAna : MonoBehaviour
     public Transform PlayerCamera;
     public float MaxDistance = 5;
 
-    public static DialogoAna instance;
+    public static DialogoMerc instance;
 
     private void Awake()
     {
@@ -43,7 +43,7 @@ public class DialogoAna : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(PlayerCamera.transform.position, PlayerCamera.transform.forward, out hit, MaxDistance))
             {
-                if (hit.transform.tag == "NPC")
+                if (hit.transform.tag == "NPCMerc")
                 {
                     playerIntetact = true;
                     playerDioalogo();
