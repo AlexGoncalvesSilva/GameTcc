@@ -25,7 +25,7 @@ public class TutorialController : MonoBehaviour
 
     void textTutorial()
     {
-        if (i <= 4)
+        if (i <= 5)
         {
             PlayerMovement.instance.canMove = false;
         }
@@ -47,7 +47,7 @@ public class TutorialController : MonoBehaviour
             }
             else if (i == 4)
             {
-                text.text = "UTILIZE 'C' PARA ACESSAR O SEU CELULAR";
+                text.text = "CLIQUE 'ESC' PARA ACESSAR AS CONFIGURAÇÕES";
             }
             else if (i == 5)
             {

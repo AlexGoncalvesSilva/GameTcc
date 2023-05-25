@@ -43,7 +43,7 @@ public class DialogoJoalheria : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(PlayerCamera.transform.position, PlayerCamera.transform.forward, out hit, MaxDistance))
             {
-                if (hit.transform.tag == "NPCJoalheria")
+                if (hit.transform.tag == "NPCJoal")
                 {
                     playerIntetact = true;
                     playerDioalogo();
