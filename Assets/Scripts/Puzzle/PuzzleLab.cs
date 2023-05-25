@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Rendering.VirtualTexturing;
 using UnityEngine.UI;
 
 public class PuzzleLab : MonoBehaviour
@@ -36,7 +35,8 @@ public class PuzzleLab : MonoBehaviour
 
     private void Update()
     {
-        checkE();
+        CheckAnswer();
+
         if (resolve == true)
         {
             PlayerInteraction.instance.canFinish = true;
@@ -44,12 +44,47 @@ public class PuzzleLab : MonoBehaviour
         else { PlayerInteraction.instance.canFinish = false; }
     }
 
-    void checkE()
+    void CheckAnswer()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.B))
         {
             char currentLetter = letterSequence[currentLetterIndex - 1];
-            if (currentLetter == 'B' || currentLetter == 'M' || currentLetter == 'L' || currentLetter == 'F')
+            if (currentLetter == 'B')
+            {
+                score += 1;
+            }
+            else
+            {
+                score -= 1;
+            }
+        }else if (Input.GetKeyDown(KeyCode.M))
+        {
+            char currentLetter = letterSequence[currentLetterIndex - 1];
+            if (currentLetter == 'M')
+            {
+                score += 1;
+            }
+            else
+            {
+                score -= 1;
+            }
+
+        }
+        else if (Input.GetKeyDown(KeyCode.L))
+        {
+            char currentLetter = letterSequence[currentLetterIndex - 1];
+            if (currentLetter == 'L')
+            {
+                score += 1;
+            }
+            else
+            {
+                score -= 1;
+            }
+        }else if (Input.GetKeyDown(KeyCode.F))
+        {
+            char currentLetter = letterSequence[currentLetterIndex - 1];
+            if (currentLetter == 'F')
             {
                 score += 1;
             }
@@ -68,7 +103,9 @@ public class PuzzleLab : MonoBehaviour
             letterText.text = letter.ToString();
             currentLetterIndex++;
             StartCoroutine(WaitBeforeNextLetter());
-            SetImageColor(letter == 'B' || letter == 'M' || letter == 'L' || letter == 'F' ? correctColor : Color.blue);
+
+            List<char> validLetters = new List<char> { 'B', 'M', 'L', 'F' };
+            SetImageColor(validLetters.Contains(letter) ? correctColor : Color.blue);
         }
         else
         {
@@ -85,13 +122,14 @@ public class PuzzleLab : MonoBehaviour
             text.text = "Consegui!!";
             senha.SetActive(true);
             buttonFinalResolve.SetActive(true);
-
+            StartCoroutine("RotinaText");
         }
         else
         {
             resolve = false;
             text.text = "Droga, não consegui, vou tentar de novo.";
             buttonFinalReject.SetActive(true);
+            StartCoroutine("RotinaText");
         }
 
     }
@@ -105,6 +143,11 @@ public class PuzzleLab : MonoBehaviour
     void SetImageColor(Color color)
     {
         feedbackImage.color = color;
+    }
+    IEnumerator RotinaText()
+    {
+        yield return new WaitForSeconds(2f);
+        text.text = "";
     }
 
     public void RestartPuzzle()

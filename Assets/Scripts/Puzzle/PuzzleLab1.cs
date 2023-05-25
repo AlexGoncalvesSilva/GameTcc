@@ -35,7 +35,8 @@ public class PuzzleLab1 : MonoBehaviour
 
     private void Update()
     {
-        checkE();
+        CheckAnswer();
+            
         if (resolve1 == true)
         {
             PlayerInteraction.instance.canFinish = true;
@@ -43,12 +44,12 @@ public class PuzzleLab1 : MonoBehaviour
         else { PlayerInteraction.instance.canFinish = false; }
     }
 
-    void checkE()
+    void CheckAnswer()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.B))
         {
             char currentLetter = letterSequence[currentLetterIndex - 1];
-            if (currentLetter == 'B' || currentLetter == 'N' || currentLetter == 'L' || currentLetter == 'F')
+            if (currentLetter == 'B')
             {
                 score += 1;
             }
@@ -56,6 +57,44 @@ public class PuzzleLab1 : MonoBehaviour
             {
                 score -= 1;
             }
+        }
+        else if (Input.GetKeyDown(KeyCode.N))
+        {
+            char currentLetter = letterSequence[currentLetterIndex - 1];
+            if (currentLetter == 'N')
+            {
+                score += 1;
+            }
+            else
+            {
+                score -= 1;
+            }
+
+        }
+        else if (Input.GetKeyDown(KeyCode.L))
+        {
+            char currentLetter = letterSequence[currentLetterIndex - 1];
+            if (currentLetter == 'L')
+            {
+                score += 1;
+            }
+            else
+            {
+                score -= 1;
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.F))
+        {
+            char currentLetter = letterSequence[currentLetterIndex - 1];
+            if (currentLetter == 'F')
+            {
+                score += 1;
+            }
+            else
+            {
+                score -= 1;
+            }
+
         }
     }
 

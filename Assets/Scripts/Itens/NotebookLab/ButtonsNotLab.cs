@@ -74,6 +74,7 @@ public class ButtonsNotLab : MonoBehaviour
 
     public void camCorrectButton()
     {
+        Debug.Log("clicou");
         text.text = "Esse programa é protegidos por uma outra senha, está criptografado";
         panelCamSec.SetActive(true);
         camSec = true;
@@ -101,6 +102,11 @@ public class ButtonsNotLab : MonoBehaviour
     {
         text.text = "As filmagens mostram Daniel, ele esteve realmente aqui, mas o seu padrasto chegou com mais uma pessoa, apagaram ele e o levaram";
         StartCoroutine("RotinaTextSecurity");
+    }
+
+    public void closePlayer()
+    {
+        player.SetActive(false );
     }
 
     IEnumerator RotinaTextNormal()
