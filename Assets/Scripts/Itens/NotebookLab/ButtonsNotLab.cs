@@ -54,7 +54,6 @@ public class ButtonsNotLab : MonoBehaviour
             panelPuzzleFiles.SetActive(true);
             fileSec = false;
         }
-        StartCoroutine("RotinaTextSec");
     }
 
     public void WrongButton()
