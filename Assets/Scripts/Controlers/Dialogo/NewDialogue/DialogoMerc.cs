@@ -43,7 +43,7 @@ public class DialogoMerc : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(PlayerCamera.transform.position, PlayerCamera.transform.forward, out hit, MaxDistance))
             {
-                if (hit.transform.tag == "NPCMerc")
+                if (hit.transform.tag == "NPCSec")
                 {
                     playerIntetact = true;
                     playerDioalogo();
@@ -67,13 +67,16 @@ public class DialogoMerc : MonoBehaviour
 
             if (!dialogoConcluido)
             {
+                Debug.Log("Dialogando agoraaa");
                 Cursor.lockState = CursorLockMode.Confined;
                 Cursor.visible = true;
                 DialogoController.instance.ProximaFala(falas[0]);
-                Analyze.instance.PistaDialogo();
+                CountPistas.instance.AddPista();
+                //Analyze.instance.PistaDialogo();
             }
             else
             {
+                Debug.Log("Dialogou ja sdasas");
                 DialogoController.instance.ProximaFala(falas[1]);
                 CameraController.instance.CanMoveCamera();
             }
