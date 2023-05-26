@@ -10080,7 +10080,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 140438, guid: 938147f6ad7eebe4cb99d4a14cb96757, type: 3}
       propertyPath: m_Name
-      value: Dog_Labrador_01
+      value: Dog - Pista
       objectReference: {fileID: 0}
     - target: {fileID: 140438, guid: 938147f6ad7eebe4cb99d4a14cb96757, type: 3}
       propertyPath: m_Layer
