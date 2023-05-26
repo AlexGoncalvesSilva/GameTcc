@@ -5,20 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class DoorMenu : MonoBehaviour
 {
-
     public GameObject Panel;
     public Transform PlayerCamera;
     [Header("MaxDistance")]
     public float MaxDistance = 5;
-
+    public float CloseDistance = 10; // Distância para fechar o menu
     private bool openedPanel = false;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
@@ -55,7 +47,15 @@ public class DoorMenu : MonoBehaviour
             }
         }
 
+        // Verifica a distância entre o jogador e o objeto do menu para fechar o menu
+        if (openedPanel && Vector3.Distance(transform.position, PlayerCamera.position) > CloseDistance)
+        {
+            openedPanel = false;
+            Panel.SetActive(false);
+            Cursor.visible = false;
+        }
     }
+
     public void LevelButton(int i)
     {
         SceneManager.LoadScene(i);

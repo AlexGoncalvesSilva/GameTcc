@@ -63,7 +63,7 @@ public class TutorialController : MonoBehaviour
 
     void finishedTutorial()
     {
-        if (CountPistas.instance.countEvidenciasAnalisadasOng >= CountPistas.instance.maxEvidenciasOng)
+        if (CountPistas.instance.countEvidenciasAnalisadasCenario2 >= CountPistas.instance.maxEvidenciasCenario2)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {

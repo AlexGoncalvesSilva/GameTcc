@@ -6,33 +6,37 @@ using UnityEngine.UI;
 
 public class CountPistas : MonoBehaviour
 {
-    public int countEvidenciasAnalisadasOng;
-    public int countEvidenciasAnalisadasLaboratorio;
-    public int countEvidenciasAnalisadasCenario2; // Nova variável
-    public int maxEvidenciasOng;
-    public int maxEvidenciasLaboratorio;
-    public int maxEvidenciasCenario2; // Nova variável
-    public int countEvidenciasUsadasOng;
-    public int countEvidenciasUsadasLaboratorio;
-    public int countEvidenciasUsadasCenario2; // Nova variável
-    public TextMeshProUGUI pistaTextOng;
-    public TextMeshProUGUI pistaTextLaboratorio;
-    public TextMeshProUGUI pistaTextCenario2; // Nova variável
-    public Button outroMenuButton;
-    public Button outroMenuButtonCenario2; // Nova variável
+    public int countEvidenciasAnalisadasCenario1;
+    public int countEvidenciasAnalisadasCenario2;
+    public int countEvidenciasAnalisadasCenario3;
+    public int countEvidenciasAnalisadasCenario4;
+    public int maxEvidenciasCenario1;
+    public int maxEvidenciasCenario2;
+    public int maxEvidenciasCenario3;
+    public int maxEvidenciasCenario4;
+    public TextMeshProUGUI pistaTextCenario1;
+    public TextMeshProUGUI pistaTextCenario2;
+    public TextMeshProUGUI pistaTextCenario3;
+    public TextMeshProUGUI pistaTextCenario4;
+    public Button botaoAvancoCenario1;
+    public Button botaoAvancoCenario2;
+    public Button botaoAvancoCenario3;
+    public Button botaoAvancoCenario4;
     private Interactables interactables;
 
-    public static bool allCollectedCluesOng = false;
-    public static bool allCollectedCluesLaboratorio = false;
-    public static bool allCollectedCluesCenario2 = false; // Nova variável
+    public static bool allCollectedCluesCenario1 = false;
+    public static bool allCollectedCluesCenario2 = false;
+    public static bool allCollectedCluesCenario3 = false;
+    public static bool allCollectedCluesCenario4 = false;
 
     public static CountPistas instance;
 
     public enum SceneType
     {
-        Ong,
-        Laboratorio,
-        CenarioTutorial2 // Nova enumeração
+        Cenario1,
+        Cenario2,
+        Cenario3,
+        Cenario4
     }
 
     public SceneType sceneType;
@@ -46,158 +50,139 @@ public class CountPistas : MonoBehaviour
     {
         LoadPistas();
         UpdatePistaText();
-        checkIfWin(); // Verifica se já coletou as pistas suficientes
+        CheckIfWin();
     }
 
     public void AddPista()
     {
-        if (sceneType == SceneType.Ong)
+        switch (sceneType)
         {
-            if (countEvidenciasAnalisadasOng < maxEvidenciasOng)
-            {
-                countEvidenciasAnalisadasOng++;
-                UpdatePistaText();
-                checkIfWin();
-                SavePistas();
-            }
-        }
-        else if (sceneType == SceneType.Laboratorio)
-        {
-            if (countEvidenciasAnalisadasLaboratorio < maxEvidenciasLaboratorio)
-            {
-                countEvidenciasAnalisadasLaboratorio++;
-                UpdatePistaText();
-                checkIfWin();
-                SavePistas();
-            }
-        }
-        else if (sceneType == SceneType.CenarioTutorial2) // Nova condição
-        {
-            if (countEvidenciasAnalisadasCenario2 < maxEvidenciasCenario2)
-            {
-                countEvidenciasAnalisadasCenario2++;
-                UpdatePistaText();
-                checkIfWin();
-                SavePistas();
-            }
-        }
-    }
-
-    void checkIfWin()
-    {
-        if (sceneType == SceneType.Ong)
-        {
-            if (countEvidenciasAnalisadasOng >= maxEvidenciasOng && countEvidenciasUsadasOng >= maxEvidenciasOng)
-            {
-                Debug.Log("Todas as pistas da ONG foram analisadas e usadas!");
-                allCollectedCluesOng = true;
-                EnableOutroMenuButton();
-            }
-        }
-        else if (sceneType == SceneType.Laboratorio)
-        {
-            if (countEvidenciasAnalisadasLaboratorio >= maxEvidenciasLaboratorio && countEvidenciasUsadasLaboratorio >= maxEvidenciasLaboratorio)
-            {
-                Debug.Log("Todas as pistas do laboratório foram analisadas e usadas!");
-                allCollectedCluesLaboratorio = true;
-                EnableOutroMenuButton();
-            }
-        }
-        else if (sceneType == SceneType.CenarioTutorial2) // Nova condição
-        {
-            if (countEvidenciasAnalisadasCenario2 >= maxEvidenciasCenario2 && countEvidenciasUsadasCenario2 >= maxEvidenciasCenario2)
-            {
-                Debug.Log("Todas as pistas do cenário 2 foram analisadas e usadas!");
-                allCollectedCluesCenario2 = true;
-                EnableOutroMenuButtonCenario2(); // Novo método
-            }
+            case SceneType.Cenario1:
+                if (countEvidenciasAnalisadasCenario1 < maxEvidenciasCenario1)
+                {
+                    countEvidenciasAnalisadasCenario1++;
+                    UpdatePistaText();
+                    CheckIfWin();
+                    SavePistas();
+                }
+                break;
+            case SceneType.Cenario2:
+                if (countEvidenciasAnalisadasCenario2 < maxEvidenciasCenario2)
+                {
+                    countEvidenciasAnalisadasCenario2++;
+                    UpdatePistaText();
+                    CheckIfWin();
+                    SavePistas();
+                }
+                break;
+            case SceneType.Cenario3:
+                if (countEvidenciasAnalisadasCenario3 < maxEvidenciasCenario3)
+                {
+                    countEvidenciasAnalisadasCenario3++;
+                    UpdatePistaText();
+                    CheckIfWin();
+                    SavePistas();
+                }
+                break;
+            case SceneType.Cenario4:
+                if (countEvidenciasAnalisadasCenario4 < maxEvidenciasCenario4)
+                {
+                    countEvidenciasAnalisadasCenario4++;
+                    UpdatePistaText();
+                    CheckIfWin();
+                    SavePistas();
+                }
+                break;
         }
     }
 
-    private void UpdatePistaText()
+    void CheckIfWin()
     {
-        if (sceneType == SceneType.Ong)
+        switch (sceneType)
         {
-            pistaTextOng.text = string.Format("{0}/{1} Pistas Analisadas",
-                countEvidenciasAnalisadasOng, maxEvidenciasOng,
-                countEvidenciasUsadasOng, maxEvidenciasOng);
-        }
-        else if (sceneType == SceneType.Laboratorio)
-        {
-            pistaTextLaboratorio.text = string.Format("{0}/{1} Pistas Analisadas",
-                countEvidenciasAnalisadasLaboratorio, maxEvidenciasLaboratorio,
-                countEvidenciasUsadasLaboratorio, maxEvidenciasLaboratorio);
-        }
-        else if (sceneType == SceneType.CenarioTutorial2) // Nova condição
-        {
-            pistaTextCenario2.text = string.Format("{0}/{1} Pistas Analisadas",
-                countEvidenciasAnalisadasCenario2, maxEvidenciasCenario2,
-                countEvidenciasUsadasCenario2, maxEvidenciasCenario2);
+            case SceneType.Cenario1:
+                if (countEvidenciasAnalisadasCenario1 == maxEvidenciasCenario1)
+                {
+                    allCollectedCluesCenario1 = true;
+                    EnableBotaoAvancoCenario1();
+                }
+                break;
+            case SceneType.Cenario2:
+                if (countEvidenciasAnalisadasCenario2 == maxEvidenciasCenario2)
+                {
+                    allCollectedCluesCenario2 = true;
+                    EnableBotaoAvancoCenario2();
+                }
+                break;
+            case SceneType.Cenario3:
+                if (countEvidenciasAnalisadasCenario3 == maxEvidenciasCenario3)
+                {
+                    allCollectedCluesCenario3 = true;
+                    EnableBotaoAvancoCenario3();
+                }
+                break;
+            case SceneType.Cenario4:
+                if (countEvidenciasAnalisadasCenario4 == maxEvidenciasCenario4)
+                {
+                    allCollectedCluesCenario4 = true;
+                    EnableBotaoAvancoCenario4();
+                }
+                break;
         }
     }
 
-    private void EnableOutroMenuButton()
+    void EnableBotaoAvancoCenario1()
     {
-        outroMenuButton.interactable = true;
+        botaoAvancoCenario1.interactable = true;
     }
 
-    private void EnableOutroMenuButtonCenario2() // Novo método
+    void EnableBotaoAvancoCenario2()
     {
-        outroMenuButtonCenario2.interactable = true;
+        botaoAvancoCenario2.interactable = true;
     }
 
-    private void SavePistas()
+    void EnableBotaoAvancoCenario3()
     {
-        if (sceneType == SceneType.Ong)
-        {
-            PlayerPrefs.SetInt("OngPistasColetadas", countEvidenciasAnalisadasOng);
-            PlayerPrefs.SetInt("OngPistasUsadas", countEvidenciasUsadasOng);
-        }
-        else if (sceneType == SceneType.Laboratorio)
-        {
-            PlayerPrefs.SetInt("LaboratorioPistasColetadas", countEvidenciasAnalisadasLaboratorio);
-            PlayerPrefs.SetInt("LaboratorioPistasUsadas", countEvidenciasUsadasLaboratorio);
-        }
-        else if (sceneType == SceneType.CenarioTutorial2) // Nova condição
-        {
-            PlayerPrefs.SetInt("Cenario2PistasColetadas", countEvidenciasAnalisadasCenario2);
-            PlayerPrefs.SetInt("Cenario2PistasUsadas", countEvidenciasUsadasCenario2);
-        }
-
-        PlayerPrefs.Save();
+        botaoAvancoCenario3.interactable = true;
     }
 
-    private void LoadPistas()
+    void EnableBotaoAvancoCenario4()
     {
-        if (sceneType == SceneType.Ong)
+        botaoAvancoCenario4.interactable = true;
+    }
+
+    void UpdatePistaText()
+    {
+        switch (sceneType)
         {
-            if (PlayerPrefs.HasKey("OngPistasColetadas"))
-            {
-                countEvidenciasAnalisadasOng = PlayerPrefs.GetInt("OngPistasColetadas");
-                countEvidenciasUsadasOng = PlayerPrefs.GetInt("OngPistasUsadas");
-                UpdatePistaText(); // Atualiza o texto da interface com o valor carregado
-                checkIfWin(); // Verifica se já coletou as pistas suficientes
-            }
+            case SceneType.Cenario1:
+                pistaTextCenario1.text = countEvidenciasAnalisadasCenario1 + "/" + maxEvidenciasCenario1;
+                break;
+            case SceneType.Cenario2:
+                pistaTextCenario2.text = countEvidenciasAnalisadasCenario2 + "/" + maxEvidenciasCenario2;
+                break;
+            case SceneType.Cenario3:
+                pistaTextCenario3.text = countEvidenciasAnalisadasCenario3 + "/" + maxEvidenciasCenario3;
+                break;
+            case SceneType.Cenario4:
+                pistaTextCenario4.text = countEvidenciasAnalisadasCenario4 + "/" + maxEvidenciasCenario4;
+                break;
         }
-        else if (sceneType == SceneType.Laboratorio)
-        {
-            if (PlayerPrefs.HasKey("LaboratorioPistasColetadas"))
-            {
-                countEvidenciasAnalisadasLaboratorio = PlayerPrefs.GetInt("LaboratorioPistasColetadas");
-                countEvidenciasUsadasLaboratorio = PlayerPrefs.GetInt("LaboratorioPistasUsadas");
-                UpdatePistaText(); // Atualiza o texto da interface com o valor carregado
-                checkIfWin(); // Verifica se já coletou as pistas suficientes
-            }
-        }
-        else if (sceneType == SceneType.CenarioTutorial2) // Nova condição
-        {
-            if (PlayerPrefs.HasKey("Cenario2PistasColetadas"))
-            {
-                countEvidenciasAnalisadasCenario2 = PlayerPrefs.GetInt("Cenario2PistasColetadas");
-                countEvidenciasUsadasCenario2 = PlayerPrefs.GetInt("Cenario2PistasUsadas");
-                UpdatePistaText(); // Atualiza o texto da interface com o valor carregado
-                checkIfWin(); // Verifica se já coletou as pistas suficientes
-            }
-        }
+    }
+
+    void SavePistas()
+    {
+        PlayerPrefs.SetInt("CountEvidenciasAnalisadasCenario1", countEvidenciasAnalisadasCenario1);
+        PlayerPrefs.SetInt("CountEvidenciasAnalisadasCenario2", countEvidenciasAnalisadasCenario2);
+        PlayerPrefs.SetInt("CountEvidenciasAnalisadasCenario3", countEvidenciasAnalisadasCenario3);
+        PlayerPrefs.SetInt("CountEvidenciasAnalisadasCenario4", countEvidenciasAnalisadasCenario4);
+    }
+
+    void LoadPistas()
+    {
+        countEvidenciasAnalisadasCenario1 = PlayerPrefs.GetInt("CountEvidenciasAnalisadasCenario1", 0);
+        countEvidenciasAnalisadasCenario2 = PlayerPrefs.GetInt("CountEvidenciasAnalisadasCenario2", 0);
+        countEvidenciasAnalisadasCenario3 = PlayerPrefs.GetInt("CountEvidenciasAnalisadasCenario3", 0);
+        countEvidenciasAnalisadasCenario4 = PlayerPrefs.GetInt("CountEvidenciasAnalisadasCenario4", 0);
     }
 }

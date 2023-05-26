@@ -16,8 +16,8 @@ public class LevelsButtons : MonoBehaviour
     private void Start()
     {
         countPistas = CountPistas.instance;
-        ongUnlocked = CountPistas.allCollectedCluesOng;
-        laboratorioUnlocked = CountPistas.allCollectedCluesLaboratorio;
+        ongUnlocked = CountPistas.allCollectedCluesCenario1;
+        laboratorioUnlocked = CountPistas.allCollectedCluesCenario2;
 
         ongLevelButton.interactable = ongUnlocked;
         laboratorioLevelButton.interactable = laboratorioUnlocked;
