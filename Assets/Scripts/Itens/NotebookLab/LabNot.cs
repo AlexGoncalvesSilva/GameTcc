@@ -72,7 +72,7 @@ public class LabNot : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
 
     }
-
+    
     public void ClosePanelLab()
     {
         openedPanel = false;

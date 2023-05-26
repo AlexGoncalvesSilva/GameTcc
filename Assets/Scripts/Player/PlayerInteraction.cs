@@ -160,13 +160,17 @@ public class PlayerInteraction : MonoBehaviour
             Debug.Log("Clicou no quadro");
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            UiManager.instance.SetCaptions(item.text);
+           
         }
         if (item.image != null)
         {
             UiManager.instance.SetImage(item.image);
             wasImage = true;
+        }else if (item.image == null)
+        {
+            UiManager.instance.SetCaptions(item.text);
         }
+       
         sfxItens.PlayAudio(item.audioClip);
 
         Invoke("CanFinish", 1f);
