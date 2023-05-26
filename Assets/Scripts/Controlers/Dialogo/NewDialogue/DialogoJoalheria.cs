@@ -67,13 +67,16 @@ public class DialogoJoalheria : MonoBehaviour
 
             if (!dialogoConcluido)
             {
+                Debug.Log("Dialogando agoraaa");
                 Cursor.lockState = CursorLockMode.Confined;
                 Cursor.visible = true;
                 DialogoController.instance.ProximaFala(falas[0]);
-                Analyze.instance.PistaDialogo();
+                CountPistas.instance.AddPista();
+                //Analyze.instance.PistaDialogo();
             }
             else
             {
+                Debug.Log("Dialogou ja sdasas");
                 DialogoController.instance.ProximaFala(falas[1]);
                 CameraController.instance.CanMoveCamera();
             }

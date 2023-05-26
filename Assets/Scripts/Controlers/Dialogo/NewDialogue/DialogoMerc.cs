@@ -43,7 +43,7 @@ public class DialogoMerc : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(PlayerCamera.transform.position, PlayerCamera.transform.forward, out hit, MaxDistance))
             {
-                if (hit.transform.tag == "NPCSec")
+                if (hit.transform.tag == "NPCMerc")
                 {
                     playerIntetact = true;
                     playerDioalogo();
