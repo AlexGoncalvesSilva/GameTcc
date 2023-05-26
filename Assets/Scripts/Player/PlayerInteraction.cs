@@ -91,7 +91,7 @@ public class PlayerInteraction : MonoBehaviour
 
                     CameraController.instance.CantMoveCamera();
 
-                    if (hit.transform.tag == "HouseNotebook")
+                    if (hit.transform.gameObject.layer == 12)
                     {
                         if (LiberarNot.instance.playerHasThePassword == true)
                         {
@@ -102,7 +102,7 @@ public class PlayerInteraction : MonoBehaviour
 
                     }else { Interact(currentInteractable.item); }
 
-                    if(hit.transform.tag == "LabNotebook")
+                    if(hit.transform.gameObject.layer == 11)
                     {
                         Interact(currentInteractable.item);
                         StartCoroutine("rotinaText");
