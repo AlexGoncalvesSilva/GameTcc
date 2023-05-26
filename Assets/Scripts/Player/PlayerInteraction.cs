@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using static UnityEditor.Progress;
 
 
 public class PlayerInteraction : MonoBehaviour
 {
-    public float rayDistance = 2f;  
+    public float rayDistance = 2f;
     public float rotateSpeed = 200f;
 
     public float velocidadeDoObj = 5f;
@@ -23,6 +24,7 @@ public class PlayerInteraction : MonoBehaviour
     public bool canFinish;
     public bool notebook;
     public bool notebookLab;
+    public bool wasImage;
 
     private Interactables currentInteractable;
     private Vector3 originPosition;
@@ -33,7 +35,7 @@ public class PlayerInteraction : MonoBehaviour
     public static PlayerInteraction instance;
     private void Awake()
     {
-        sfxItens= GetComponent<SFXItens>();
+        sfxItens = GetComponent<SFXItens>();
         instance = this;
     }
 
@@ -57,7 +59,7 @@ public class PlayerInteraction : MonoBehaviour
             {
                 RotateObject();
             }
-            if(canFinish && Input.GetKeyDown(KeyCode.E))
+            if (canFinish && Input.GetKeyDown(KeyCode.E))
             {
                 FinishView();
             }
@@ -100,9 +102,9 @@ public class PlayerInteraction : MonoBehaviour
                         } else
                         { Interact(currentInteractable.item); }
 
-                    }else { Interact(currentInteractable.item); }
+                    } else { Interact(currentInteractable.item); }
 
-                    if(hit.transform.gameObject.layer == 11)
+                    if (hit.transform.gameObject.layer == 11)
                     {
                         Interact(currentInteractable.item);
                         StartCoroutine("rotinaText");
@@ -110,10 +112,10 @@ public class PlayerInteraction : MonoBehaviour
                         notebookLab = true;
                     }
 
-                    if(interactable.isClue == true && interactable.alredyInteract == false)
+                    if (interactable.isClue == true && interactable.alredyInteract == false)
                     {
                         Analyze.instance.PistaObjeto();
-                        interactable.alredyInteract= true;
+                        interactable.alredyInteract = true;
                     }
 
                     if (currentInteractable.item.grabbable)
@@ -142,6 +144,14 @@ public class PlayerInteraction : MonoBehaviour
         UiManager.instance.SetCaptions("");
     }
 
+    IEnumerator rotinaTextImage()
+    {
+        yield return new WaitForSeconds(3f);
+        UiManager.instance.SetCaptions("");
+    }
+
+
+
     void Interact(Item item)
     {
         if (item.panelInterection != null)
@@ -149,20 +159,28 @@ public class PlayerInteraction : MonoBehaviour
             UiManager.instance.showPanelLevels();
             Debug.Log("Clicou no quadro");
             Cursor.lockState = CursorLockMode.None;
+            UiManager.instance.SetCaptions(item.text);
         }
         if (item.image != null)
         {
             UiManager.instance.SetImage(item.image);
+            wasImage = true;
         }
         sfxItens.PlayAudio(item.audioClip);
-        UiManager.instance.SetCaptions(item.text);
-        Invoke("CanFinish" , 1f);
+
+        Invoke("CanFinish", 1f);
     }
 
     void CanFinish()
     {
         canFinish = true;
         UiManager.instance.SetBackImage(true);
+    }
+
+    void textImage(Item item)
+    {
+        UiManager.instance.SetCaptions(item.text);
+        StartCoroutine("rotinaTextImage");
     }
 
     void FinishView()
@@ -186,7 +204,11 @@ public class PlayerInteraction : MonoBehaviour
             currentInteractable.transform.rotation = originRotation;
             StartCoroutine(MovingObject(currentInteractable, originPosition));
         }
-        if(notebook == true)
+        if (wasImage)
+        {
+            textImage(currentInteractable.item);
+        }
+        if (notebook == true)
         {
             LiberarNot.instance.ClosePanel();
         }
