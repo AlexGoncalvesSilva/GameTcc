@@ -213,7 +213,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 150073710}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.027236763, y: 1.56, z: 0.599381}
+  m_LocalPosition: {x: -0.027236763, y: 1.56, z: 0.59938365}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1286,7 +1286,7 @@ GameObject:
   - component: {fileID: 1186585640}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1299,7 +1299,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1186585635}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -2.73, y: 1.06, z: 2.02}
+  m_LocalPosition: {x: -3.45, y: 1.06, z: 2.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1402,6 +1402,7 @@ MonoBehaviour:
   canFinish: 0
   notebook: 0
   notebookLab: 0
+  wasImage: 0
 --- !u!82 &1186585640
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1744,6 +1745,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1213813630}
   - component: {fileID: 1213813631}
+  - component: {fileID: 1213813632}
   m_Layer: 0
   m_Name: OfficeTexts
   m_TagString: Untagged
@@ -1758,14 +1760,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1213813629}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.1140175, y: 2.7729647, z: -0.047252834}
+  m_LocalRotation: {x: -0, y: 0.3102275, z: -0, w: 0.9506623}
+  m_LocalPosition: {x: -2.02, y: 0, z: 1.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 36.146, z: 0}
 --- !u!114 &1213813631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1781,11 +1783,28 @@ MonoBehaviour:
   text: {fileID: 1579153438}
   textFinal: {fileID: 1579153435}
   i: 0
+  t: 0
   PlayerCamera: {fileID: 150073711}
   playerInteractWithNotebook: 0
   alredyInteract: 0
   showText: 0
+  needHelp: 0
+  alreadySend: 0
   MaxDistance: 5
+  colliderToDisable: {fileID: 1213813632}
+--- !u!65 &1213813632
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213813629}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 12.202372}
+  m_Center: {x: -0.00000085910267, y: 0, z: 0.98796207}
 --- !u!1 &1315384736
 GameObject:
   m_ObjectHideFlags: 0

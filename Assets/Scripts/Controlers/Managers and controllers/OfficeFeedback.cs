@@ -1,12 +1,8 @@
-using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Experimental.GlobalIllumination;
-using UnityEngine.Rendering;
-using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
 
 public class OfficeFeedback : MonoBehaviour
@@ -16,11 +12,16 @@ public class OfficeFeedback : MonoBehaviour
 
     public int i = 0;
 
+    public int t = 0;
+
     public Transform PlayerCamera;
     public bool playerInteractWithNotebook;
     public bool alredyInteract;
     public bool showText;
+    public bool needHelp;
     public float MaxDistance = 5;
+    public Collider colliderToDisable;
+
 
     public static OfficeFeedback instance;
 
@@ -40,6 +41,7 @@ public class OfficeFeedback : MonoBehaviour
     {
         checkNotebook();
         textFeedback();
+        textsTut();
     }
 
     void checkNotebook()
@@ -112,4 +114,57 @@ public class OfficeFeedback : MonoBehaviour
         yield return new WaitForSeconds(1f);
         showText = true;
     }
+
+    void textsTut()
+    {
+        if (t>= 1 && t <= 2)
+        {
+            PlayerMovement.instance.canMove = false;
+        }
+        else { PlayerMovement.instance.canMove = true; }
+
+        if (needHelp == true && FirstTime.instance.alreadyRead== false)
+        {
+            if (t == 0)
+            {
+                text.text = "TENHO QUE ENVIAR OS MATERIAIS DESSE CASO PARA O DEPARTAMENTO.";
+                t++;
+            }
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                
+                t += 1;
+                if (t == 1)
+                {
+                    text.text = "TENHO QUE ENVIAR OS MATERIAIS DESSE CASO PARA O DEPARTAMENTO.";
+                }
+                else if (t == 2)
+                {
+                    text.text = "TENHO QUE ACESSAR MEU NOTEBOOK";
+                }
+                else if( t == 3)
+                {
+                    text.text = "";
+                    FirstTime.instance.alreadyRead = true;
+                }
+
+            }
+        }
+
+    }
+
+    void DisableCollider()
+    {
+        colliderToDisable.enabled = false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            needHelp = true;
+            Debug.Log("Tut 1");
+        }
+    }
+
 }

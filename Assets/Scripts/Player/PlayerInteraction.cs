@@ -159,6 +159,7 @@ public class PlayerInteraction : MonoBehaviour
             UiManager.instance.showPanelLevels();
             Debug.Log("Clicou no quadro");
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             UiManager.instance.SetCaptions(item.text);
         }
         if (item.image != null)
