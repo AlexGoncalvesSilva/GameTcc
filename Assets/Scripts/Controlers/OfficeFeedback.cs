@@ -22,6 +22,13 @@ public class OfficeFeedback : MonoBehaviour
     public bool showText;
     public float MaxDistance = 5;
 
+    public static OfficeFeedback instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +49,7 @@ public class OfficeFeedback : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(PlayerCamera.transform.position, PlayerCamera.transform.forward, out hit, MaxDistance))
             {
-                if (hit.transform.tag == "OfficeNotebook")
+                if (hit.transform.gameObject.layer == 10)
                 {
                     playerInteractWithNotebook = true;
                 }
@@ -57,7 +64,7 @@ public class OfficeFeedback : MonoBehaviour
 
     void textFeedback()
     {
-        if (i <= 4 && playerInteractWithNotebook == true)
+        if (i <= 5 && playerInteractWithNotebook == true)
         {
             PlayerMovement.instance.canMove = false;
         }
