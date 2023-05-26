@@ -71,7 +71,8 @@ public class DialogoSec : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Confined;
                 Cursor.visible = true;
                 DialogoController.instance.ProximaFala(falas[0]);
-                Analyze.instance.PistaDialogo();
+                CountPistas.instance.AddPista();
+                //Analyze.instance.PistaDialogo();
             }
             else
             {
