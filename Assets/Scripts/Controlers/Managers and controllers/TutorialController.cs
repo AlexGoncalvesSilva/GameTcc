@@ -7,6 +7,7 @@ public class TutorialController : MonoBehaviour
 {
     public Text text;
     public GameObject textFinal;
+    public bool finished;
 
     public int i = 0;
 
@@ -63,7 +64,7 @@ public class TutorialController : MonoBehaviour
 
     void finishedTutorial()
     {
-        if (CountPistas.instance.countEvidenciasAnalisadasCenario2 >= CountPistas.instance.maxEvidenciasCenario2)
+        if (CountPistas.instance.countEvidenciasAnalisadasCenario4 >= CountPistas.instance.maxEvidenciasCenario4)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -74,7 +75,9 @@ public class TutorialController : MonoBehaviour
 
     IEnumerator rotinaFinal()
     {
-        // Lógica para o término do tutorial
-        yield return null;
+        yield return new WaitForSeconds(3f);
+        textFinal.SetActive(true);
+       
     }
+
 }
