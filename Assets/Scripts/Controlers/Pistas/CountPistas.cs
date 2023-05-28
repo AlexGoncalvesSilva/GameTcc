@@ -41,6 +41,8 @@ public class CountPistas : MonoBehaviour
 
     public SceneType sceneType;
 
+    public Animator uiAnimator; // Referência ao componente Animator da UI
+
     private void Awake()
     {
         instance = this;
@@ -94,6 +96,12 @@ public class CountPistas : MonoBehaviour
                 }
                 break;
         }
+
+        // Ativa a animação da UI
+        uiAnimator.SetTrigger("InOutUI");
+
+        // Chamada para iniciar a rotina quando você coletar as pistas
+        StartCoroutine(HideUIAfterSeconds(2.0f)); // Altere o valor '2.0f' para o número de segundos que você deseja esperar antes de esconder a UI
     }
 
     void CheckIfWin()
@@ -184,5 +192,13 @@ public class CountPistas : MonoBehaviour
         countEvidenciasAnalisadasCenario2 = PlayerPrefs.GetInt("CountEvidenciasAnalisadasCenario2", 0);
         countEvidenciasAnalisadasCenario3 = PlayerPrefs.GetInt("CountEvidenciasAnalisadasCenario3", 0);
         countEvidenciasAnalisadasCenario4 = PlayerPrefs.GetInt("CountEvidenciasAnalisadasCenario4", 0);
+    }
+
+    IEnumerator HideUIAfterSeconds(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        // Toca a animação para esconder a UI
+        uiAnimator.SetTrigger("InOutUI");
     }
 }

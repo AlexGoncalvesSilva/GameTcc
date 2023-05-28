@@ -17317,6 +17317,7 @@ GameObject:
   - component: {fileID: 2894509979075718069}
   - component: {fileID: 2894509979075718071}
   - component: {fileID: 2894509979075718070}
+  - component: {fileID: 2894509979075718072}
   m_Layer: 5
   m_Name: CountPistasText
   m_TagString: Untagged
@@ -17344,7 +17345,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 176.9, y: -79}
+  m_AnchoredPosition: {x: -166.6, y: -79}
   m_SizeDelta: {x: 234.5748, y: 85.1205}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2894509979075718070
@@ -17389,6 +17390,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2894509979075718068}
   m_CullTransparentMesh: 1
+--- !u!95 &2894509979075718072
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2894509979075718068}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 92e3ca41a70b725479a5164b3936c1e3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &2898394801566774833
 Transform:
   m_ObjectHideFlags: 0
@@ -19395,6 +19417,7 @@ MonoBehaviour:
   botaoAvancoCenario3: {fileID: 0}
   botaoAvancoCenario4: {fileID: 0}
   sceneType: 1
+  uiAnimator: {fileID: 2894509979075718072}
 --- !u!4 &6182307516801212752
 Transform:
   m_ObjectHideFlags: 0

@@ -2744,7 +2744,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4734955907222296064, guid: e6bb3b73edb686c458c9acff50ce75e1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 176.9
+      value: -167.6
       objectReference: {fileID: 0}
     - target: {fileID: 4734955907222296064, guid: e6bb3b73edb686c458c9acff50ce75e1, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2768,6 +2768,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6bb3b73edb686c458c9acff50ce75e1, type: 3}
+--- !u!1 &425337690 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4734955907222296065, guid: e6bb3b73edb686c458c9acff50ce75e1, type: 3}
+  m_PrefabInstance: {fileID: 425337689}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &425337691
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425337690}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 92e3ca41a70b725479a5164b3936c1e3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &428391762
 GameObject:
   m_ObjectHideFlags: 0
@@ -14074,6 +14100,7 @@ MonoBehaviour:
   botaoAvancoCenario3: {fileID: 0}
   botaoAvancoCenario4: {fileID: 0}
   sceneType: 2
+  uiAnimator: {fileID: 425337691}
 --- !u!1 &6324692785454730125 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8953966655279218896, guid: eba1be2dccc8e75449862a6b660150f2, type: 3}
