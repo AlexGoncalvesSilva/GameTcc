@@ -9,7 +9,6 @@ public class CellphoneMenuController : MonoBehaviour
     public GameObject cellphoneObj;
     public GameObject menuCellphone;
     public GameObject cellphoneLightObject; // Referência para o objeto da luz do celular
-    public GameObject cellphoneOnTable; // Referência para o celular na mesa
     private PlayerMovement playerMovement;
     private CameraController cameraController;
     private CursorLockMode previousCursorLockMode;
@@ -19,12 +18,6 @@ public class CellphoneMenuController : MonoBehaviour
     {
         playerMovement = FindObjectOfType<PlayerMovement>();
         cameraController = FindObjectOfType<CameraController>();
-
-        // Verificar se o celular já foi coletado
-        if (CellphoneManager.Instance.IsCellphoneCollected())
-        {
-            CollectCellphone();
-        }
     }
 
     void Update()
@@ -56,7 +49,7 @@ public class CellphoneMenuController : MonoBehaviour
                     cellphoneLightObject.SetActive(false); // Desativa o objeto da luz do celular
                 }
             }
-            else if (!activatedCellphone && cellphoneOnTable != null && !cellphoneOnTable.activeSelf)
+            else
             {
                 CollectCellphone();
             }
@@ -106,12 +99,5 @@ public class CellphoneMenuController : MonoBehaviour
         {
             cellphoneLightObject.SetActive(true); // Ativa o objeto da luz do celular
         }
-        if (cellphoneOnTable)
-        {
-            cellphoneOnTable.SetActive(false); // Remove o telefone da mesa
-        }
-
-        // Definir o estado do celular como coletado no CellphoneManager
-        CellphoneManager.Instance.SetCellphoneCollected(true);
     }
 }

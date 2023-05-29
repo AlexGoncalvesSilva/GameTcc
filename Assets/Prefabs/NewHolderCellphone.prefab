@@ -267,5 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07faf89061e5c2a408d9dda4a568c8b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cellphoneObj: {fileID: 0}
   menuCellphone: {fileID: 0}
   cellphoneLightObject: {fileID: 0}
+  cellphoneOnTable: {fileID: 0}
