@@ -101,7 +101,7 @@ public class CountPistas : MonoBehaviour
         uiAnimator.SetTrigger("InOutUI");
 
         // Chamada para iniciar a rotina quando você coletar as pistas
-        StartCoroutine(HideUIAfterSeconds(2.0f)); // Altere o valor '2.0f' para o número de segundos que você deseja esperar antes de esconder a UI
+        StartCoroutine(HideUIAfterSeconds(5.0f)); // Altere o valor '2.0f' para o número de segundos que você deseja esperar antes de esconder a UI
     }
 
     void CheckIfWin()
