@@ -11,6 +11,8 @@ public class DialogoController : MonoBehaviour
 {
     public GameObject painelDiaologo;
 
+    public GameObject PainelE;
+
     //public Text falaNPC;
 
     public TextMeshProUGUI falaNPC;
@@ -57,6 +59,7 @@ public class DialogoController : MonoBehaviour
                 painelDiaologo.SetActive(false);
                 falaNPC.gameObject.SetActive(false);
                 NameNPC.gameObject.SetActive(false);
+                PainelE.SetActive(false);
                 Cursor.lockState = CursorLockMode.Locked;
                 CameraController.instance.CanMoveCamera();
                 OnFinishTalking.Invoke();
@@ -68,6 +71,7 @@ public class DialogoController : MonoBehaviour
     {
         falaNPC.gameObject.SetActive(false);
         NameNPC.gameObject.SetActive(false);
+        PainelE.SetActive(false);
         falaAtiva = false;
 
         for (int i = 0; i < falas.respostas.Length; i++) 
@@ -88,6 +92,7 @@ public class DialogoController : MonoBehaviour
         painelDiaologo.SetActive(true); 
         falaNPC.gameObject.SetActive(true);
         NameNPC.gameObject.SetActive(true);
+        PainelE.SetActive(true);
 
         falaNPC.text = falas.fala;
     }
