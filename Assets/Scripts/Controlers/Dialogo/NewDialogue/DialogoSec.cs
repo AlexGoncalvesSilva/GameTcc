@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class DialogoSec : MonoBehaviour
 {
     public FalaNPC[] falas = new FalaNPC[2];
+
+    public TextMeshProUGUI NameNPC;
 
     private bool dialogoConcluido = false;
 
@@ -27,7 +30,7 @@ public class DialogoSec : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -68,7 +71,8 @@ public class DialogoSec : MonoBehaviour
 
             if (!dialogoConcluido)
             {
-                Debug.Log("Dialogando agoraaa"); 
+                Debug.Log("Dialogando agoraaa");
+                NameNPC.text = "Secretária";
                 Cursor.lockState = CursorLockMode.Confined;
                 Cursor.visible = true;
                 DialogoController.instance.ProximaFala(falas[0]);
@@ -78,6 +82,7 @@ public class DialogoSec : MonoBehaviour
             else
             {
                 Debug.Log("Dialogou ja sdasas");
+                NameNPC.text = "Secretária";
                 DialogoController.instance.ProximaFala(falas[1]);
                 CameraController.instance.CanMoveCamera();
             }

@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class DialogoAna : MonoBehaviour
 {
     public FalaNPC[] falas = new FalaNPC[2];
+
+    public TextMeshProUGUI NameNPC;
 
     private bool dialogoConcluido = false;
 
@@ -70,12 +73,14 @@ public class DialogoAna : MonoBehaviour
             {
                 Cursor.lockState = CursorLockMode.Confined;
                 Cursor.visible = true;
+                NameNPC.text = "Ana";
                 DialogoController.instance.ProximaFala(falas[0]);
                 CountPistas.instance.AddPista();
                 //Analyze.instance.PistaDialogo();
             }
             else
             {
+                NameNPC.text = "Ana";
                 DialogoController.instance.ProximaFala(falas[1]);
                 CameraController.instance.CanMoveCamera();
             }

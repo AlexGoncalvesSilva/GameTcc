@@ -5,12 +5,17 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using TMPro;
 
 public class DialogoController : MonoBehaviour
 {
     public GameObject painelDiaologo;
 
-    public Text falaNPC;
+    //public Text falaNPC;
+
+    public TextMeshProUGUI falaNPC;
+
+    public TextMeshProUGUI NameNPC;
 
     public GameObject resposta;
 
@@ -20,6 +25,8 @@ public class DialogoController : MonoBehaviour
     public bool falaAtiva = false;
 
     FalaNPC falas;
+
+    FalaNPC names;
 
     public static DialogoController instance;
 
@@ -49,6 +56,7 @@ public class DialogoController : MonoBehaviour
                 falaAtiva = false;
                 painelDiaologo.SetActive(false);
                 falaNPC.gameObject.SetActive(false);
+                NameNPC.gameObject.SetActive(false);
                 Cursor.lockState = CursorLockMode.Locked;
                 CameraController.instance.CanMoveCamera();
                 OnFinishTalking.Invoke();
@@ -59,6 +67,7 @@ public class DialogoController : MonoBehaviour
     void MostrarRespostas() 
     {
         falaNPC.gameObject.SetActive(false);
+        NameNPC.gameObject.SetActive(false);
         falaAtiva = false;
 
         for (int i = 0; i < falas.respostas.Length; i++) 
@@ -78,6 +87,7 @@ public class DialogoController : MonoBehaviour
         falaAtiva = true;
         painelDiaologo.SetActive(true); 
         falaNPC.gameObject.SetActive(true);
+        NameNPC.gameObject.SetActive(true);
 
         falaNPC.text = falas.fala;
     }

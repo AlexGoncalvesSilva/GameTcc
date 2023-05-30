@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class DialogoMerc : MonoBehaviour
 {
     public FalaNPC[] falas = new FalaNPC[2];
+
+    public TextMeshProUGUI NameNPC;
 
     private bool dialogoConcluido = false;
 
@@ -69,6 +72,7 @@ public class DialogoMerc : MonoBehaviour
             if (!dialogoConcluido)
             {
                 Debug.Log("Dialogando agoraaa");
+                NameNPC.text = "Atendente";
                 Cursor.lockState = CursorLockMode.Confined;
                 Cursor.visible = true;
                 DialogoController.instance.ProximaFala(falas[0]);
@@ -78,6 +82,7 @@ public class DialogoMerc : MonoBehaviour
             else
             {
                 Debug.Log("Dialogou ja sdasas");
+                NameNPC.text = "Atendente";
                 DialogoController.instance.ProximaFala(falas[1]);
                 CameraController.instance.CanMoveCamera();
             }
