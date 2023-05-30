@@ -87,7 +87,6 @@ public class DialogoAna : MonoBehaviour
     public void finished()
     {
         StartCoroutine("RotinaInteract");
-        RotateNpx.instance.ResetRotation();
     }
 
     IEnumerator RotinaInteract()
@@ -96,13 +95,4 @@ public class DialogoAna : MonoBehaviour
         playerIntetact = false;
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            RotateNpx.instance.ResetRotation();
-
-        }
-
-    }
 }

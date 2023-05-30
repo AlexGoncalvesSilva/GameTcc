@@ -6,19 +6,20 @@ public class RotateNpx : MonoBehaviour
 {
     public Transform player;
     private Quaternion initialRotation;
-    private bool isRotating = false;
+    public bool isRotating = false;
 
     public static RotateNpx instance;
     
     private void Awake()
     {
         instance = this;
+        initialRotation = transform.rotation;
     }
 
     private void Start()
     {
         // Salva a rotação inicial do objeto
-        initialRotation = transform.rotation;
+    
     }
     
     private void Update()
@@ -35,25 +36,21 @@ public class RotateNpx : MonoBehaviour
             // Interpola suavemente a rotação do objeto para a nova rotação
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
         }
-        else
-        {
-            // Retorna à rotação inicial
-            transform.rotation = Quaternion.Slerp(transform.rotation, initialRotation, Time.deltaTime * 5f);
-           
-            
-        }
+        if(isRotating == false) { transform.rotation = Quaternion.Slerp(transform.rotation, initialRotation, Time.deltaTime * 5f); }
     }
 
     public void Interact()
     {
         // Ativa a rotação para o jogador
         isRotating = true;
+        
     }
     
     public void ResetRotation()
     {
         // Desativa a rotação para o jogador
         isRotating = false;
+        transform.rotation = Quaternion.Slerp(transform.rotation, initialRotation, Time.deltaTime * 5f);
 
     }
 }
