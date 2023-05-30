@@ -2305,6 +2305,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &870549823 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4734955907222296065, guid: e6bb3b73edb686c458c9acff50ce75e1, type: 3}
+  m_PrefabInstance: {fileID: 1168829715}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &870549824
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870549823}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 92e3ca41a70b725479a5164b3936c1e3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &877130250 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9217234437682292332, guid: 9634d301a1db1544dbf1bf69e855ef0d, type: 3}
@@ -4762,7 +4788,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5351937138071560054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.261, y: 2.32, z: 2.241}
+  m_LocalPosition: {x: -0.26, y: 2.6, z: 0.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4843,7 +4869,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5351937138312861007}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.27391684, y: 3.13, z: 0.14599988}
+  m_LocalPosition: {x: -0.27393186, y: 3.13, z: 0.14599988}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5553,6 +5579,10 @@ PrefabInstance:
       propertyPath: sceneType
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6105290871003036012, guid: 8de5876090446dd4e8ce44097ec67fb4, type: 3}
+      propertyPath: uiAnimator
+      value: 
+      objectReference: {fileID: 870549824}
     - target: {fileID: 6105290871003036012, guid: 8de5876090446dd4e8ce44097ec67fb4, type: 3}
       propertyPath: pistaTextOng
       value: 
