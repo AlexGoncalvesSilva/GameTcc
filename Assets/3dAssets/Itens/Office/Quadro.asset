@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quadro
   m_EditorClassIdentifier: 
   grabbable: 0
-  audioClip: {fileID: 8300000, guid: 1be609ccdb844a34f9aae1b8ac44b12c, type: 3}
+  audioClip: {fileID: 8300000, guid: 8adc76c19abbe4841acf2fec9e591549, type: 3}
   text: 
   image: {fileID: 0}
   panelInterection: {fileID: 753053135567153393, guid: f0b60d8b8ac1bb0449a1e50f443cb981, type: 3}
