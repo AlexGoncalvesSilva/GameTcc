@@ -43,6 +43,7 @@ public class DialogoMerc : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(PlayerCamera.transform.position, PlayerCamera.transform.forward, out hit, MaxDistance))
             {
+                RotateNpx.instance.Interact();
                 if (hit.transform.tag == "NPCMerc")
                 {
                     playerIntetact = true;
@@ -96,11 +97,11 @@ public class DialogoMerc : MonoBehaviour
         playerIntetact = false;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-
+            RotateNpx.instance.ResetRotation();
 
         }
 

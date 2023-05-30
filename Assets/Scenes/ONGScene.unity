@@ -3107,23 +3107,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 47a4c28b45ae0864199a9b11acefbb4f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.5071008
+      value: 3.5071015
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 47a4c28b45ae0864199a9b11acefbb4f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.6070983
+      value: 2.6070988
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 47a4c28b45ae0864199a9b11acefbb4f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.059884667
+      value: -0.53971106
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 47a4c28b45ae0864199a9b11acefbb4f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.09247558
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 47a4c28b45ae0864199a9b11acefbb4f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.9431843
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 47a4c28b45ae0864199a9b11acefbb4f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5821,6 +5821,7 @@ GameObject:
   - component: {fileID: 882098536}
   - component: {fileID: 882098542}
   - component: {fileID: 882098543}
+  - component: {fileID: 882098544}
   m_Layer: 0
   m_Name: AnaNPC2
   m_TagString: NPC
@@ -5839,8 +5840,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.28
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 2.669566
+  m_Center: {x: -0.9617662, y: 0, z: -0.5507528}
 --- !u!114 &882098537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5997,6 +5998,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ffca983a50380d48bd3933bdb59b5ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &882098544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882098534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 573645d693a46c340912ffcda8bc2696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 7305061097456774450}
 --- !u!64 &887901046
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6569,6 +6583,7 @@ GameObject:
   - component: {fileID: 1002337442}
   - component: {fileID: 1002337448}
   - component: {fileID: 1002337449}
+  - component: {fileID: 1002337450}
   m_Layer: 8
   m_Name: TestemunhaNPC1
   m_TagString: NPCSec
@@ -6585,10 +6600,10 @@ SphereCollider:
   m_GameObject: {fileID: 1002337440}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.28
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 2.908374
+  m_Center: {x: -0.3325942, y: 0, z: 0.55487335}
 --- !u!114 &1002337443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6676,7 +6691,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002337440}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.25, y: 1.87, z: 2.37}
+  m_LocalPosition: {x: 3.971, y: 1.86, z: 0.99}
   m_LocalScale: {x: 1.3359, y: 1.9140193, z: 1.3359}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6745,6 +6760,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1997afe2c08255e41af6c6646c92a5df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1002337450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002337440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 573645d693a46c340912ffcda8bc2696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 7305061097456774450}
 --- !u!1 &1004730553
 GameObject:
   m_ObjectHideFlags: 0
@@ -10353,19 +10381,6 @@ MonoBehaviour:
   playerIntetact: 0
   PlayerCamera: {fileID: 0}
   MaxDistance: 5
---- !u!135 &1445673999
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1445673993}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.7
-  m_Center: {x: 0.09, y: -0.04, z: 0.08462063}
 --- !u!114 &1445674003
 MonoBehaviour:
   m_ObjectHideFlags: 0
