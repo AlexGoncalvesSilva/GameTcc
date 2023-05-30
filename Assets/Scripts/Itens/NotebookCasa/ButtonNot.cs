@@ -30,7 +30,7 @@ public class ButtonNot : MonoBehaviour
 
     public void WrongButton()
     {
-        text.text = "Aqui não tem nada de importante";
+        text.text = "qui não tem nada de importante.";
         StartCoroutine("RotinaText");
         Debug.Log("Clicou no bt");
     }

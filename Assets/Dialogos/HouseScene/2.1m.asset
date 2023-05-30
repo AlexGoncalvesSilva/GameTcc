@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b91b47a63b64349a357d6f1bed7fc8, type: 3}
   m_Name: 2.1m
   m_EditorClassIdentifier: 
-  fala: " A amiga dele teve por aqui ontem e perguntou por ele, ele n\xE3o d\xE1
-    not\xEDcias h\xE1 alguns dias n\xE9. Espero que n\xE3o seja nada s\xE9rio."
+  fala: "A amiga dele esteve por aqui ontem e perguntou por ele. Ele n\xE3o d\xE1
+    not\xEDcias h\xE1 alguns dias, n\xE9? Espero que n\xE3o seja nada s\xE9rio."
   respostas:
   - resposta: "Quando foi a \xFAltima vez que voc\xEA viu ele? "
     proximaFala: {fileID: 11400000, guid: 3376607333ee1fd4b8c87ee80cd46d65, type: 2}

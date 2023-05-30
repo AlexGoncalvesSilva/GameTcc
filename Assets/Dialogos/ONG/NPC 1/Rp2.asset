@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b91b47a63b64349a357d6f1bed7fc8, type: 3}
   m_Name: Rp2
   m_EditorClassIdentifier: 
-  fala: Eu o conheci aqui na ONG, ele e a Ana criaram a "Pata Amiga" e eu era amiga
-    da Ana, ela me chamou para ajudar eles e eu vim.
+  fala: "Eu o conheci aqui na ONG, ele e a Ana criaram a \"Pata Amiga\", e eu era
+    amiga da Ana. Ela me chamou para ajud\xE1-los e eu vim."
   respostas: []

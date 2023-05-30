@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b91b47a63b64349a357d6f1bed7fc8, type: 3}
   m_Name: 2.2m
   m_EditorClassIdentifier: 
-  fala: Faz alguns dias, quando ele veio fazer a compra da semana.
+  fala: Faz alguns dias que vi ele, foi quando ele veio fazer a compra da semana.
   respostas: []

@@ -80,23 +80,23 @@ public class OfficeFeedback : MonoBehaviour
                 i += 1;
                 if (i == 1)
                 {
-                    text.text = "ENVIEI PARA O DEPARTAMENTO O QUE CONSEGUI NA JOALHERIA. AGORA TÁ NA HORA DE FOCAR NO OUTRO CASO";
+                    text.text = "Enviei para o departamento o que consegui na joalheria. Agora é hora de focar no outro caso.";
                 }
                 else if (i == 2)
                 {
-                    text.text = "VAMOS VER... É O CASO DE DANIEL, ELE DESAPARECEU HÁ DOIS DIAS SEM DEIXAR NENHUM RASTRO";
+                    text.text = "Vamos ver... É o caso de Daniel. Ele desapareceu há dois dias sem deixar nenhum rastro.";
                 }
                 else if (i == 3)
                 {
-                    text.text = "BOM, EU JÁ ORGANIZEI O CASO NO MEU QUADRO";
+                    text.text = "Bom, eu já organizei o caso no meu quadro.";
                 }
                 else if (i == 4)
                 {
-                    text.text = "POR ONDE DEVO COMEÇAR EXATAMENTE? BOM, RECEBI UMA CÓPIA DA CHAVE DA CASA DELE IREI LÁ PRIMEIRO";
+                    text.text = "Por onde devo começar exatamente? Bem, recebi uma cópia da chave da casa dele. Irei lá primeiro.";
                 }
                 else if (i == 5)
                 {
-                    text.text = "DEPOIS IREI NA ONG ONDE ELE TRABALHAVA E LÁ CONVERSAREI COM A ANA.";
+                    text.text = "Depois irei na ONG onde ele trabalhava e lá conversarei com a Ana.";
                 }
                 else if (i == 6)
                 {
@@ -127,7 +127,7 @@ public class OfficeFeedback : MonoBehaviour
         {
             if (t == 0)
             {
-                text.text = "TENHO QUE ENVIAR OS MATERIAIS DESSE CASO PARA O DEPARTAMENTO.";
+                text.text = "Tenho que enviar os materiais desse caso para o departamento.";
                 t++;
             }
             if (Input.GetKeyDown(KeyCode.E))
@@ -136,11 +136,11 @@ public class OfficeFeedback : MonoBehaviour
                 t += 1;
                 if (t == 1)
                 {
-                    text.text = "TENHO QUE ENVIAR OS MATERIAIS DESSE CASO PARA O DEPARTAMENTO.";
+                    text.text = "Tenho que enviar os materiais desse caso para o departamento.";
                 }
                 else if (t == 2)
                 {
-                    text.text = "TENHO QUE ACESSAR MEU NOTEBOOK";
+                    text.text = "Tenho que acessar meu notebook.";
                 }
                 else if( t == 3)
                 {

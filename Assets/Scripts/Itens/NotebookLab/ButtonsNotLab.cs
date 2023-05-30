@@ -58,14 +58,14 @@ public class ButtonsNotLab : MonoBehaviour
 
     public void WrongButton()
     {
-        text.text = "Aqui não tem nada de importante";
+        text.text = "Aqui não tem nada de importante.";
         StartCoroutine("RotinaTextNormal");
         Debug.Log("Clicou no bt");
     }
 
     public void filesCorrectButton()
     {
-        text.text = "Esses arquivos são protegidos por uma outra senha, estão criptografados";
+        text.text = "Esses arquivos estão protegidos por outra senha e estão criptografados.";
         panelFileSec.SetActive(true);
         fileSec = true;
         StartCoroutine("RotinaTextNormal");
@@ -74,7 +74,7 @@ public class ButtonsNotLab : MonoBehaviour
     public void camCorrectButton()
     {
         Debug.Log("clicou");
-        text.text = "Esse programa é protegidos por uma outra senha, está criptografado";
+        text.text = "Esse programa está protegido por outra senha e está criptografado.";
         panelCamSec.SetActive(true);
         camSec = true;
         StartCoroutine("RotinaTextNormal");
@@ -82,7 +82,7 @@ public class ButtonsNotLab : MonoBehaviour
 
     public void CamButton()
     {
-        text.text = "As gravações das câmeras de segurança... Está aberto em um dia específico.";
+        text.text = "As gravações das câmeras de segurança estão abertas em um dia específico.";
         player.SetActive(true);
         StartCoroutine("RotinaTextNormal");
         panelPuzzleCam.SetActive(false);
@@ -91,7 +91,7 @@ public class ButtonsNotLab : MonoBehaviour
 
     public void filesButton()
     {
-        text.text = "Aqui tem muita coisa sobre esses remédios, o esquema com o prefeito e tem imagens e informações de um galpão. Será que foi para lá que levaram Daniel?";
+        text.text = "Aqui há muitas informações sobre esses remédios e o esquema com o prefeito, incluindo imagens e informações de um galpão. Será que foi para lá que levaram Daniel?";
         panelFileSec.SetActive(false);
         panelPuzzleFiles.SetActive(false);
         StartCoroutine("RotinaNextText");
@@ -99,7 +99,7 @@ public class ButtonsNotLab : MonoBehaviour
 
     public void playerButton()
     {
-        text.text = "As filmagens mostram Daniel, ele esteve realmente aqui, mas o seu padrasto chegou com mais uma pessoa, apagaram ele e o levaram";
+        text.text = "As filmagens mostram que Daniel esteve realmente aqui, mas seu padrasto chegou com mais uma pessoa, apagaram-no e o levaram.";
         StartCoroutine("RotinaTextSecurity");
     }
 
@@ -112,13 +112,6 @@ public class ButtonsNotLab : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         text.text = "";
-    }
-
-    IEnumerator RotinaTextSec()
-    {
-        yield return new WaitForSeconds(.3f);
-        text.text = "[E] PARA DESCRIPTOGRAFAR";
-        StartCoroutine("RotinaTextNormal");
     }
 
     IEnumerator RotinaTextSecurity()

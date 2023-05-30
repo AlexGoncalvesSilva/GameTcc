@@ -36,23 +36,23 @@ public class TutorialController : MonoBehaviour
             i += 1;
             if (i == 1)
             {
-                text.text = "PARA INTERAGIR COM OBJETOS E NPCs UTILIZE O 'E'";
+                text.text = "Para interagir com objetos e NPCs utilize o 'E'.";
             }
             else if (i == 2)
             {
-                text.text = "AO FALAR COM OS NPCs UTILIZE O MOUSE PARA SELECIONAR A OPÇÃO DE RESPOSTA QUE VOCÊ DESEJA";
+                text.text = "Ao falar com os NPCs, utilize o mouse para selecionar a opção de resposta que você deseja.";
             }
             else if (i == 3)
             {
-                text.text = "PARA ANDAR UTILIZE AS TECLAS 'W, A, S, D'";
+                text.text = "Para andar, utilize as teclas 'W, A, S, D'.";
             }
             else if (i == 4)
             {
-                text.text = "CLIQUE 'ESC' PARA ACESSAR AS CONFIGURAÇÕES";
+                text.text = "Clique em 'ESC' para acessar as configurações.";
             }
             else if (i == 5)
             {
-                text.text = "AO INTERAGIR COM OBJETOS PEGÁVEIS VOCÊ PODE MEXE-LO UTILIZANDO O MOUSE COM O BOTÃO ESQUERDO PRECIONADO";
+                text.text = "Ao interagir com objetos pegáveis, você pode movê-los utilizando o mouse com o botão esquerdo pressionado.";
             }
             else if (i > 6)
             {

@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b91b47a63b64349a357d6f1bed7fc8, type: 3}
   m_Name: FalaNPC1
   m_EditorClassIdentifier: 
-  fala: "Voc\xEA \xE9 a Carol? Fique a vontade para andar por ai e olhar o que quiser,
-    a Ana est\xE1 na outra sala indo por esse corredor, n\xE3o se esque\xE7a de falar
-    com ela."
+  fala: "Voc\xEA \xE9 a Carol? Fique \xE0 vontade para andar por a\xED e olhar o
+    que quiser. A Ana est\xE1 na outra sala, seguindo por esse corredor."
   respostas:
   - resposta: Onde posso encontrar a sala de Daniel?
     proximaFala: {fileID: 11400000, guid: 1a30e81f5d3888e479fcbd471d43786f, type: 2}

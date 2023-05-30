@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b91b47a63b64349a357d6f1bed7fc8, type: 3}
   m_Name: FalaAna1
   m_EditorClassIdentifier: 
-  fala: "Ol\xE1, voc\xEA \xE9 a Carol n\xE3o \xE9? "
+  fala: "Ol\xE1, voc\xEA \xE9 a Carol, n\xE3o \xE9? "
   respostas:
   - resposta: "Sim! Voc\xEA \xE9 a Ana? Qual a sua fun\xE7\xE3o aqui? "
     proximaFala: {fileID: 11400000, guid: b4f2a081dbef2444f92e0565fb11e4a7, type: 2}

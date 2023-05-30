@@ -17,5 +17,5 @@ MonoBehaviour:
   - resposta: "Quando foi a \xFAltima vez que voc\xEA falou com Daniel?"
     proximaFala: {fileID: 11400000, guid: f357bb3603141d64d9f62a739e4b0917, type: 2}
   - resposta: "Voc\xEA sabe se ele pode ter ido para algum lugar sem avisar? Uma
-      viagem ou algo do tipo? "
+      viagem ou algo do tipo?     "
     proximaFala: {fileID: 11400000, guid: 67ad1341296c4d34db8f249551d848d0, type: 2}

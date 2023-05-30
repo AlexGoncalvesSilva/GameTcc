@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b91b47a63b64349a357d6f1bed7fc8, type: 3}
   m_Name: 1.1m
   m_EditorClassIdentifier: 
-  fala: "Ele costumava comprar comida por aqui, algumas frutas e ra\xE7\xE3o para
+  fala: "Ele costumava comprar comida por aqui, incluindo frutas e ra\xE7\xE3o para
     o seu cachorro."
   respostas:
   - resposta: 'Daniel vivia sozinho? '

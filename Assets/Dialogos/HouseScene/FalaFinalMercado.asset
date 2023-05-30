@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b91b47a63b64349a357d6f1bed7fc8, type: 3}
   m_Name: FalaFinalMercado
   m_EditorClassIdentifier: 
-  fala: "Boa sorte para achar ele, esqpero que n\xE3o demore muito"
+  fala: "Boa sorte em encontrar ele, espero que n\xE3o demore muito."
   respostas: []

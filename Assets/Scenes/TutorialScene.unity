@@ -3992,9 +3992,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "ENCAMINHAREI ISSO TUDO PARA A DELEGACIA, ELES V\xC3O CONSEGUIR IDENTIFICAR
-    O SUSPEITO. HORA DE VOLTAR AO ESCRIT\xD3RIO. \nPARA VOLTAR AO ESCRIT\xD3RIO,
-    CLIQUE 'E' NA PORTA DE SA\xCDDA"
+  m_Text: "Encaminharei tudo isso para a delegacia, eles v\xE3o conseguir identificar
+    o suspeito. Hora de voltar ao escrit\xF3rio.\r\nPara voltar ao escrit\xF3rio,
+    clique em 'E' na porta de sa\xEDda."
 --- !u!114 &1718187831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4439,7 +4439,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: CLIQUE "E" PARA PROSSEGUIR
+  m_Text: "\rClique em 'E' para prosseguir."
 --- !u!222 &1849671503
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4865,7 +4865,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5351937138312861007}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.27395874, y: 3.13, z: 0.14599988}
+  m_LocalPosition: {x: -0.27398258, y: 3.13, z: 0.14599988}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

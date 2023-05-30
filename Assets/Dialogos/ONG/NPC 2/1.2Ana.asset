@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b91b47a63b64349a357d6f1bed7fc8, type: 3}
   m_Name: 1.2Ana
   m_EditorClassIdentifier: 
-  fala: "N\xE3o, ele avisaria se fosse demorar tanto, temos muitas obriga\xE7\xF5es
-    por aqui e ele \xE9 bem respons\xE1vel  "
+  fala: "N\xE3o, ele avisaria se fosse demorar tanto. Temos muitas obriga\xE7\xF5es
+    por aqui e ele \xE9 bastante respons\xE1vel."
   respostas: []

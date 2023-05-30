@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b91b47a63b64349a357d6f1bed7fc8, type: 3}
   m_Name: 1.2m
   m_EditorClassIdentifier: 
-  fala: "Sim, ele se mudou para c\xE1 h\xE1 algum tempo, sua m\xE3e as vezes vem
-    visitar ele. Mas quem esteve por aqui recentemente foi seu padrastro."
+  fala: "Sim, ele se mudou para c\xE1 h\xE1 algum tempo, sua m\xE3e \xE0s vezes vem
+    visit\xE1-lo. Mas quem esteve por aqui recentemente foi seu padrasto."
   respostas:
   - resposta: "Voc\xEA viu alguma movimenta\xE7\xE3o estranha por aqui recentemente? "
     proximaFala: {fileID: 11400000, guid: 5f154c3d6084e424890fb734a26d3e1a, type: 2}

@@ -127,7 +127,7 @@ public class PuzzleLab : MonoBehaviour
         else
         {
             resolve = false;
-            text.text = "Droga, não consegui, vou tentar de novo.";
+            text.text = "Droga, não consegui. Vou tentar de novo.";
             buttonFinalReject.SetActive(true);
             StartCoroutine("RotinaText");
         }
