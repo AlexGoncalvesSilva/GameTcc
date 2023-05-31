@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.Rendering.VirtualTexturing;
 using UnityEngine.UI;
 
 public class PuzzleLab : MonoBehaviour
@@ -9,10 +11,18 @@ public class PuzzleLab : MonoBehaviour
     //public Text letterText;
     public TextMeshProUGUI letterText;
     public bool resolve;
+    public bool isLetterScored;
     public Image feedbackImage;
     public Color correctColor;
     public int score = 0;
+    public int Wrong = 0;
     public TextMeshProUGUI text;
+    public TextMeshProUGUI passwordText; // Texto para exibir as letras corretas da senha
+
+    public AudioSource audioSource;
+
+    public AudioClip correct;
+    public AudioClip wrong;
 
     public GameObject buttonFinalResolve;
     public GameObject buttonFinalReject;
@@ -20,6 +30,8 @@ public class PuzzleLab : MonoBehaviour
 
     private List<char> letterSequence = new List<char> { 'C', 'I', 'B', 'N', 'M', 'N', 'A', 'K', 'A', 'F', 'J', 'B', 'A', 'F', 'K', 'D', 'L', 'E', 'B', 'A', 'Q', 'J', 'A', 'M', 'O', 'F', 'P', 'A', 'B' };
     private int currentLetterIndex = 0;
+
+    private List<char> passwordLetters = new List<char>(); // Lista das letras corretas digitadas pelo jogador
 
     public static PuzzleLab instance;
 
@@ -41,57 +53,80 @@ public class PuzzleLab : MonoBehaviour
         {
             PlayerInteraction.instance.canFinish = true;
         }
-        else { PlayerInteraction.instance.canFinish = false; }
+        if (resolve == false)
+        {
+            PlayerInteraction.instance.canFinish = false;
+        }
+
+        if (Wrong >= 3)
+        {
+            resolvePuzzle();
+        }
     }
 
     void CheckAnswer()
     {
-        if (Input.GetKeyDown(KeyCode.B))
+        if (Input.anyKeyDown)
         {
             char currentLetter = letterSequence[currentLetterIndex - 1];
-            if (currentLetter == 'B')
+            bool keyPressed = false;
+
+            if (Input.GetKeyDown(KeyCode.B) && currentLetter == 'B')
             {
-                score += 1;
+                if (!isLetterScored)
+                {
+                    score += 1;
+                    isLetterScored = true;
+                    keyPressed = true;
+                    passwordLetters.Add(currentLetter);
+                    UpdatePasswordText();
+                    audioSource.PlayOneShot(correct);
+                }
             }
-            else
+            else if (Input.GetKeyDown(KeyCode.M) && currentLetter == 'M')
             {
-                score -= 1;
+                if (!isLetterScored)
+                {
+                    score += 1;
+                    isLetterScored = true;
+                    keyPressed = true;
+                    passwordLetters.Add(currentLetter);
+                    UpdatePasswordText();
+                    audioSource.PlayOneShot(correct);
+                }
             }
-        }else if (Input.GetKeyDown(KeyCode.M))
-        {
-            char currentLetter = letterSequence[currentLetterIndex - 1];
-            if (currentLetter == 'M')
+            else if (Input.GetKeyDown(KeyCode.L) && currentLetter == 'L')
             {
-                score += 1;
+                if (!isLetterScored)
+                {
+                    score += 1;
+                    isLetterScored = true;
+                    keyPressed = true;
+                    passwordLetters.Add(currentLetter);
+                    UpdatePasswordText();
+                    audioSource.PlayOneShot(correct);
+                }
             }
-            else
+            else if (Input.GetKeyDown(KeyCode.F) && currentLetter == 'F')
             {
-                score -= 1;
+                if (!isLetterScored)
+                {
+                    score += 1;
+                    isLetterScored = true;
+                    keyPressed = true;
+                    passwordLetters.Add(currentLetter);
+                    UpdatePasswordText();
+                    audioSource.PlayOneShot(correct);
+                }
             }
 
-        }
-        else if (Input.GetKeyDown(KeyCode.L))
-        {
-            char currentLetter = letterSequence[currentLetterIndex - 1];
-            if (currentLetter == 'L')
-            {
-                score += 1;
-            }
-            else
+            if (!keyPressed)
             {
                 score -= 1;
+                Wrong += 1;
+                audioSource.PlayOneShot(wrong);
             }
-        }else if (Input.GetKeyDown(KeyCode.F))
-        {
-            char currentLetter = letterSequence[currentLetterIndex - 1];
-            if (currentLetter == 'F')
-            {
-                score += 1;
-            }
-            else
-            {
-                score -= 1;
-            }
+
         }
     }
 
@@ -112,26 +147,26 @@ public class PuzzleLab : MonoBehaviour
             resolvePuzzle();
             Debug.Log("Game over. Final score: " + score);
         }
+
+        isLetterScored = false;
     }
-    
+
     public void resolvePuzzle()
     {
-        if (score >= 10)
+        if (score >= 9)
         {
             resolve = true;
-            text.text = "Consegui!!";
+            PuzzleController.instance.conseguiu();
             senha.SetActive(true);
             buttonFinalResolve.SetActive(true);
-            StartCoroutine("RotinaText");
         }
         else
         {
             resolve = false;
-            text.text = "Droga, não consegui. Vou tentar de novo.";
+            PuzzleController.instance.NConseguiu();
             buttonFinalReject.SetActive(true);
-            StartCoroutine("RotinaText");
+            ButtonsNotLab.instance.panelPuzzleCam.SetActive(false);
         }
-
     }
 
     IEnumerator WaitBeforeNextLetter()
@@ -144,6 +179,7 @@ public class PuzzleLab : MonoBehaviour
     {
         feedbackImage.color = color;
     }
+
     IEnumerator RotinaText()
     {
         yield return new WaitForSeconds(2f);
@@ -152,10 +188,19 @@ public class PuzzleLab : MonoBehaviour
 
     public void RestartPuzzle()
     {
+        ButtonsNotLab.instance.panelPuzzleCam.SetActive(true);
         currentLetterIndex = 0;
         score = 0;
+        Wrong = 0;
         ShowNextLetter();
         text.text = "";
+        passwordLetters.Clear(); // Limpa a lista de letras da senha
+        UpdatePasswordText(); // Atualiza o texto da senha
         buttonFinalReject.SetActive(false);
+    }
+
+    void UpdatePasswordText()
+    {
+        passwordText.text = string.Join(" ", passwordLetters); // Atualiza o texto da senha com as letras corretas separadas por espaço
     }
 }
