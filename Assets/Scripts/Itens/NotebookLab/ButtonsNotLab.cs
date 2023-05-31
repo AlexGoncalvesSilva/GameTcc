@@ -108,6 +108,18 @@ public class ButtonsNotLab : MonoBehaviour
         player.SetActive(false );
     }
 
+    public void closeCamPuzzle()
+    {
+        panelCamSec.SetActive(false) ;
+        panelPuzzleCam.SetActive(false);
+    }
+
+    public void closeSecPuzzle()
+    {
+        panelPuzzleFiles.SetActive(false);
+        panelFileSec.SetActive(false);
+    }
+
     IEnumerator RotinaTextNormal()
     {
         yield return new WaitForSeconds(2f);
