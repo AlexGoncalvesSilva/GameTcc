@@ -7,7 +7,7 @@ public class MenuPrincipal : MonoBehaviour
 {
 
     public GameObject panelInstructions;
-    //public GameObject panelCredits; fazer depois
+    public GameObject panelCredits;
 
     public void PlayButton(int i)
     {
@@ -23,6 +23,16 @@ public class MenuPrincipal : MonoBehaviour
     public void ExitInstructions()
     {
         panelInstructions.SetActive(false);
+    }
+
+    public void ActiveCredits()
+    {
+        panelCredits.SetActive(true);
+    }
+
+    public void ExitCredits()
+    {
+        panelCredits.SetActive(false);
     }
 
     public void ExitButton()
