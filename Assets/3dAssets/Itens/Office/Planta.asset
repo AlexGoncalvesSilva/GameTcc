@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 975c40793ac3ca24ab61c46ab1bb0cc8, type: 3}
-  m_Name: Celular
+  m_Name: Planta
   m_EditorClassIdentifier: 
-  grabbable: 1
+  grabbable: 0
   audioClip: {fileID: 8300000, guid: c3371d97805523f4badbba6888a30736, type: 3}
-  text: "Sempre bom levar esse v\xEDcio comigo."
+  text: "Essas flores s\xE3o lindas."
   image: {fileID: 0}
   panelInterection: {fileID: 0}
