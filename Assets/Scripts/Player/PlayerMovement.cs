@@ -16,13 +16,13 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask;
 
     bool isGrounded;
-    public  bool canMove = true; // Variável para controlar a movimentação do personagem
+    public bool canMove = true; // Variável para controlar a movimentação do personagem
 
     public static PlayerMovement instance;
 
     private void Awake()
     {
-        instance= this;
+        instance = this;
     }
 
     private void Start()
@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
 
         velocity.y += gravity * Time.deltaTime;
 
-        controller.Move(velocity * Time.deltaTime); 
+        controller.Move(velocity * Time.deltaTime);
     }
 
     // Método para habilitar/desabilitar a movimentação do personagem
