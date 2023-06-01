@@ -14,11 +14,4 @@ public class GetValue : MonoBehaviour
         sliderV.value = valorVolume;
         AudioListener.volume = valorVolume;
     }
-
-    public void mudou()
-    {
-        print("volume + " + sliderV.value);
-        AudioListener.volume = sliderV.value;
-    }
-
 }
