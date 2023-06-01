@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabbable: 0
   audioClip: {fileID: 8300000, guid: 565e7143688100149b9ec406ec0a803e, type: 3}
-  text: "Esse \xE9 o cachorro de Daniel... No colar de identifica\xE7\xE3o diz que
-    seu nome \xE9 Bob e que sua data de nascimento \xE9 03/04. Talvez isso possa
-    ser \xFAtil."
+  text: "Esse \xE9 o cachorro de Daniel... No colar de identifica\xE7\xE3o diz sua
+    data de nascimento \xE9 03/04. Pode ser a sua senha."
   image: {fileID: 0}
   panelInterection: {fileID: 0}

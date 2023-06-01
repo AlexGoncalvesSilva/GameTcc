@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class TutorialController : MonoBehaviour
 {
-    public Text text;
+    public TextMeshProUGUI text;
     public GameObject textFinal;
     public bool finished;
 
