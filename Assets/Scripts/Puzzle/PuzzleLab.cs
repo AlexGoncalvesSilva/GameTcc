@@ -163,6 +163,7 @@ public class PuzzleLab : MonoBehaviour
         {
             finished = true;
             resolve = false;
+            StopAllCoroutines();
             PuzzleController.instance.NConseguiu();
             buttonFinalReject.SetActive(true);
             ButtonsNotLab.instance.panelPuzzleCam.SetActive(false);

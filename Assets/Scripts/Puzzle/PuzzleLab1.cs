@@ -42,6 +42,7 @@ public class PuzzleLab1 : MonoBehaviour
     void Start()
     {
         ShowNextLetter();
+
     }
 
     private void Update()
@@ -162,6 +163,7 @@ public class PuzzleLab1 : MonoBehaviour
         {
             finished = true;
             resolve1 = false;
+            StopAllCoroutines();
             PuzzleController.instance.NConseguiu();
             buttonFinalReject.SetActive(true);
             ButtonsNotLab.instance.panelPuzzleCam.SetActive(false);
@@ -192,6 +194,7 @@ public class PuzzleLab1 : MonoBehaviour
         passwordLetters.Clear(); // Limpa a lista de letras da senha
         UpdatePasswordText(); // Atualiza o texto da senha
         buttonFinalReject.SetActive(false);
+
     }
 
     IEnumerator RotinaTextNormal()
