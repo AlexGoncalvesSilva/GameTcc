@@ -1143,6 +1143,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3541629673168548286, guid: 8eedc2a067740bc43805a73287b1b4a4, type: 3}
+--- !u!114 &290535111 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2576642284104000037, guid: 18a400107bb432542934542482ae369f, type: 3}
+  m_PrefabInstance: {fileID: 1756114869}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!64 &301426460
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1820,7 +1831,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 548486274}
-  - component: {fileID: 548486273}
+  - component: {fileID: 548486275}
   m_Layer: 0
   m_Name: Audio
   m_TagString: Untagged
@@ -1828,19 +1839,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &548486273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 548486272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 047dae4be009b954cbdabfe7266ae8e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  i: 1
 --- !u!4 &548486274
 Transform:
   m_ObjectHideFlags: 0
@@ -1856,6 +1854,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &548486275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548486272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e042f01823eba540ada5e210478d567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sliderV: {fileID: 290535111}
 --- !u!1 &600047295 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3116195551291034863, guid: 71647c4d78224c84fb56032e36b74726, type: 3}

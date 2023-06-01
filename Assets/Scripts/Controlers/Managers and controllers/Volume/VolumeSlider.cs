@@ -13,10 +13,11 @@ public class VolumeSlider : MonoBehaviour
 
     public float valorVolume;
 
+
     // Start is called before the first frame update
     void Start()
     {
-
+        volumeSlider.value = PlayerPrefs.GetFloat("volume");
     }
 
     // Update is called once per frame
@@ -24,7 +25,9 @@ public class VolumeSlider : MonoBehaviour
     {
         soundObjects.GetComponent<AudioSource>().volume = volumeSlider.value;
         soundScenarioOng.GetComponent<AudioSource>().volume = volumeSlider.value;
-        soundScenarioLab.GetComponent<AudioSource>().volume = volumeSlider.value;
+        soundScenarioLab.GetComponent<AudioSource>().volume = volumeSlider.value; 
+        
+        volumeSlider.value = PlayerPrefs.GetFloat("volume");
 
     }
 
