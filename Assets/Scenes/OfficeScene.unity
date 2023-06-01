@@ -4243,6 +4243,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2576642283870102388, guid: 18a400107bb432542934542482ae369f, type: 3}
   m_PrefabInstance: {fileID: 1756114869}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1578156746 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6058826323705334265, guid: 18a400107bb432542934542482ae369f, type: 3}
+  m_PrefabInstance: {fileID: 1756114869}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578156745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 801228d26450c6e49be9ad4616635ac4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1579153435
 GameObject:
   m_ObjectHideFlags: 0
@@ -4780,23 +4791,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2576642284104000037, guid: 18a400107bb432542934542482ae369f, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2576642284104000037, guid: 18a400107bb432542934542482ae369f, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2576642284104000037, guid: 18a400107bb432542934542482ae369f, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1578156746}
     - target: {fileID: 2576642284104000037, guid: 18a400107bb432542934542482ae369f, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2576642284104000037, guid: 18a400107bb432542934542482ae369f, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: VolumeMaster
+      value: mudouVolume
       objectReference: {fileID: 0}
     - target: {fileID: 2576642284104000037, guid: 18a400107bb432542934542482ae369f, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -4804,7 +4815,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2576642284104000037, guid: 18a400107bb432542934542482ae369f, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2576642284104000037, guid: 18a400107bb432542934542482ae369f, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
