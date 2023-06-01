@@ -30,6 +30,7 @@ public class PuzzleController : MonoBehaviour
     public void conseguiu()
     {
         text.text = "Consegui!!";
+        CountPistas.instance.AddPista();
         StartCoroutine("RotinaText");
     }
 

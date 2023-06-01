@@ -122,7 +122,7 @@ public class ButtonsNotLab : MonoBehaviour
 
     IEnumerator RotinaTextNormal()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         text.text = "";
     }
 

@@ -22,11 +22,10 @@ public class PuzzleLab1 : MonoBehaviour
     public AudioClip correct;
     public AudioClip wrong;
 
-    public bool trava;
+    public bool finished;
 
     public GameObject buttonFinalResolve;
     public GameObject buttonFinalReject;
-    public GameObject senha;
 
     private List<char> letterSequence = new List<char> { 'C', 'I', 'A', 'M', 'N', 'B', 'K', 'N', 'B', 'F', 'J', 'B', 'T', 'F', 'K', 'L', 'D', 'E', 'B', 'L', 'Q', 'J', 'A', 'M', 'O', 'F', 'P', 'B', 'A' };
     private int currentLetterIndex = 0;
@@ -66,7 +65,7 @@ public class PuzzleLab1 : MonoBehaviour
 
     void CheckAnswer()
     {
-        if (Input.anyKeyDown && trava == false)
+        if (Input.anyKeyDown && finished == false)
         {
             char currentLetter = letterSequence[currentLetterIndex - 1];
             bool keyPressed = false;
@@ -137,29 +136,32 @@ public class PuzzleLab1 : MonoBehaviour
             letterText.text = letter.ToString();
             currentLetterIndex++;
             StartCoroutine(WaitBeforeNextLetter());
-            SetImageColor(letter == 'A' || letter == 'N' || letter == 'L' || letter == 'F' ? correctColor : Color.blue);
+
+            List<char> validLetters = new List<char> { 'A', 'N', 'L', 'F' };
+            SetImageColor(validLetters.Contains(letter) ? correctColor : Color.blue);
         }
         else
         {
             resolvePuzzle();
             Debug.Log("Game over. Final score: " + score);
         }
+
+        isLetterScored = false;
     }
     
     public void resolvePuzzle()
     {
         if (score >= 9)
         {
+            finished = true;
             resolve1 = true;
-            trava = true;
             PuzzleController.instance.conseguiu();
-            senha.SetActive(true);
             buttonFinalResolve.SetActive(true);
         }
         else
         {
+            finished = true;
             resolve1 = false;
-            trava = true;
             PuzzleController.instance.NConseguiu();
             buttonFinalReject.SetActive(true);
             ButtonsNotLab.instance.panelPuzzleCam.SetActive(false);
@@ -180,7 +182,8 @@ public class PuzzleLab1 : MonoBehaviour
 
     public void RestartPuzzle()
     {
-        ButtonsNotLab.instance.panelPuzzleCam.SetActive(true);
+        ButtonsNotLab.instance.panelPuzzleFiles.SetActive(true);
+        finished = false;
         currentLetterIndex = 0;
         score = 0;
         Wrong = 0;
@@ -189,7 +192,6 @@ public class PuzzleLab1 : MonoBehaviour
         passwordLetters.Clear(); // Limpa a lista de letras da senha
         UpdatePasswordText(); // Atualiza o texto da senha
         buttonFinalReject.SetActive(false);
-        trava = false;
     }
 
     IEnumerator RotinaTextNormal()

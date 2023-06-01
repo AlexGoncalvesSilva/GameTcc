@@ -24,7 +24,8 @@ public class PuzzleLab : MonoBehaviour
 
     public GameObject buttonFinalResolve;
     public GameObject buttonFinalReject;
-    public GameObject senha;
+
+    public bool finished;
 
     private List<char> letterSequence = new List<char> { 'C', 'I', 'B', 'N', 'M', 'N', 'A', 'K', 'A', 'F', 'J', 'B', 'A', 'F', 'K', 'D', 'L', 'E', 'B', 'A', 'Q', 'J', 'A', 'M', 'O', 'F', 'P', 'A', 'B' };
     private int currentLetterIndex = 0;
@@ -64,7 +65,7 @@ public class PuzzleLab : MonoBehaviour
 
     void CheckAnswer()
     {
-        if (Input.anyKeyDown)
+        if (Input.anyKeyDown && finished == false)
         {
             char currentLetter = letterSequence[currentLetterIndex - 1];
             bool keyPressed = false;
@@ -153,13 +154,14 @@ public class PuzzleLab : MonoBehaviour
     {
         if (score >= 9)
         {
+            finished = true;
             resolve = true;
             PuzzleController.instance.conseguiu();
-            senha.SetActive(true);
             buttonFinalResolve.SetActive(true);
         }
         else
         {
+            finished = true;
             resolve = false;
             PuzzleController.instance.NConseguiu();
             buttonFinalReject.SetActive(true);
@@ -187,6 +189,7 @@ public class PuzzleLab : MonoBehaviour
     public void RestartPuzzle()
     {
         ButtonsNotLab.instance.panelPuzzleCam.SetActive(true);
+        finished = false;
         currentLetterIndex = 0;
         score = 0;
         Wrong = 0;
