@@ -8,6 +8,7 @@ public class MenuPrincipal : MonoBehaviour
 
     public GameObject panelInstructions;
     public GameObject panelCredits;
+    public GameObject painelExit;
 
     public void PlayButton(int i)
     {
@@ -36,6 +37,16 @@ public class MenuPrincipal : MonoBehaviour
     }
 
     public void ExitButton()
+    {
+        painelExit.SetActive(true);
+    }
+
+    public void closePanelExit()
+    {
+        painelExit.SetActive(false);
+    }
+
+public void ConfirmExitButton()
     {
         Application.Quit();
     }
