@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabbable: 1
   audioClip: {fileID: 8300000, guid: c3371d97805523f4badbba6888a30736, type: 3}
-  text: "Sempre bom levar esse v\xEDcio comigo."
+  text: "Sempre \xE9 bom levar esse v\xEDcio comigo."
   image: {fileID: 0}
   panelInterection: {fileID: 0}

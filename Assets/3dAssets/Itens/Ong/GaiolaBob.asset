@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabbable: 0
   audioClip: {fileID: 8300000, guid: c3371d97805523f4badbba6888a30736, type: 3}
-  text: "Essa gaiola de transporte t\xE1 com o nome do cachorro dele, talvez ele
-    tenha trazido ele para c\xE1."
+  text: "Essa gaiola de transporte t\xE1 com o nome do cachorro dele, talvez tenha
+    trazido ele para c\xE1."
   image: {fileID: 0}
   panelInterection: {fileID: 0}

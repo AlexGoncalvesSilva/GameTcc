@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabbable: 1
   audioClip: {fileID: 8300000, guid: 1115365203fff724e81de9184bf5e333, type: 3}
-  text: Isso provavelmente foi usado para quebrar os vidros para pegar as joias
+  text: Isso provavelmente foi usado para quebrar os vidros para pegar as joias.
   image: {fileID: 0}
   panelInterection: {fileID: 0}

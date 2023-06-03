@@ -96,7 +96,7 @@ public class OfficeFeedback : MonoBehaviour
                 }
                 else if (i == 5)
                 {
-                    text.text = "Depois irei na ONG onde ele trabalhava e lá conversarei com a Ana.";
+                    text.text = "Depois irei para a ONG onde ele trabalha e lá conversarei com a Ana.";
                 }
                 else if (i == 6)
                 {

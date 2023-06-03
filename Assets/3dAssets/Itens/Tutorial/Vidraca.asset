@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabbable: 0
   audioClip: {fileID: 8300000, guid: a9e5c6c555632894d95a65380589130c, type: 3}
-  text: O vidro foi quebrado, e as joias retiradas
+  text: "O vidro foi quebrado, e as j\xF3ias foram retiradas."
   image: {fileID: 0}
   panelInterection: {fileID: 0}
