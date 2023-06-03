@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabbable: 0
   audioClip: {fileID: 8300000, guid: 9d6f16d91f98e134ea001ad84eec24d0, type: 3}
-  text: Miau
+  text: "Miau pra voc\xEA tamb\xE9m fofinho."
   image: {fileID: 0}
   panelInterection: {fileID: 0}
