@@ -1,1 +1,1 @@
-# GameTcc
+# Blue Spectrum: Investigation
